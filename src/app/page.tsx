@@ -1,113 +1,370 @@
+// 'use client'
 import Image from 'next/image'
+import Navbar from './components/nav'
+// import { useState } from 'react'
+
+
+
+const review = [
+  { id: '0', name: 'user001', msg: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat temporibus dicta iste. Commodi blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '1', name: 'user001', msg: ' Commodi blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '2', name: 'user001', msg: 'Repellat temporibus dicta iste. Commodi blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '3', name: 'user001', msg: ' Commodi blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '3', name: 'user001', msg: ' Commodi blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '3', name: 'user001', msg: ' Commodi blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '3', name: 'user001', msg: ' Commodi blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '3', name: 'user001', msg: ' Commodi blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '3', name: 'user001', msg: ' Commodi blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '3', name: 'user001', msg: ' Commodi blanditiis temporibus laborum, adipisci sit aut autem.' },
+
+]
+
+
+const courses = [
+  { id: '0', title: 'Online course', des: 'รู้เรื่องธุรกิจใน 3 นาที' },
+  { id: '1', title: 'Online course', des: 'รู้เรื่องธุรกิจใน 3 นาที' },
+  { id: '2', title: 'Online course', des: 'รู้เรื่องธุรกิจใน 3 นาที' },
+  { id: '3', title: 'Online course', des: 'รู้เรื่องธุรกิจใน 3 นาที' },
+  { id: '4', title: 'Online course', des: 'รู้เรื่องธุรกิจใน 3 นาที' },
+  { id: '5', title: 'Online course', des: 'รู้เรื่องธุรกิจใน 3 นาที' },
+  { id: '6', title: 'Online course', des: 'รู้เรื่องธุรกิจใน 3 นาที' },
+]
+
+
+const consults = [
+  { id: '0', name: 'Willian', des: 'blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '1', name: 'Angiliga', des: 'blanditiis temporibus laborum, adipisci sit aut autem.' },
+  { id: '2', name: 'Roren', des: 'blanditiis temporibus laborum, adipisci sit aut autem.' },
+]
 
 export default function Home() {
+
+  // const [count, setCount] = useState(0)
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Navbar />
+      <main className="my-10 sm:mx-20 mx-5">
+
+        <div className="text-white">
+          <div className="mark">
+            <div className="line"> </div>
+          </div>
+          <div>ชุ่มฉ่ำ แบรนดิ้ง</div>
+          {/* top */}
+          <div className="mb-10">
+            <h1 className="text-3xl sm:text-5xl thai">อยากสร้างแบรนด์ให้ชัด <br />
+              เล่าเรื่องให้โดน  <br />
+              คุณมาถูกที่แล้ว</h1>
+            <br />
+            <h4>การเป็นตัวจริงแต่ไม่มีที่ยืน มัน<u>เจ็บปวด</u>ใช่ไหม?</h4>
+            <br />
+            <button className="btn bg-primary hover:scale-110 duration-150 text-white">About us</button>
+          </div>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        {/* review */}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className="card  shadow-xl p-10 my-10">
+          <h2 className="text-2xl font-bold text-center py-5 pt-24">รีวิวคอร์สและหนังสือ</h2>
+          <div className="flex justify-center gap-5" >
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+            <a className="tab actived border-2 rounded-full">Coure review</a>
+            <a className="tab border-2 rounded-full">Books</a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          </div>
+
+          <div className="grid grid-flow-row sm:grid-flow-col my-10 gap-5 overflow-scroll py-10">
+
+            {review.map((post) => {
+              return <>
+
+                {/* 1 */}
+
+
+                <div className="card carousel-item w-96 bg-base-100 shadow-md border-green-300" key={post.id}>
+                  <div className="card-body" >
+
+                    <div className="card-actions justify-end">
+                      <button className="btn btn-square btn-sm" >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                      </button>
+                    </div>
+                    <div className="grid gap-3 grid-flow-row">
+                      <div className="bg-primary rounded-full w-20 h-20 overflow-hidden"><img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" className="w-full h-full object-cover" alt="" /></div>
+                      <div className="rating">
+                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-yellow-500" />
+                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-yellow-500" />
+                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-yellow-500" />
+                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-yellow-500" />
+                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-yellow-500" checked />
+                      </div>
+                      <div>
+                        <p>{post.name}</p>
+                        <p className="text-sm">{post.msg}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </>
+            })}
+
+
+
+          </div>
+        </div>
+        {/*  */}
+
+        <div className="divider"></div>
+
+        {/* course */}
+        <div className="">
+          <h2 className="text-2xl font-bold text-center py-5 pt-24">คอร์สรีวิว 3 นาที</h2>
+
+          <div className="flex overflow-scroll py-10 gap-5">
+            {courses.map((course) => {
+              return <>
+                <div className="grid gap-10 sm:flex justify-center" key={course.id}>
+                  <div className="card w-96 bg-base-100 shadow-xl">
+                    <figure className="px-10 pt-10">
+                      <div className="rounded-2xl overflow-hidden "><img src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="course one" className="hover:saturate-50 rounded-2xl hover:scale-110 duration-150" /></div>
+                    </figure>
+                    <div className="card-body ">
+                      <h2 className="card-title">{course.title}</h2>
+                      <p>{course.des}</p>
+                      <div className="card-actions">
+                        <button className="btn bg-primary">Buy Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </>
+            })}
+          </div>
+
+        </div>
+
+        {/* consult */}
+        <div className="mt-10">
+          <h2 className="text-2xl font-bold text-center py-5 pt-24">ที่ปรึกษา</h2>
+
+          <div className="grid gap-10 sm:flex justify-center">
+            {consults.map((consult) => {
+              return <>
+                <div className=" w-96 grid justify-center justify-items-center text-center" key={consult.id}>
+                  <figure className="px-10 pt-10 pb-5">
+                    <div className="rounded-full w-48 h-48 overflow-hidden drop-shadow-xl"><img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80  " alt="course one" className="w-full" /></div>
+                  </figure>
+                  <div className="">
+                    <h2 className="font-bold">{consult.name}</h2>
+                    <p className="font-thin p-4">{consult.des}</p>
+
+                  </div>
+                </div>
+
+              </>
+            })}
+
+
+            {/*  */}
+
+
+          </div>
+        </div>
+
+
+        {/* menu */}
+        <div className="mt-10">
+          <h2 className="text-2xl font-bold text-center py-5 pt-24">หมวดหมู่</h2>
+
+          <div className="grid gap-10 sm:flex justify-center">
+            <div className="card w-96 bg-base-100 shadow-xl duration-150 hover:-translate-y-4 hover:text-blue-400">
+              <figure className="px-10 py-10">
+                <div className="rounded-2xl overflow-hidden ">Product</div>
+              </figure>
+
+            </div>
+
+            {/*  */}
+
+            <div className="card w-96 bg-base-100 shadow-xl duration-150 hover:-translate-y-4 hover:text-blue-400">
+              <figure className="px-10 py-10">
+                <div className="rounded-2xl overflow-hidden ">Course</div>
+              </figure>
+
+            </div>
+
+            <div className="card w-96 bg-base-100 shadow-xl duration-150 hover:-translate-y-4 hover:text-blue-400">
+              <figure className="px-10 py-10">
+                <div className="rounded-2xl overflow-hidden ">Consult</div>
+              </figure>
+
+            </div>
+
+            <div className="card w-96 bg-base-100 shadow-xl duration-150 hover:-translate-y-4 hover:text-blue-400">
+              <figure className="px-10 py-10">
+                <div className="rounded-2xl overflow-hidden ">Team training</div>
+              </figure>
+
+            </div>
+
+
+          </div>
+        </div>
+
+
+        {/* contents */}
+        <div className="mt-10">
+          <h2 className="text-2xl font-bold text-center py-5 pt-24">Contents</h2>
+
+          <div className="grid gap-10 sm:flex justify-center">
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <figure className="px-10 pt-10">
+                <div className="rounded-2xl overflow-hidden "><img src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="course one" className="hover:saturate-50 rounded-2xl hover:scale-110 duration-150" /></div>
+              </figure>
+              <div className="card-body ">
+                <h2 className="card-title">Online course</h2>
+                <p>รู้เรื่องธุรกิจใน 3 นาที</p>
+                <div className="card-actions">
+                  <button className="btn bg-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+
+            {/*  */}
+
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <figure className="px-10 pt-10">
+                <div className="rounded-2xl overflow-hidden "><img src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="course two" className="hover:saturate-50 rounded-2xl hover:scale-110 duration-150" /></div>
+              </figure>
+              <div className="card-body ">
+                <h2 className="card-title">Online course</h2>
+                <p>รู้เรื่องธุรกิจใน 3 นาที</p>
+                <div className="card-actions">
+                  <button className="btn bg-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        {/* video content */}
+        <div className="mt-10">
+          <h2 className="text-2xl font-bold text-center py-5 pt-24">Videos</h2>
+
+          <div className="grid gap-10 sm:flex justify-center">
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <figure className="px-10 pt-10">
+                <div className="rounded-2xl overflow-hidden "><img src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="course one" className="hover:saturate-50 rounded-2xl hover:scale-110 duration-150" /></div>
+              </figure>
+              <div className="card-body ">
+                <h2 className="card-title">Online course</h2>
+                <p>รู้เรื่องธุรกิจใน 3 นาที</p>
+                <div className="card-actions">
+                  <button className="btn bg-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+
+            {/*  */}
+
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <figure className="px-10 pt-10">
+                <div className="rounded-2xl overflow-hidden "><img src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="course two" className="hover:saturate-50 rounded-2xl hover:scale-110 duration-150" /></div>
+              </figure>
+              <div className="card-body ">
+                <h2 className="card-title">Online course</h2>
+                <p>รู้เรื่องธุรกิจใน 3 นาที</p>
+                <div className="card-actions">
+                  <button className="btn bg-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        {/* Our work */}
+        <div className="mt-10">
+          <h2 className="text-2xl font-bold text-center py-5 pt-24">งานของเรา</h2>
+
+          <div className="grid gap-10 sm:flex justify-center">
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <figure className="px-10 pt-10">
+                <div className="rounded-2xl overflow-hidden "><img src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="course one" className="hover:saturate-50 rounded-2xl hover:scale-110 duration-150" /></div>
+              </figure>
+              <div className="card-body ">
+                <h2 className="card-title">Online course</h2>
+                <p>รู้เรื่องธุรกิจใน 3 นาที</p>
+                <div className="card-actions">
+                  <button className="btn bg-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+
+            {/*  */}
+
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <figure className="px-10 pt-10">
+                <div className="rounded-2xl overflow-hidden "><img src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="course two" className="hover:saturate-50 rounded-2xl hover:scale-110 duration-150" /></div>
+              </figure>
+              <div className="card-body ">
+                <h2 className="card-title pt-24">Online course</h2>
+                <p>รู้เรื่องธุรกิจใน 3 นาที</p>
+                <div className="card-actions">
+                  <button className="btn bg-primary">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        {/* registation */}
+
+        <div className="mt-10 card  bg-base-100 shadow-xl">
+          <h3 className="card-title text-center p-10">ลงทะเบียนพูดคุยกับชุ่มฉ่ำ</h3>
+          <form action="" className="grid gap-5 px-10 pb-10">
+            <div className="grid grid-flow-col gap-5">
+              <div>
+                <label htmlFor='name'>ชื่อ</label>
+                <input type="text" id='name' className="input input-bordered input-md w-full " placeholder="กรอกชื่อ" />
+              </div>
+              <div>
+                <label htmlFor='tel'>เบอร์โทร</label>
+                <input type="text" id='tel' className="input input-bordered input-md w-full " placeholder="กรอกเบอร์โทรศัพท์" />
+              </div>
+            </div>
+            <div>
+              <label htmlFor='email'>อีเมล์</label>
+              <input type="text" id='email' className="input input-bordered input-md w-full " placeholder="กรอกอีเมล์" />
+            </div>
+            <div>
+              <label htmlFor='bussines'>ชื่อองค์กร/ธุรกิจที่คุณทำอยู่</label>
+              <input type="text" id='bussines' className="input input-bordered input-md w-full " placeholder="กรอกชื่อองค์กร/ธุรกิจที่คุณทำอยู่" />
+            </div>
+            <div>
+              <label htmlFor='fb'>Facebook / fanpage</label>
+              <input type="text" id='fb' className="input input-bordered input-md w-full " placeholder="กรอกFacebook / fanpage" />
+            </div>
+            <div>
+              <label htmlFor='trouble'>ปัญหาที่อยากระบาย</label>
+              <textarea id='trouble' rows={50} className="input input-bordered input-md w-full " placeholder="ระบุ"></textarea>
+            </div>
+
+            <button type="submit" className="btn bg-primary">ลงทะเบียน</button>
+          </form>
+        </div>
+
+        {/*  */}
+
+
+      </main>
+    </>
   )
 }

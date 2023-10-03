@@ -1,27 +1,83 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  font-family: 'Cloud Soft','Mali', cursive;
+}
+
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --activedcolor: #D33666;
+  /* --activedcolor:linear-gradient(90deg, rgba(34,193,195,1) 0%, rgb(253, 187, 45) 100%);
+  --activedcolorfade:linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253, 187, 45, 0.716) 100%); */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+#sidebar a.active {
+  color: rgb(255, 255, 255);
+}
+
+
+
+.thai{
+  line-height: 1.5;
+}
+.bg-radial{
+  background: radial-gradient(102.99% 19.58% at 875.44% 15.12%, rgba(23, 167, 138, 0) 0%, #08372E 100%);
+}
+.bg-primary{
+  background: var(--activedcolor);
+}
+.bg-primary-fade{
+  background: var(--activedcolorfade);
+}
+
+.actived {
+  background: var(--activedcolor);
+  color:white;
+  border-color:var(--activedcolor);
+}
+.mark{
+
+  overflow: hidden;
+  width: 100%;
+  mask-image: url(/masker.svg);
+  mask-repeat: no-repeat;
+  mask-size: 100rem;
+  /* border-radius: 100%; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.line{
+  /* position:absolute;
+  right:0;
+  top:0; */
+
+  height: 100vh;
+  background: url(https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+  background-color: var(--activedcolor);
+  background-size: contain;
+}
+
+@media screen and (max-width: 986px){
+  .mark{
+    mask-size: 85rem;
   }
+  
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
