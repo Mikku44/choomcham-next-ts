@@ -51,7 +51,7 @@ function Navbar() {
                         <Link className='hover:text-pink-600' href="/about">
                             <li>About us</li>
                         </Link>
-                    </ul>
+                    </ul>  
                 </nav>
                 <div className="sm:grid gap-3 hidden grid-flow-col">
                     <Link target="_blank" href="https://lin.ee/5p0JD5t"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" className="text-black fill-current" width="24" height="24" viewBox="0 0 50 50">
