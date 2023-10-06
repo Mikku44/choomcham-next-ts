@@ -3,6 +3,11 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;500;600;700&display=swap');
 
+@font-face {
+  font-family: myFirstFont;
+  src: url('/fonts/cloudsoft/Cloud Soft-Bold.otf');
+}
+
 *{
 
   font-family: 'Cloud Soft','Mali', cursive;
