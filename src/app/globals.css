@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;500;600;700&display=swap');
+
 
 @font-face {
   font-family: 'Cloud Soft';
@@ -16,7 +16,7 @@
 
 *{
 
-  font-family: 'Cloud Soft', cursive;
+  font-family: cursive'Cloud Soft';
   scroll-behavior: smooth;
 }
 
