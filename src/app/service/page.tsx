@@ -64,6 +64,7 @@ function Service() {
 
             <div className="bg-[#17A78ABA] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">หลักสูตรเจ้าของธุรกิจ</h4>
+                <div className="h-5"></div>
 
                 <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
                     <div className="sm:block hidden"></div>
@@ -83,13 +84,22 @@ function Service() {
                         </>
                     })}
 
-
+                    <div className="sm:block hidden"></div>
+                </div>
+                <div className="flex justify-center gap-3 pt-5">
+                    {bussiness.map((x,index)=> {
+                        return <>
+                        <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        
+                        </>
+                    })}
                 </div>
 
             </div>
 
             <div className="bg-[#3C429780] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">สำหรับงานโปรดักชั่น</h4>
+                <div className="h-5"></div>
                 <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
                     <div className="sm:block hidden"></div>
@@ -109,12 +119,21 @@ function Service() {
                         </>
                     })}
 
-
+                    <div className="sm:block hidden"></div>
+                </div>
+                <div className="flex justify-center gap-3 pt-5">
+                    {bussiness.map((x,index)=> {
+                        return <>
+                        <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        
+                        </>
+                    })}
                 </div>
             </div>
 
             <div className="bg-[#F2C76291] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">คอร์สออนไลน์</h4>
+                <div className="h-5"></div>
                 <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
                     <div className="sm:block hidden"></div>
@@ -134,12 +153,21 @@ function Service() {
                         </>
                     })}
 
-
+                    <div className="sm:block hidden"></div>
+                </div>
+                <div className="flex justify-center gap-3 pt-5">
+                    {bussiness.map((x,index)=> {
+                        return <>
+                        <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        
+                        </>
+                    })}
                 </div>
             </div>
 
             <div className="bg-pink-500/50 pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">คอร์สออนไลน์</h4>
+                <div className="h-5"></div>
                 <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
 
@@ -160,8 +188,17 @@ function Service() {
                         </>
                     })}
 
-
+                    <div className="sm:block hidden"></div>
                 </div>
+                <div className="flex justify-center gap-3 pt-5">
+                    {bussiness.map((x,index)=> {
+                        return <>
+                        <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        
+                        </>
+                    })}
+                </div>
+
             </div>
         </div>
         <Footer />
