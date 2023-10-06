@@ -65,12 +65,13 @@ function Service() {
             <div className="bg-[#17A78ABA] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">หลักสูตรเจ้าของธุรกิจ</h4>
 
-                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
+                <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
+                    <div className="sm:block hidden"></div>
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center  w-[36rem] px-4 gap-5 h-56 drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
-                                <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="" /></div>
+                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-4 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                                <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/0374f75c.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title}</div>
                                     <div>{post.description}</div>
@@ -89,13 +90,14 @@ function Service() {
 
             <div className="bg-[#3C429780] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">สำหรับงานโปรดักชั่น</h4>
-                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
+                <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
+                    <div className="sm:block hidden"></div>
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center  w-[36rem] px-4 gap-5 h-56 drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
-                                <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="" /></div>
+                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-4 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                                <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/0374f75c.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title}</div>
                                     <div>{post.description}</div>
@@ -113,12 +115,13 @@ function Service() {
 
             <div className="bg-[#F2C76291] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">คอร์สออนไลน์</h4>
-                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
+                <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
+                    <div className="sm:block hidden"></div>
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center  w-[36rem] px-4 gap-5 h-56 drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-4 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
                                 <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title}</div>
@@ -137,13 +140,14 @@ function Service() {
 
             <div className="bg-pink-500/50 pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">คอร์สออนไลน์</h4>
-                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
+                <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
 
+                    <div className="sm:block hidden"></div>
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center  w-[36rem] px-4 gap-5 h-56 drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-4 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
                                 <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title}</div>
