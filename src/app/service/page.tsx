@@ -65,7 +65,7 @@ function Service() {
             <div className="bg-[#17A78ABA] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">หลักสูตรเจ้าของธุรกิจ</h4>
 
-                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll">
+                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
                     {bussiness.map((post) => {
                         return <>
 
@@ -89,7 +89,7 @@ function Service() {
 
             <div className="bg-[#3C429780] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">สำหรับงานโปรดักชั่น</h4>
-                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll">
+                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
                     {bussiness.map((post) => {
                         return <>
@@ -113,7 +113,7 @@ function Service() {
 
             <div className="bg-[#F2C76291] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">คอร์สออนไลน์</h4>
-                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll">
+                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
                     {bussiness.map((post) => {
                         return <>
@@ -137,7 +137,7 @@ function Service() {
 
             <div className="bg-pink-500/50 pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5">คอร์สออนไลน์</h4>
-                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll">
+                <div className="grid grid-flow-col gap-3 snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
 
                     {bussiness.map((post) => {

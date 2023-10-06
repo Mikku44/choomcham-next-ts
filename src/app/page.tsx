@@ -74,7 +74,7 @@ export default function Home() {
 
           </div>
 
-          <div className="grid grid-flow-row sm:grid-flow-col my-10 gap-5 overflow-scroll py-10">
+          <div className="grid grid-flow-row sm:grid-flow-col my-10 gap-5 overflow-scroll  scrollbar-hide py-10">
 
             {review.map((post) => {
               return <div key={post.id}>
@@ -122,7 +122,7 @@ export default function Home() {
         <div className="">
           <h2 className="text-2xl font-bold text-center py-5 pt-24">คอร์สรีวิว 3 นาที</h2>
 
-          <div className="flex overflow-scroll py-10 gap-5">
+          <div className="flex overflow-scroll  scrollbar-hide py-10 gap-5">
             {courses.map((course) => {
               return <>
                 <div className="grid gap-10 sm:flex justify-center" key={course.id}>
