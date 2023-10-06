@@ -70,7 +70,7 @@ function Service() {
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-4 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
                                 <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/0374f75c.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title}</div>
@@ -96,8 +96,8 @@ function Service() {
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-4 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
-                                <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/0374f75c.png" alt="" /></div>
+                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                                <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/c41ef567.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title}</div>
                                     <div>{post.description}</div>
@@ -121,8 +121,8 @@ function Service() {
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-4 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
-                                <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="" /></div>
+                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                                <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title}</div>
                                     <div>{post.description}</div>
@@ -147,8 +147,8 @@ function Service() {
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-4 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
-                                <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="" /></div>
+                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                                <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/b1eddfa0.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title}</div>
                                     <div>{post.description}</div>
