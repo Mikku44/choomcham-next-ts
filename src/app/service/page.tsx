@@ -55,15 +55,15 @@ function Service() {
 
             <div className="p-10">
                 <ul className="grid  sm:grid-flow-col gap-5 text-center">
-                    <li className="rounded-full bg-black px-4 py-2 btn text-white">หลักสูตรเจ้าของธุรกิจ</li>
-                    <li className="rounded-full bg-black px-4 py-2 btn text-white">สำหรับงานโปรดักชั่น</li>
-                    <li className="rounded-full bg-black px-4 py-2 btn text-white">คอร์สออนไลน์</li>
-                    <li className="rounded-full bg-black px-4 py-2 btn text-white">คอร์สออนไลน์</li>
+                    <li className="rounded-full bg-black px-4 py-2 btn text-white"><a href="#bussiness">หลักสูตรเจ้าของธุรกิจ</a></li>
+                    <li className="rounded-full bg-black px-4 py-2 btn text-white"><a href="#production">สำหรับงานโปรดักชั่น</a></li>
+                    <li className="rounded-full bg-black px-4 py-2 btn text-white"><a href="#online">คอร์สออนไลน์</a></li>
+                    <li className="rounded-full bg-black px-4 py-2 btn text-white"><a href="#last">คอร์สออนไลน์</a></li>
                 </ul>
             </div>
 
             <div className="bg-[#17A78ABA] pb-[80px]">
-                <h4 className="text-center text-white text-3xl py-5">หลักสูตรเจ้าของธุรกิจ</h4>
+                <h4 className="text-center text-white text-3xl py-5" id="bussiness">หลักสูตรเจ้าของธุรกิจ</h4>
                 <div className="h-5"></div>
 
                 <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
@@ -71,10 +71,10 @@ function Service() {
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                            <div id={"B"+post.id} className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
                                 <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/0374f75c.png" alt="" /></div>
                                 <div className="grid ">
-                                    <div className="text-xl font-bold">{post.title}</div>
+                                    <div className="text-xl font-bold">{post.title} {post.id}</div>
                                     <div>{post.description}</div>
                                     <div className="flex flex-end"><button className="bg-[#17A78ABA] px-3 py-1 rounded-md hover:bg-[#17a78ae5] ">ซื้อคอร์ส</button></div>
                                 </div>
@@ -87,9 +87,11 @@ function Service() {
                     <div className="sm:block hidden"></div>
                 </div>
                 <div className="flex justify-center gap-3 pt-5">
-                    {bussiness.map((x,index)=> {
+                    {bussiness.map((x)=> {
                         return <>
-                        <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        <a href={"#B"+x.id}>
+                            <div className="w-4 h-4 rounded-full border-2 border-pink-500"></div>
+                        </a>
                         
                         </>
                     })}
@@ -98,7 +100,7 @@ function Service() {
             </div>
 
             <div className="bg-[#3C429780] pb-[80px]">
-                <h4 className="text-center text-white text-3xl py-5">สำหรับงานโปรดักชั่น</h4>
+                <h4 className="text-center text-white text-3xl py-5" id='production'>สำหรับงานโปรดักชั่น</h4>
                 <div className="h-5"></div>
                 <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
@@ -106,10 +108,10 @@ function Service() {
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                            <div id={"P"+post.id} className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
                                 <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/c41ef567.png" alt="" /></div>
                                 <div className="grid ">
-                                    <div className="text-xl font-bold">{post.title}</div>
+                                    <div className="text-xl font-bold">{post.title} {post.id}</div>
                                     <div>{post.description}</div>
                                     <div className="flex flex-end"><button className="bg-[#3C429780] px-3 py-1 rounded-md hover:bg-[#3c4297da] ">ซื้อคอร์ส</button></div>
                                 </div>
@@ -122,9 +124,11 @@ function Service() {
                     <div className="sm:block hidden"></div>
                 </div>
                 <div className="flex justify-center gap-3 pt-5">
-                    {bussiness.map((x,index)=> {
+                    {bussiness.map((x)=> {
                         return <>
-                        <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        <a href={'#P'+x.id}>
+                            <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        </a>
                         
                         </>
                     })}
@@ -132,7 +136,7 @@ function Service() {
             </div>
 
             <div className="bg-[#F2C76291] pb-[80px]">
-                <h4 className="text-center text-white text-3xl py-5">คอร์สออนไลน์</h4>
+                <h4 className="text-center text-white text-3xl py-5" id='online'>คอร์สออนไลน์</h4>
                 <div className="h-5"></div>
                 <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
@@ -140,10 +144,10 @@ function Service() {
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                            <div id={"C"+post.id} className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
                                 <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="" /></div>
                                 <div className="grid ">
-                                    <div className="text-xl font-bold">{post.title}</div>
+                                    <div className="text-xl font-bold">{post.title} {post.id}</div>
                                     <div>{post.description}</div>
                                     <div className="flex flex-end"><button className="bg-[#F2C76291] px-3 py-1 rounded-md hover:bg-[#f2c762ed] ">ซื้อคอร์ส</button></div>
                                 </div>
@@ -158,7 +162,9 @@ function Service() {
                 <div className="flex justify-center gap-3 pt-5">
                     {bussiness.map((x,index)=> {
                         return <>
-                        <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        <a href={'#C'+x.id}>
+                            <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        </a>
                         
                         </>
                     })}
@@ -166,7 +172,7 @@ function Service() {
             </div>
 
             <div className="bg-pink-500/50 pb-[80px]">
-                <h4 className="text-center text-white text-3xl py-5">คอร์สออนไลน์</h4>
+                <h4 className="text-center text-white text-3xl py-5" id='last'>คอร์สออนไลน์</h4>
                 <div className="h-5"></div>
                 <div className="grid grid-flow-col gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
 
@@ -175,10 +181,10 @@ function Service() {
                     {bussiness.map((post) => {
                         return <>
 
-                            <div className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
+                            <div id={"D"+post.id} className="bg-white rounded-lg snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] drop-shadow-xl flex  items-center justify-items-center" key={post.id}>
                                 <div className="overflow-hidden rounded-md h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/b1eddfa0.png" alt="" /></div>
                                 <div className="grid ">
-                                    <div className="text-xl font-bold">{post.title}</div>
+                                    <div className="text-xl font-bold">{post.title} {post.id}</div>
                                     <div>{post.description}</div>
                                     <div className="flex flex-end"><button className="bg-pink-500/50 px-3 py-1 rounded-md hover:bg-pink-500 ">ซื้อคอร์ส</button></div>
                                 </div>
@@ -191,9 +197,11 @@ function Service() {
                     <div className="sm:block hidden"></div>
                 </div>
                 <div className="flex justify-center gap-3 pt-5">
-                    {bussiness.map((x,index)=> {
+                    {bussiness.map((x)=> {
                         return <>
-                        <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        <a href={'#D'+x.id}>
+                            <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
+                        </a>
                         
                         </>
                     })}
