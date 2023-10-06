@@ -25,7 +25,7 @@ function Service() {
         </head>
 
         <Navbar />
-        <main className="my-10 sm:mx-20 mx-5">
+        <main className="my-10 ">
 
             {/* <div>ชุ่มฉ่ำ แบรนดิ้ง</div> */}
             {/* top */}
@@ -35,7 +35,7 @@ function Service() {
            
        </div> */}
 
-            <div className="bg-radial rounded-xl h-[400px] p-10 pb-[26rem] mt-5 relative text-white">
+            <div className="bg-radial rounded-xl h-[400px] p-10 pb-[26rem] mt-5 relative text-white sm:mx-20 mx-5">
                 <h2 className="text-blue-600 text-[62px] font-bold">Service</h2>
                 <h3 className="text-2xl">ให้ทีมงานช่วยเลือกบริการที่เหมาะสมกับคุณ</h3>
                 <div className="py-5"></div>
