@@ -77,12 +77,12 @@ export default function Home() {
           <div className="grid grid-flow-row sm:grid-flow-col my-10 gap-5 overflow-scroll py-10">
 
             {review.map((post) => {
-              return <>
+              return <div key={post.id}>
 
                 {/* 1 */}
 
 
-                <div className="card carousel-item w-96 bg-base-100 shadow-md border-green-300" key={post.id}>
+                <div className="card carousel-item w-96 bg-base-100 shadow-md border-green-300" >
                   <div className="card-body" >
 
                     <div className="card-actions justify-end">
@@ -97,7 +97,7 @@ export default function Home() {
                         <input type="radio" name="rating-4" className="mask mask-star-2 bg-yellow-500" />
                         <input type="radio" name="rating-4" className="mask mask-star-2 bg-yellow-500" />
                         <input type="radio" name="rating-4" className="mask mask-star-2 bg-yellow-500" />
-                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-yellow-500" checked />
+                        <input type="radio" name="rating-4" className="mask mask-star-2 bg-yellow-500" />
                       </div>
                       <div>
                         <p>{post.name}</p>
@@ -107,7 +107,7 @@ export default function Home() {
                   </div>
                 </div>
 
-              </>
+              </div>
             })}
 
 
