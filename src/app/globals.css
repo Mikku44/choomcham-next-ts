@@ -11,12 +11,12 @@
 @font-face {
   font-family: 'Cloud Soft';
   src: url('/fonts/cloudsoft/Cloud-Soft-Light.ttf');
-  font-weight:normal;
+  font-weight:400;
 }
 
 *{
 
-  font-family: cursive'Cloud Soft';
+  font-family: cursive,'Cloud Soft';
   scroll-behavior: smooth;
 }
 
@@ -25,7 +25,7 @@
   --activedcolor: #D33666;
   /* --activedcolor:linear-gradient(90deg, rgba(34,193,195,1) 0%, rgb(253, 187, 45) 100%);
   --activedcolorfade:linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253, 187, 45, 0.716) 100%); */
-  font-family: Inter;
+  font-family: 'Cloud Soft',Inter;
   line-height: 1.5;
   font-weight: 400;
 
