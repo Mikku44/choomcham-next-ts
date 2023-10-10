@@ -101,7 +101,7 @@ export default function Home() {
 
         {/* review */}
 
-        <div className="card  shadow-xl p-10 my-10">
+        <div className="   p-10 my-10">
           <h2 className="text-2xl font-bold text-center py-5 pt-24">รีวิวคอร์สและหนังสือ</h2>
           <div className="flex justify-center gap-5" >
 
@@ -152,11 +152,11 @@ export default function Home() {
         </div>
         {/*  */}
 
-        <div className="divider"></div>
+        {/* <div className="divider"></div> */}
 
         {/* course */}
         <div className="rounded-xl">
-          <h2 className="text-2xl font-bold text-center py-5 pt-24">คอร์สรีวิว 3 นาที</h2>
+          <h2 className="text-2xl font-bold text-center ">คอร์สรีวิว 3 นาที</h2>
 
           <div className="flex overflow-scroll  scrollbar-hide py-10 gap-5">
             {courses.map((course) => {
