@@ -34,8 +34,8 @@ function Service() {
            
        </div> */}
 
-            <div className="bg-radial rounded-xl h-[400px] p-10 pb-[26rem] mt-5 relative text-white sm:mx-20 mx-5">
-                <h2 className="text-blue-600 text-[62px] font-bold">Service</h2>
+            <div className="bg-radial rounded-xl h-[400px] p-10 pb-[26rem] mt-5 relative text-white sm:mx-20 mx-5 overflow-hidden">
+                <h2 className="text-blue-600 text-2xl sm:text-[62px] py-3 font-bold">Service</h2>
                 <h3 className="text-2xl">ให้ทีมงานช่วยเลือกบริการที่เหมาะสมกับคุณ</h3>
                 <div className="py-5"></div>
                 <div className="rounded-full bg-primary px-4 py-2 w-48 text-center">เงื่อนไขการให้บริการ</div>
@@ -47,7 +47,7 @@ function Service() {
 
                 </ul>
 
-                <Image className='absolute right-10 bottom-[36px]' width={300} height={300} src="./icon.svg" alt="" />
+                <Image className='absolute -right-10 w-48 sm:right-10 bottom-[36px]' width={300} height={300} src="./icon.svg" alt="" />
                 <div className="text-center bg-white px-3 py-2 text-green-600 rounded-md w-48 mt-5 btn">สอบถามเพิ่มเติม</div>
 
             </div>
@@ -66,7 +66,7 @@ function Service() {
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id="bussiness">หลักสูตรเจ้าของธุรกิจ</h4>
                 <div className="h-5"></div>
 
-                <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
+                <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide">
                     <div className="sm:block hidden"></div>
                     {bussiness.map((post) => {
                         return <>
@@ -102,7 +102,7 @@ function Service() {
             <div className="bg-[#3C429780] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id='production'>สำหรับงานโปรดักชั่น</h4>
                 <div className="h-5"></div>
-                <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
+                <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide">
 
                     <div className="sm:block hidden"></div>
                     {bussiness.map((post) => {
@@ -138,7 +138,7 @@ function Service() {
             <div className="bg-[#F2C76291] pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id='online'>คอร์สออนไลน์</h4>
                 <div className="h-5"></div>
-                <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
+                <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide">
 
                     <div className="sm:block hidden"></div>
                     {bussiness.map((post) => {
@@ -174,7 +174,7 @@ function Service() {
             <div className="bg-pink-500/50 pb-[80px]">
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id='last'>คอร์สออนไลน์</h4>
                 <div className="h-5"></div>
-                <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md mx-10 overflow-scroll  scrollbar-hide">
+                <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide">
 
 
                     <div className="sm:block hidden"></div>

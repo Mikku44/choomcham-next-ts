@@ -78,7 +78,7 @@
   width: 100%;
   mask-image: url(/masker.svg);
   mask-repeat: no-repeat;
-  mask-size: 100rem;
+  mask-size: 125rem;
   /* border-radius: 100%; */
   position: absolute;
   left: 0;

@@ -43,8 +43,44 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="my-10 sm:mx-20 mx-5">
+      <div className='absolute top-[90%] -left-10 -z-10'>
+      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#D33666" fill-opacity="0.5" />
+        </svg>
+      </div>
 
+      <div className='absolute top-[100rem] -right-10 -z-10'>
+      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#3C4297" fill-opacity="0.5" />
+        </svg>
+      </div>
+
+      <div className='absolute top-[150rem] -left-10 -z-10'>
+      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#17A78A" fill-opacity="0.5" />
+        </svg>
+      </div>
+
+      <div className='absolute top-[200rem] -right-10 -z-10'>
+      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#68686A" fill-opacity="0.5" />
+        </svg>
+      </div>
+
+      <div className='absolute top-[250rem] -left-10 -z-10'>
+      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#028ECA" fill-opacity="0.5" />
+        </svg>
+      </div>
+
+      <div className='absolute top-[300rem] -right-10 -z-10'>
+      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#F2C762" fill-opacity="0.5" />
+        </svg>
+      </div>
+
+      <main className="my-10 sm:mx-10 mx-5">
+     
         <div className="text-white">
           <div className="mark">
             <div className="line"> </div>
@@ -119,14 +155,14 @@ export default function Home() {
         <div className="divider"></div>
 
         {/* course */}
-        <div className="">
+        <div className="rounded-xl">
           <h2 className="text-2xl font-bold text-center py-5 pt-24">คอร์สรีวิว 3 นาที</h2>
 
           <div className="flex overflow-scroll  scrollbar-hide py-10 gap-5">
             {courses.map((course) => {
               return <>
                 <div className="grid gap-10 sm:flex justify-center" key={course.id}>
-                  <div className="card w-96 bg-base-100 shadow-xl">
+                  <div className="card w-60 sm:w-96 bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                       <div className="rounded-2xl overflow-hidden "><img src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="course one" className="hover:saturate-50 rounded-2xl hover:scale-110 duration-150" /></div>
                     </figure>

@@ -1,12 +1,11 @@
-import Navbar from "../components/nav";
-import Footer from '../components/footer';
+
 
 function Blog(){
     return(
         <>
-        <Navbar />
-        <main className="my-10 sm:mx-20 mx-5">
        
+        <div className="my-10 sm:mx-20 mx-5">
+            <div><img src="" alt="" /></div>
             <div>ชุ่มฉ่ำ แบรนดิ้ง</div>
             {/* top */}
             <div className="mb-10">
@@ -15,8 +14,8 @@ function Blog(){
                 
             </div>
 
-        </main>
-        <Footer />
+        </div>
+    
         </>
     )
 }
