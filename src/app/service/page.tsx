@@ -2,7 +2,7 @@ import Navbar from "../components/nav";
 import Footer from '../components/footer';
 import Head from "next/head";
 import Image from "next/image";
-import { activate } from "firebase/remote-config";
+
 
 
 

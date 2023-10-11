@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className={cloudSoft.className}>{children}</body>
       {/* <body className={inter.className}>{children}</body> */}
    
-    <script src='app.js'></script>
+    {/* <script src='app.js'></script> */}
     </html>
   
   )
