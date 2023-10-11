@@ -2,6 +2,7 @@ import Navbar from "../components/nav";
 import Footer from '../components/footer';
 import Head from "next/head";
 import Image from "next/image";
+import { activate } from "firebase/remote-config";
 
 
 
@@ -88,9 +89,13 @@ function Service() {
                 </div>
                 <div className="flex justify-center gap-3 pt-5">
                     {bussiness.map((x)=> {
+                        let btnActive = ""
+                        if (x.id == '0'){
+                            btnActive = "btn-active"
+                        }
                         return <>
                         <a href={"#B"+x.id}>
-                            <div className="w-4 h-4 rounded-full border-2 border-pink-500"></div>
+                            <div className={"w-4 h-4 rounded-full border-2 border-pink-500 "+ btnActive} ></div>
                         </a>
                         
                         </>

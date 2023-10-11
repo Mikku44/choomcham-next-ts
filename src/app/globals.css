@@ -96,6 +96,11 @@
   background-size: contain;
 }
 
+.btn-active{
+  background: rgb(236 72 153);
+  padding: 0 30px;
+}
+
 @media screen and (max-width: 986px){
   .mark{
     mask-size: 85rem;
