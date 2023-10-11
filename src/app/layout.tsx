@@ -2,6 +2,23 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
+
+const cloudSoft = localFont({
+  src: [
+    {
+      path: './fonts/CloudSoft/Cloud-Soft-Light.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/CloudSoft/Cloud-Soft-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+
+  ],
+})
 // const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -17,7 +34,7 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      <body className='overflow-x-hidden'>{children}</body>
+      <body className={cloudSoft.className}>{children}</body>
       {/* <body className={inter.className}>{children}</body> */}
    
     <script src='app.js'></script>
