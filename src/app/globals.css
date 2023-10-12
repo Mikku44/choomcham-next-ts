@@ -3,23 +3,26 @@
 @tailwind utilities;
 
 
-  @import url('https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap');
 
 
 @font-face {
   font-family: 'Cloud Soft';
-  src: url('https://github.com/Mikku44/choomcham-next-ts/tree/master/src/app/fonts/cloudsoft/Cloud-Soft-Bold.ttf');
-  font-weight:bold;
+  src: url('https://github.com/Mikku44/choomcham-next-ts/blob/master/src/app/fonts/cloudsoft/Cloud-Soft-Bold.ttf');
+  font-weight:700;
+  weight: '700';
+
 }
 @font-face {
   font-family: 'Cloud Soft';
-  src: url('https://github.com/Mikku44/choomcham-next-ts/tree/master/src/app/fonts/cloudsoft/Cloud-Soft-Light.otf');
-  font-weight:normal;
+  src: url('https://github.com/Mikku44/choomcham-next-ts/blob/master/src/app/fonts/CloudSoft/Cloud-Soft-Light.ttf');
+  font-weight:400;
+  weight: '400';
 }
 
-*{
+h1{
 
-  font-family: 'Cloud Soft','prompt';
+  font-family: 'Cloud Soft','Prompt';
   scroll-behavior: smooth;
 }
 
@@ -30,7 +33,7 @@
   --activedcolorfade:linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253, 187, 45, 0.716) 100%); */
   font-family: 'Cloud Soft',Inter;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: normal;
 
   color-scheme: light ;
 
