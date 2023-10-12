@@ -1,6 +1,8 @@
 // 'use client'
+// import { motion } from "framer-motion"
 import Image from 'next/image'
 import Navbar from './components/nav'
+import Link from 'next/link'
 // import { useState } from 'react'
 
 
@@ -42,45 +44,46 @@ export default function Home() {
   // const [count, setCount] = useState(0)
   return (
     <>
+      {/* <motion.div initial={false} animate={{ x: 100 }} /> */}
       <Navbar />
       <div className='absolute sm:block hidden top-[90%]  sm:-left t-10 -z-10'>
-      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+        <svg className='w-[30rem] sm:w-[60rem]' height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
           <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#D33666" fill-opacity="0.5" />
         </svg>
       </div>
 
-      <div className='absolute sm:block hidden top-[100rem] sm:-right-10 -z-10'>
-      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+      <div className='absolute sm:block  top-[100rem] sm:right-0 -z-10'>
+        <svg className='w-[30rem] sm:w-[60rem]' height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
           <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#3C4297" fill-opacity="0.5" />
         </svg>
       </div>
 
       <div className='absolute sm:block hidden top-[150rem] sm:-left-10 -z-10'>
-      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+        <svg className='w-[30rem] sm:w-[60rem]' height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
           <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#17A78A" fill-opacity="0.5" />
         </svg>
       </div>
 
-      <div className='absolute sm:block hidden top-[200rem] sm:-right-10 -z-10'>
-      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+      <div className='absolute sm:block  top-[200rem] sm:right-0 -z-10'>
+        <svg className='w-[30rem] sm:w-[60rem]' height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
           <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#68686A" fill-opacity="0.5" />
         </svg>
       </div>
 
       <div className='absolute sm:block hidden top-[250rem] sm:-left-10 -z-10'>
-      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+        <svg className='w-[30rem] sm:w-[60rem]' height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
           <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#028ECA" fill-opacity="0.5" />
         </svg>
       </div>
 
-      <div className='absolute sm:block hidden top-[300rem] sm:-right-10 -z-10'>
-      <svg width="703" height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
+      <div className='absolute sm:block  top-[300rem] sm:right-0 -z-10'>
+        <svg className='w-[30rem] sm:w-[60rem]' height="663" viewBox="0 0 703 663" fill="none" xmlns="http://www.w3.org/2000/svg" >
           <path fill-rule="evenodd" clip-rule="evenodd" d="M199.454 2.92203C279.775 -15.3187 339.711 70.1149 416.946 98.6863C494.048 127.209 592.553 103.304 644.027 167.383C703.092 240.912 717.201 346.332 687.906 435.999C657.722 528.382 580.504 597.873 490.991 635.787C404.172 672.56 306.079 670.549 218.921 634.64C134.943 600.042 72.2263 530.766 35.0215 447.928C-1.7947 365.956 -12.3364 273.409 18.8157 189.101C49.9672 104.795 111.792 22.83 199.454 2.92203Z" fill="#F2C762" fill-opacity="0.5" />
         </svg>
       </div>
 
       <main className="my-10 sm:mx-10 mx-5">
-     
+
         <div className="text-white">
           <div className="mark">
             <div className="line"> </div>
@@ -94,7 +97,7 @@ export default function Home() {
             <br />
             <h4>การเป็นตัวจริงแต่ไม่มีที่ยืน มัน<u>เจ็บปวด</u>ใช่ไหม?</h4>
             <br />
-            <button className="btn bg-primary hover:scale-110 duration-150 text-white">About us</button>
+            <Link href="/about"><div className="btn bg-primary rounded-full px-10 py-1 border-0 hover:scale-110 duration-150 text-white">About us</div></Link>
           </div>
         </div>
 
