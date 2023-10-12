@@ -13,8 +13,8 @@
 }
 @font-face {
   font-family: 'Cloud Soft';
-  src: url('https://github.com/Mikku44/choomcham-next-ts/tree/master/src/app/fonts/cloudsoft/Cloud-Soft-Light.ttf');
-  font-weight:400;
+  src: url('https://github.com/Mikku44/choomcham-next-ts/tree/master/src/app/fonts/cloudsoft/Cloud-Soft-Light.otf');
+  font-weight:normal;
 }
 
 *{
