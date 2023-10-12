@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 import Link from 'next/link'
 function Navbar() {
     const actStyl = "active px-5 py-1 rounded-full  bg-black  shadow-xl"
@@ -33,9 +33,11 @@ function Navbar() {
             <div id='nav' className={header}>
 
                 <nav id="sidebar">
-                    <div className="pr-10"><img src="https://blog.choomcham.com/wp-content/uploads/2021/09/cropped-logo.png" alt="" />
-                        <img src="https://www.choomcham.com/assets/images/4277eb7d.png" className='hidden' alt="" /></div>
-                    <ul className='duration-150 gap-5 hidden sm:flex '>
+                    <Link href="/">
+                        <div className="pr-10"><img src="https://blog.choomcham.com/wp-content/uploads/2021/09/cropped-logo.png" alt="" />
+                            <img src="https://www.choomcham.com/assets/images/4277eb7d.png" className='hidden' alt="" /></div>
+                    </Link>
+                        <ul className='duration-150 gap-5 hidden sm:flex '>
                         <Link className='hover:text-pink-600' href="/">
                             <li>Home</li>
                         </Link>
