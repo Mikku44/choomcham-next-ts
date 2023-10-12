@@ -1,7 +1,9 @@
+"use client"
 import Navbar from "../components/nav";
 import Footer from '../components/footer';
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
 
 
 
@@ -18,7 +20,33 @@ const bussiness = [
     { id: '7', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
 ]
 
+
+
 function Service() {
+    const [btn, setBtn] = useState("");
+    var index: number[] = [0,0,0,0];
+    function scrollItem(i: number, act: number,panelName:string) {
+        const scrollPanel = document.getElementsByClassName('scrollbar-hide');
+        const dot = document.getElementsByClassName(panelName);
+        if (scrollPanel) {
+            if (act == 1) {
+                scrollPanel[i].scrollLeft += 1000;
+                for (let j = 0; j< dot.length;j+=1)
+                    dot[j].classList.remove('btn-active');
+                if(index[i] < dot.length-1)
+                    index[i] += 1;
+                dot[index[i]].classList.add('btn-active');
+            }
+            else {
+                scrollPanel[i].scrollLeft -= 1000;
+                for (let j = 0; j< dot.length;j+=1)
+                    dot[j].classList.remove('btn-active');
+                if(index[i] > 0)
+                    index[i] -= 1;
+                dot[index[i]].classList.add('btn-active');
+            }
+        }
+    }
 
     return <>
 
@@ -63,57 +91,71 @@ function Service() {
                 </ul>
             </div>
 
-            <div className="bg-[#17A78ABA] pb-[80px]">
+            <div className="bg-[#17A78ABA] pb-[80px] ">
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id="bussiness">หลักสูตรเจ้าของธุรกิจ</h4>
                 <div className="h-5"></div>
 
-                <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide">
-                    <div className="sm:block hidden"></div>
-                    {bussiness.map((post) => {
-                        return <>
-
-                            <div id={"B"+post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
-                                <div className="overflow-hidden rounded-[20px] h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/0374f75c.png" alt="" /></div>
-                                <div className="grid ">
-                                    <div className="text-xl font-bold">{post.title} {post.id}</div>
-                                    <div>{post.description}</div>
-                                    <div className="flex flex-end"><button className="bg-[#17A78ABA] px-3 py-1 rounded-md hover:bg-[#17a78ae5] ">ซื้อคอร์ส</button></div>
+                <div className="relative">
+                    <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(0, 0,'btn-scroll') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                    </button>
+                    <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(0, 1,'btn-scroll') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                    </button>
+                    <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide">
+                        <div className="sm:block hidden"></div>
+                        {bussiness.map((post) => {
+                            return <>
+                                <div id={"B" + post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
+                                    <div className="overflow-hidden rounded-[20px] h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/0374f75c.png" alt="" /></div>
+                                    <div className="grid ">
+                                        <div className="text-xl font-bold">{post.title} {post.id}</div>
+                                        <div>{post.description}</div>
+                                        <div className="flex flex-end"><button className="bg-[#17A78ABA] px-3 py-1 rounded-md hover:bg-[#17a78ae5] ">ซื้อคอร์ส</button></div>
+                                    </div>
                                 </div>
-                            </div>
-
-
-                        </>
-                    })}
-
-                    <div className="sm:block hidden"></div>
+                            </>
+                        })}
+                        <div className="sm:block hidden"></div>
+                    </div>
                 </div>
                 <div className="flex justify-center gap-3 pt-5">
-                    {bussiness.map((x)=> {
+                    {bussiness.map((x,index) => {
                         let btnActive = ""
-                        if (x.id == '0'){
+                        if (index == 0) {
                             btnActive = "btn-active"
                         }
                         return <>
-                        <a href={"#B"+x.id}>
-                            <div className={"w-4 h-4 rounded-full border-2 border-pink-500 "+ btnActive} ></div>
-                        </a>
-                        
+                            <a href={"#B" + x.id}>
+                                <div className={"w-4 h-4 rounded-full border-2 duration-200 border-pink-500 btn-scroll " + btnActive} ></div>
+                            </a>
+
                         </>
                     })}
                 </div>
 
             </div>
 
-            <div className="bg-[#3C429780] pb-[80px]">
+            <div className="bg-[#3C429780] pb-[80px] relative">
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id='production'>สำหรับงานโปรดักชั่น</h4>
                 <div className="h-5"></div>
+                <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(1, 0,'panel2') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+                </button>
+                <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(1, 1,'panel2') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+                </button>
                 <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide">
 
                     <div className="sm:block hidden"></div>
                     {bussiness.map((post) => {
                         return <>
 
-                            <div id={"P"+post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
+                            <div id={"P" + post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
                                 <div className="overflow-hidden rounded-[20px] h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/c41ef567.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title} {post.id}</div>
@@ -129,27 +171,40 @@ function Service() {
                     <div className="sm:block hidden"></div>
                 </div>
                 <div className="flex justify-center gap-3 pt-5">
-                    {bussiness.map((x)=> {
+                    {bussiness.map((x,index) => {
+                        let btnActive = ""
+                        if (index == 0) {
+                            btnActive = "btn-active"
+                        }
                         return <>
-                        <a href={'#P'+x.id}>
-                            <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
-                        </a>
-                        
+                            <a href={'#P' + x.id}>
+                                <div className={"w-4 h-4 rounded-full border-2 duration-200 border-pink-500 panel2 " + btnActive}></div>
+                            </a>
+
                         </>
                     })}
                 </div>
             </div>
 
-            <div className="bg-[#F2C76291] pb-[80px]">
+            <div className="bg-[#F2C76291] pb-[80px] relative">
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id='online'>คอร์สออนไลน์</h4>
                 <div className="h-5"></div>
+                <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(2, 0,'panel3') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+                </button>
+                <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(2, 1,'panel3') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+                </button>
                 <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide">
 
                     <div className="sm:block hidden"></div>
                     {bussiness.map((post) => {
+                        
                         return <>
 
-                            <div id={"C"+post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
+                            <div id={"C" + post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
                                 <div className="overflow-hidden rounded-[20px] h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title} {post.id}</div>
@@ -165,20 +220,32 @@ function Service() {
                     <div className="sm:block hidden"></div>
                 </div>
                 <div className="flex justify-center gap-3 pt-5">
-                    {bussiness.map((x,index)=> {
+                    {bussiness.map((x, index) => {
+                         let btnActive = ""
+                         if (index == 0) {
+                             btnActive = "btn-active"
+                         }
                         return <>
-                        <a href={'#C'+x.id}>
-                            <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
-                        </a>
-                        
+                            <a href={'#C' + x.id}>
+                                <div className={"w-4 h-4 rounded-full border-2 duration-200 border-pink-500 panel3 " + btnActive}></div>
+                            </a>
+
                         </>
                     })}
                 </div>
             </div>
 
-            <div className="bg-pink-500/50 pb-[80px]">
+            <div className="bg-pink-500/50 pb-[80px] relative">
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id='last'>คอร์สออนไลน์</h4>
                 <div className="h-5"></div>
+                <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(3, 0,'panel4') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+                </button>
+                <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(3, 1,'panel4') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+                </button>
                 <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide">
 
 
@@ -186,7 +253,7 @@ function Service() {
                     {bussiness.map((post) => {
                         return <>
 
-                            <div id={"D"+post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
+                            <div id={"D" + post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
                                 <div className="overflow-hidden rounded-[20px] h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/b1eddfa0.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title} {post.id}</div>
@@ -202,12 +269,16 @@ function Service() {
                     <div className="sm:block hidden"></div>
                 </div>
                 <div className="flex justify-center gap-3 pt-5">
-                    {bussiness.map((x)=> {
+                    {bussiness.map((x,index) => {
+                        let btnActive = ""
+                        if (index == 0) {
+                            btnActive = "btn-active"
+                        }
                         return <>
-                        <a href={'#D'+x.id}>
-                            <div className="w-4 h-4 rounded-full border-2 border-pink-500 "></div>
-                        </a>
-                        
+                            <a href={'#D' + x.id}>
+                                <div className={"w-4 h-4 rounded-full border-2 duration-200 border-pink-500 panel4 "+btnActive}></div>
+                            </a>
+
                         </>
                     })}
                 </div>
