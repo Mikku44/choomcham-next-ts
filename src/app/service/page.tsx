@@ -53,6 +53,9 @@ function Service() {
         <title>Services | ชุ่มฉ่ำ Branding ตัวจริงต้องมีที่ยืน</title>
 
         <Navbar />
+        <div className="mark bg-radial">
+            <div className="line-service"></div>
+        </div>
         <div className="my-10 ">
 
             {/* <div>ชุ่มฉ่ำ แบรนดิ้ง</div> */}
@@ -63,16 +66,16 @@ function Service() {
            
        </div> */}
 
-            <div className="bg-radial rounded-xl h-[400px] p-10 pb-[26rem] mt-5 relative text-white sm:mx-20 mx-5 overflow-hidden">
-                <h2 className="text-blue-600 text-2xl sm:text-[62px] py-3 font-bold">Service</h2>
+            <div className=" rounded-xl h-[400px] p-10 pb-[26rem] mt-5 relative text-white sm:mx-20 mx-5 overflow-hidden">
+                <h2 className="text-[#3C4297] text-2xl sm:text-[62px] py-3 font-bold">Service</h2>
                 <h3 className="text-2xl">ให้ทีมงานช่วยเลือกบริการที่เหมาะสมกับคุณ</h3>
                 <div className="py-5"></div>
                 <div className="rounded-full bg-primary px-4 py-2 w-48 text-center">เงื่อนไขการให้บริการ</div>
                 <div className="py-2"></div>
                 <ul className="">
-                    <li className="flex gap-3 "><div className="text-2xl text-white/50">01</div><div>เป็นเจ้าของธุรกิจตัวจริงในวงการนั้นๆ</div></li>
-                    <li className="flex gap-3 "><div className="text-2xl text-white/50">02</div><div>มี PASSION ในธุรกิจนั้นมีเรื่องราวหรือประสบการณ์มี FEEDBACK ที่ดีมากกว่าเสีย</div></li>
-                    <li className="flex gap-3 "><div className="text-2xl text-white/50">03</div><div>ทีมงานชุ่มฉ่ำสัมภาษณ์คัดกรอง</div></li>
+                    <li className="flex gap-3 "><div className="text-2xl font-bold text-white/50">01</div><div>เป็นเจ้าของธุรกิจตัวจริงในวงการนั้นๆ</div></li>
+                    <li className="flex gap-3 "><div className="text-2xl font-bold text-white/50">02</div><div>มี PASSION ในธุรกิจนั้นมีเรื่องราวหรือประสบการณ์มี FEEDBACK ที่ดีมากกว่าเสีย</div></li>
+                    <li className="flex gap-3 "><div className="text-2xl font-bold text-white/50">03</div><div>ทีมงานชุ่มฉ่ำสัมภาษณ์คัดกรอง</div></li>
 
                 </ul>
 
