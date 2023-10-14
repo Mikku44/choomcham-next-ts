@@ -23,6 +23,10 @@
 h1{
 
   font-family: 'Cloud Soft','Prompt';
+  
+}
+
+*{
   scroll-behavior: smooth;
 }
 
@@ -100,9 +104,9 @@ h1{
   top:0; */
 
   height: 100vh;
-  background: url("https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+  background: url("/images/cover.png");
   background-color: var(--activedcolor);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .line-service{
@@ -116,10 +120,19 @@ h1{
   background-size: contain;
 }
 
+.work{
+  background: url("/images/cover23.png");
+  background-size: cover;
+}
+
 .btn-active{
   background: rgb(236 72 153);
   padding: 0 30px;
 }
+
+
+
+
 
 @media screen and (max-width: 986px){
   .mark{
@@ -127,4 +140,6 @@ h1{
   }
   
 }
+
+
 

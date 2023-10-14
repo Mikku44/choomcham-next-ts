@@ -99,11 +99,11 @@ function Service() {
                 <div className="h-5"></div>
 
                 <div className="relative">
-                    <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(0, 0,'btn-scroll') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                    <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(0, 0,'btn-scroll') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-slate-300 duration-150">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg>
                     </button>
-                    <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(0, 1,'btn-scroll') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                    <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(0, 1,'btn-scroll') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-slate-300 duration-150">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                     </button>
@@ -144,11 +144,11 @@ function Service() {
             <div className="bg-[#3C429780] pb-[80px] relative">
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id='production'>สำหรับงานโปรดักชั่น</h4>
                 <div className="h-5"></div>
-                <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(1, 0,'panel2') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(1, 0,'panel2') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-slate-300 duration-150">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
                 </button>
-                <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(1, 1,'panel2') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(1, 1,'panel2') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-slate-300 duration-150">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
                 </button>
@@ -192,11 +192,11 @@ function Service() {
             <div className="bg-[#F2C76291] pb-[80px] relative">
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id='online'>คอร์สออนไลน์</h4>
                 <div className="h-5"></div>
-                <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(2, 0,'panel3') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(2, 0,'panel3') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-slate-300 duration-150">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
                 </button>
-                <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(2, 1,'panel3') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(2, 1,'panel3') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-slate-300 duration-150">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
                 </button>
@@ -241,11 +241,11 @@ function Service() {
             <div className="bg-pink-500/50 pb-[80px] relative">
                 <h4 className="text-center text-white text-3xl py-5 font-bold" id='last'>คอร์สออนไลน์</h4>
                 <div className="h-5"></div>
-                <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(3, 0,'panel4') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                <button className='absolute top-[45%] lg:left-56 left-0' onClick={() => { scrollItem(3, 0,'panel4') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-slate-300 duration-150">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
                 </button>
-                <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(3, 1,'panel4') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-white duration-150">
+                <button className='absolute top-[45%] lg:right-52 right-0' onClick={() => { scrollItem(3, 1,'panel4') }}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-14 h-14 hover:text-slate-300 duration-150">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
                 </button>

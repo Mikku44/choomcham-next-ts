@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Navbar from './components/nav'
 import Link from 'next/link'
 // import { useState } from 'react'
-
+import Footer from './components/footer'
 
 
 const review = [
@@ -366,7 +366,7 @@ export default function Home() {
 
         {/* registation */}
 
-        <div className="mt-10 card  bg-base-100 shadow-xl">
+        {/* <div className="mt-10 card  bg-base-100 shadow-xl">
           <h3 className="card-title text-center p-10">ลงทะเบียนพูดคุยกับชุ่มฉ่ำ</h3>
           <form action="" className="grid gap-5 px-10 pb-10">
             <div className="grid grid-flow-col gap-5">
@@ -398,12 +398,69 @@ export default function Home() {
 
             <button type="submit" className="btn bg-primary">ลงทะเบียน</button>
           </form>
-        </div>
+        </div> */}
 
         {/*  */}
+        <div className='py-20'></div>
+        <div className="hero min-h-screen bg-slate-200  rounded-[40px] py-4 shadow-xl relative overflow-hidden">
+          <span className='w-48 h-48 bg-[#D33666] rounded-full absolute top-0 -right-32'></span>
+          <span className='w-96 h-96 bg-[#3C4297] rounded-full absolute bottom-0 -left-40'></span>
+          <span className='w-56 h-56 bg-[#17A78A] rounded-full absolute top-0 -left-10'></span>
+          <span className='w-[50rem] h-[50rem] bg-yellow-500 rounded-full absolute -bottom-[15rem] -right-[50px]'></span>
+
+          <div className="hero-content flex-col lg:flex-row">
+            <div className="text-center lg:text-left p-5">
+              <h1 className="text-5xl font-bold " >เงื่อนไขการรับบริการ!</h1>
+              <p className="">1.เป็นเจ้าของธุรกิจตัวจริงในวงการนั้นๆ
+                <div className="w-96">
+                  มี PASSION ในธุรกิจนั้น
+                  มีเรื่องราวหรือประสบการณ์ <br />
+                  มี FEEDBACK ที่ดีมากกว่าเสีย
+                </div>
+              </p>
+              <p className="">2.ทีมงานชุ่มฉ่ำสัมภาษณ์คัดกรอง</p>
+            </div>
+            <div className="card flex-shrink-2 w-full max-w-xl shadow-2xl bg-base-100">
+              <div className=" card  bg-base-100 shadow-xl">
+                <h3 className="card-title text-2xl text-center p-10">ลงทะเบียนพูดคุยกับชุ่มฉ่ำ</h3>
+                <form action="" className="grid gap-5 px-10 pb-10">
+                  <div className="grid grid-flow-col gap-5">
+                    <div>
+                      <label htmlFor='name'>ชื่อ</label>
+                      <input type="text" id='name' className="input input-bordered input-md w-full " placeholder="กรอกชื่อ" />
+                    </div>
+                    <div>
+                      <label htmlFor='tel'>เบอร์โทร</label>
+                      <input type="text" id='tel' className="input input-bordered input-md w-full " placeholder="กรอกเบอร์โทรศัพท์" />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor='email'>อีเมล์</label>
+                    <input type="text" id='email' className="input input-bordered input-md w-full " placeholder="กรอกอีเมล์" />
+                  </div>
+                  <div>
+                    <label htmlFor='bussines'>ชื่อองค์กร/ธุรกิจที่คุณทำอยู่</label>
+                    <input type="text" id='bussines' className="input input-bordered input-md w-full " placeholder="กรอกชื่อองค์กร/ธุรกิจที่คุณทำอยู่" />
+                  </div>
+                  <div>
+                    <label htmlFor='fb'>Facebook / fanpage</label>
+                    <input type="text" id='fb' className="input input-bordered input-md w-full " placeholder="กรอกFacebook / fanpage" />
+                  </div>
+                  <div>
+                    <label htmlFor='trouble'>ปัญหาที่อยากระบาย</label>
+                    <textarea id='trouble' rows={50} className="input input-bordered input-md w-full " placeholder="ระบุ"></textarea>
+                  </div>
+
+                  <button type="submit" className="btn bg-primary">ลงทะเบียน</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
       </main>
+      <Footer />
     </>
   )
 }
