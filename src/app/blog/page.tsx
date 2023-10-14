@@ -20,7 +20,7 @@ function Blog() {
     return (
         <>
 
-            <div className="work p-32 text-white">
+            <div className="work sm:p-32 p-10 text-white">
 
                 <div>ชุ่มฉ่ำ แบรนดิ้ง</div>
                 {/* top */}
@@ -44,12 +44,12 @@ function Blog() {
 
             <div className="px-10 py-20">
                 <h4 className="py-10 px-5 text-xl font-bold">ACITIVITY & EVENT</h4>
-                <div className="grid grid-cols-3 gap-10 ">
+                <div className="grid sm:grid-cols-3 gap-10 ">
                     {blogs.map((blog) => {
                         return (
                             <>
                                 <motion.div initial={{ y: 20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 100 }}  className="card w-96 bg-base-100 shadow-xl">
+                        whileInView={{ y: 0, opacity: 100 }}  className="card sm:w-96 bg-base-100 shadow-xl">
                                     <figure className="rounded-xl overflow-hidden"><img className="rounded-xl" src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="Shoes" /></figure>
                                     <div className="card-body">
                                         <h2 className="card-title">
@@ -82,7 +82,7 @@ function Blog() {
 
                     {videos.map((video) => <>
                         <motion.div initial={{ y: 20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 100 }}  className="card w-96 overflow-hidden shadow-xl ">
+                        whileInView={{ y: 0, opacity: 100 }}  className="card sm:w-96 overflow-hidden shadow-xl ">
                             <figure className="h-48"><iframe width="560" src={video.src} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="object-cover h-full"></iframe></figure>
                         </motion.div></>)}
                 </div>
