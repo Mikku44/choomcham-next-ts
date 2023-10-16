@@ -3,7 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
-import Head from 'next/head'
+
 const cloudSoft = localFont({
   src: [
     {
@@ -24,6 +24,7 @@ const cloudSoft = localFont({
 export const metadata: Metadata = {
   title: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน',
   description: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน',
+  
 }
 
 export default function RootLayout({
@@ -34,9 +35,7 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      <Head>
-      <meta name="google-site-verification" content="qttjG3Mv5mZ6SPmdhaGLYCC2dLi8l8bWFRL-lKUd4bc" />
-      </Head>
+      
       <body className={cloudSoft.className}>{children}</body>
       {/* <body className={inter.className}>{children}</body> */}
    
