@@ -24,6 +24,8 @@ const cloudSoft = localFont({
 export const metadata: Metadata = {
   title: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน',
   description: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน',
+  authors:[{name:'Choomcham branding'}],
+  keywords:['Choomcham','Choomcham Branding','branding', 'courses', 'personal branding', 'marketing',' brand identity']
   
 }
 
