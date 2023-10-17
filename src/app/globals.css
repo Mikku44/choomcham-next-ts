@@ -138,6 +138,9 @@ h1{
   .mark{
     mask-size: 125rem;
   }
+  .line{
+    background-size: inherit;
+  }
   
 }
 
