@@ -237,32 +237,53 @@ export default function Home() {
 
           <div className="grid gap-10 sm:flex justify-center">
             <div className="card w-96 bg-base-100 shadow-xl duration-150 hover:-translate-y-4 hover:text-blue-400">
-              <figure className="px-10 py-10">
-                <div className="rounded-2xl overflow-hidden ">Product</div>
-              </figure>
+              <div className="px-10 py-10 grid">
+                <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+                </div>
+                <div className="  font-bold text-xl">Product</div>
+                <div>Lorem, ipsum dolor Lorem ipsum dolor sit amet.</div>
+              </div>
 
             </div>
 
             {/*  */}
 
             <div className="card w-96 bg-base-100 shadow-xl duration-150 hover:-translate-y-4 hover:text-blue-400">
-              <figure className="px-10 py-10">
-                <div className="rounded-2xl overflow-hidden ">Course</div>
-              </figure>
+              <div className="px-10 py-10 grid">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                </svg>
+
+                <div className="  font-bold text-xl">Course</div>
+                <div>Lorem, ipsum dolor Lorem ipsum dolor sit amet.</div>
+              </div>
 
             </div>
 
             <div className="card w-96 bg-base-100 shadow-xl duration-150 hover:-translate-y-4 hover:text-blue-400">
-              <figure className="px-10 py-10">
-                <div className="rounded-2xl overflow-hidden ">Consult</div>
-              </figure>
+              <div className="px-10 py-10 grid">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+</svg>
+
+
+                <div className="  font-bold text-xl">Consult</div>
+                <div>Lorem, ipsum dolor Lorem ipsum dolor sit amet.</div>
+              </div>
 
             </div>
 
             <div className="card w-96 bg-base-100 shadow-xl duration-150 hover:-translate-y-4 hover:text-blue-400">
-              <figure className="px-10 py-10">
-                <div className="rounded-2xl overflow-hidden ">Team training</div>
-              </figure>
+              <div className="px-10 py-10 grid">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+</svg>
+
+                <div className="  font-bold text-xl">Team training</div>
+                <div>Lorem, ipsum dolor Lorem ipsum dolor sit amet.</div>
+              </div>
 
             </div>
 
@@ -273,56 +294,56 @@ export default function Home() {
 
         {/* contents */}
         <div className="px-10 py-20">
-                <h4 className="py-10 px-5 text-xl font-bold">ACITIVITY & EVENT</h4>
-                <div className="grid sm:grid-cols-3 gap-10 ">
-                    {blogs.map((blog) => {
-                        return (
-                            <>
-                                <motion.div initial={{ y: 20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 100 }}  className="card sm:w-96 bg-base-100 shadow-xl">
-                                    <figure className="rounded-xl overflow-hidden"><img className="rounded-xl" src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="Shoes" /></figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">
-                                            BRANDING การตลาดสุดฉ่ำ!
-                                            <div className="badge badge-secondary">NEW</div>
-                                        </h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quod facilis hic eos!</p>
-                                        <div className="card-actions justify-end">
-                                            <div className="badge p-3 text-slate-400 hover:text-white ring-[#F2C762] cursor-pointer hover:bg-[#F2C762]">Bussiness</div>
-                                            <div className="badge p-3 text-slate-400 hover:text-white ring-[#F2C762] cursor-pointer hover:bg-[#F2C762]">Products</div>
-                                        </div>
-                                        <Link href={"./blog/" + (blog.id).toString()} className="btn">อ่านต่อ</Link>
-                                    </div>
-                                </motion.div>
-                            </>
-                        )
-                    })}
-                </div>
-            </div>
+          <h4 className="py-10 px-5 text-xl font-bold">ACITIVITY & EVENT</h4>
+          <div className="grid sm:grid-cols-3 gap-10 ">
+            {blogs.map((blog) => {
+              return (
+                <>
+                  <motion.div initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 100 }} className="card sm:w-96 bg-base-100 shadow-xl">
+                    <figure className="rounded-xl overflow-hidden"><img className="rounded-xl" src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="Shoes" /></figure>
+                    <div className="card-body">
+                      <h2 className="card-title">
+                        BRANDING การตลาดสุดฉ่ำ!
+                        <div className="badge badge-secondary">NEW</div>
+                      </h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quod facilis hic eos!</p>
+                      <div className="card-actions justify-end">
+                        <div className="badge p-3 text-slate-400 hover:text-white ring-[#F2C762] cursor-pointer hover:bg-[#F2C762]">Bussiness</div>
+                        <div className="badge p-3 text-slate-400 hover:text-white ring-[#F2C762] cursor-pointer hover:bg-[#F2C762]">Products</div>
+                      </div>
+                      <Link href={"./blog/" + (blog.id).toString()} className="btn">อ่านต่อ</Link>
+                    </div>
+                  </motion.div>
+                </>
+              )
+            })}
+          </div>
+        </div>
 
 
         {/* video content */}
         <h3 className="text-4xl p-10 text-center grid justify-items-center ">
-                วีดีโอความรู้สุดฉ่ำ
-                <div className="rounded-full h-1 w-48 bg-[#D33666]"></div>
-            </h3>
-            <div className="px-10 py-20">
-                <h4 className="py-5 px-5 text-xl font-bold">ChoomCham Branding Videos</h4>
+          วีดีโอความรู้สุดฉ่ำ
+          <div className="rounded-full h-1 w-48 bg-[#D33666]"></div>
+        </h3>
+        <div className="px-10 py-20">
+          <h4 className="py-5 px-5 text-xl font-bold">ChoomCham Branding Videos</h4>
 
-                <div className="grid sm:grid-cols-3 gap-10">
+          <div className="grid sm:grid-cols-3 gap-10">
 
-                    {videos.map((video) => <>
-                        <motion.div initial={{ y: 20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 100 }}  className="card sm:w-96 overflow-hidden shadow-xl ">
-                            <figure className="h-48"><iframe width="560" src={video.src} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="object-cover h-full"></iframe></figure>
-                        </motion.div></>)}
-                </div>
-            </div>
+            {videos.map((video) => <>
+              <motion.div initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 100 }} className="card sm:w-96 overflow-hidden shadow-xl ">
+                <figure className="h-48"><iframe width="560" src={video.src} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="object-cover h-full"></iframe></figure>
+              </motion.div></>)}
+          </div>
+        </div>
 
 
 
         {/* Our work */}
-        
+
 
 
 
