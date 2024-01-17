@@ -38,7 +38,7 @@ export default function Home() {
                         <br />
                     </motion.div>
                 </div>
-                <h4 className="absolute right-20 bottom-5 sm:bottom-40 text-white thai">
+                <h4 className="absolute right-5 sm:right-20 bottom-5 sm:bottom-40 text-white thai">
                     <div>อีฟ ภัทรัดจารินท์​ สุวัชรานนท์</div>
                     <div>Brand Consultant / Teacher</div>
                 </h4>
