@@ -58,7 +58,7 @@ const videos = [
   { id: '3', src: 'https://www.youtube.com/embed/apSobqg8BKQ?si=lt2L_MmNOwLF1uxm', description: 'name' },
 ]
 
-export default function Home() {
+function Home() {
 
   // const [count, setCount] = useState(0)
   return (
@@ -457,3 +457,6 @@ export default function Home() {
     </>
   )
 }
+
+
+// export default 
