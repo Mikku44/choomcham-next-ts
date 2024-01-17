@@ -47,7 +47,7 @@ export default function Home() {
 
         <main>
             <section className=' flex flex-col gap-10  sm:flex-row sm:items-stretch items-center justify-items-center justify-between py-10 sm:px-36 work'>
-                <Card className=' w-[350px]'>
+                <Card className=' w-[350px] shadow-xl bg-slate-100'>
                     <CardHeader>
                         <p className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
@@ -55,12 +55,12 @@ export default function Home() {
                     </CardHeader>
                     <CardBody>
                         <h3 className='text-xl font-bold'>  Branding Strategist</h3>
-                        <p>
+                        <p className="text-[18px]">
                             ถนัดวางแผนสร้างแบรนด์จาก 0 ให้มีชื่อเสียง
                         </p>
                     </CardBody>
                 </Card>
-                <Card className=' w-[350px]'>
+                <Card className=' w-[350px] shadow-xl bg-slate-100'>
                     <CardHeader>
                         <p className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
@@ -68,14 +68,14 @@ export default function Home() {
                     </CardHeader>
                     <CardBody>
                         <h3 className='text-xl font-bold'>  Keynote Speaker </h3>
-                        <p>
+                        <p className="text-[18px]">
 
                             เปลี่ยนแปลงวิธีคิดในการสร้างแบรนด์ให้คนหลักพัน
 
                         </p>
                     </CardBody>
                 </Card>
-                <Card className=' w-[350px]'>
+                <Card className=' w-[350px] shadow-xl bg-slate-100'>
                     <CardHeader>
                         <p className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
@@ -83,7 +83,7 @@ export default function Home() {
                     </CardHeader>
                     <CardBody>
                         <h3 className='text-xl font-bold'>  Mindfulness learner</h3>
-                        <p>
+                        <p className="text-[18px]">
 
                             เน้นฝึกจิต ถือศีล 5 เป็นปกติ ตั้งแต่อายุ 13
 
@@ -106,7 +106,7 @@ export default function Home() {
 
 
 
-                            <h1 className="text-5xl font-bold " >เงื่อนไขการรับบริการ!</h1>
+                            <div className="text-5xl font-bold " >เงื่อนไขก่อนสัมภาษณ์รับบริการ!</div>
                             <p className="">1.ธุรกิจของท่านถูกศีลธรรม ไม่ขัดต่อศีล 5 
                             
                             </p>
@@ -115,7 +115,7 @@ export default function Home() {
                         </div>
                         <div className="card flex-shrink-2 w-full max-w-xl shadow-2xl bg-base-100">
                             <div className=" card  bg-base-100 shadow-xl">
-                                <h3 className="card-title text-2xl text-center p-10">ลงทะเบียนพูดคุยกับชุ่มฉ่ำ</h3>
+                                <div className="card-title text-2xl text-center p-10">ลงทะเบียนพูดคุยกับชุ่มฉ่ำ</div>
                                 <form action="" className="grid gap-5 px-10 pb-10">
                                     <div className="grid grid-flow-col gap-5">
                                         <div>

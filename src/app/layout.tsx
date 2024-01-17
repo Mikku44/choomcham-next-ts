@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Providers } from "./providers";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const cloudSoft = localFont({
   src: [
     {
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body className={cloudSoft.className}>
         <Providers>
           {children}
+          <SpeedInsights />
         </Providers>
       </body>
       {/* <body className={inter.className}>{children}</body> */}

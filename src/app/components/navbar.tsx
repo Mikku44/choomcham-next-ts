@@ -33,7 +33,7 @@ export default function NavigationBar() {
 
 
                 </div>
-                <div className="navbar-center sm:flex gap-10 hidden">
+                <div className="navbar-center sm:flex  gap-10 hidden">
                     <ul className='duration-[500] gap-5 hidden font-medium sm:flex items-center'>
 
                         <Link className='hover:text-pink-600 text-white' href="/service">

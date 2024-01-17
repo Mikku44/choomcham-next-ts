@@ -1,5 +1,5 @@
 "use client"
-import Navbar from "../components/navigationbar";
+import Navbar from "../components/nav";
 import Footer from "../components/footer";
 import { motion } from "framer-motion";
 const quizs = [
