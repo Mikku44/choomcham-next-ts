@@ -1,4 +1,4 @@
-import Navbar from "../components/nav"
+import Navbar from "../components/navigationbar"
 function loading() {
     return (
         <>

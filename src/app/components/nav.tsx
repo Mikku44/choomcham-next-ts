@@ -7,26 +7,6 @@ function Navbar() {
 
     const header = 'duration-300 navbar  bg-white drop-shadow-md  flex justify-between px-20 sticky top-0 w-full py-3  z-[100] '
 
-
-
-    // function colorize() {
-    //     console.log(window.scrollY)
-    //     if (window.scrollY > 100) {
-    //         nav.classList.add('bg-white')
-    //         nav.classList.add('shadow-lg')
-    //         nav.classList.remove('text-white')
-
-    //     }
-    //     else {
-    //         nav.classList.remove('bg-white')
-    //         nav.classList.remove('shadow-lg')
-    //         nav.classList.add('text-white')
-
-    //     }
-    // }
-
-    // window.addEventListener('scroll', colorize)
-
     return (
         <>
             {/* <div className="mt-5 bg-white"> </div> */}

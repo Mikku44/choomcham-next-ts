@@ -30,6 +30,11 @@ h1{
   scroll-behavior: smooth;
 }
 
+body{
+  margin: 0;
+  padding: 0;
+}
+
 
 :root {
   --activedcolor: #D33666;
@@ -85,10 +90,10 @@ h1{
 .mark{
 
   overflow: hidden;
-  width: 100%;
-  mask-image: url(/masker.svg);
+  /* width: 100%; */
+  /* mask-image: url(/masker.svg);
   mask-repeat: no-repeat;
-  mask-size: 125rem;
+  mask-size: 125rem; */
   /* border-radius: 100%; */
   position: absolute;
   left: 0;
@@ -103,10 +108,12 @@ h1{
   right:0;
   top:0; */
 
-  height: 100vh;
-  background: url("/images/cover.png");
+  height: 80vh;
+  /* width: 100vw; */
+  background: url("/images/homepage_image.jpg");
   background-color: var(--activedcolor);
-  background-size: contain;
+  /* background-color: black; */
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .line-service{
@@ -139,7 +146,8 @@ h1{
     mask-size: 125rem;
   }
   .line{
-    background-size: inherit;
+    /* background-size: inherit; */
+    height: 50vh;
   }
   
 }

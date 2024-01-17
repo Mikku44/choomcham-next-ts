@@ -4,6 +4,7 @@ import Footer from '../components/footer';
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
+import Script from 'next/script';
 
 
 
@@ -25,9 +26,12 @@ const bussiness = [
 function Service() {
     const [btn, setBtn] = useState("");
     var index: number[] = [0,0,0,0];
+
+
     function scrollItem(i: number, act: number,panelName:string) {
         const scrollPanel = document.getElementsByClassName('scrollbar-hide');
         const dot = document.getElementsByClassName(panelName);
+        
         if (scrollPanel) {
             if (act == 1) {
                 scrollPanel[i].scrollLeft += 1000;
@@ -107,12 +111,12 @@ function Service() {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                     </button>
-                    <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide">
+                    <div className="grid grid-flow-col py-8 gap-10 sm:gap-[25em] snap-x snap-proximity rounded-md px-10 overflow-scroll  scrollbar-hide" id='container'>
                         <div className="sm:block hidden"></div>
                         {bussiness.map((post) => {
                             return <>
-                                <div id={"B" + post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
-                                    <div className="overflow-hidden rounded-[20px] h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/0374f75c.png" alt="" /></div>
+                                <div id={"B" + post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center item" key={post.id}>
+                                    <div className="overflow-hidden rounded-[20px] h-48"><img draggable='false' className="object-cover h-full" src="https://www.choomcham.com/assets/images/0374f75c.png" alt="" /></div>
                                     <div className="grid ">
                                         <div className="text-xl font-bold">{post.title} {post.id}</div>
                                         <div>{post.description}</div>
@@ -159,7 +163,7 @@ function Service() {
                         return <>
 
                             <div id={"P" + post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
-                                <div className="overflow-hidden rounded-[20px] h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/c41ef567.png" alt="" /></div>
+                                <div className="overflow-hidden rounded-[20px] h-48"><img draggable='false' className="object-cover h-full" src="https://www.choomcham.com/assets/images/c41ef567.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title} {post.id}</div>
                                     <div>{post.description}</div>
@@ -208,7 +212,7 @@ function Service() {
                         return <>
 
                             <div id={"C" + post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
-                                <div className="overflow-hidden rounded-[20px] h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="" /></div>
+                                <div className="overflow-hidden rounded-[20px] h-48"><img draggable='false' className="object-cover h-full" src="https://www.choomcham.com/assets/images/84dfa30d.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title} {post.id}</div>
                                     <div>{post.description}</div>
@@ -257,7 +261,7 @@ function Service() {
                         return <>
 
                             <div id={"D" + post.id} className="bg-white rounded-[30px]  snap-center w-[25rem]  sm:w-[48rem] px-6 py-10 gap-5 h-[15rem] shadow-xl flex  items-center justify-items-center" key={post.id}>
-                                <div className="overflow-hidden rounded-[20px] h-48"><img className="object-cover h-full" src="https://www.choomcham.com/assets/images/b1eddfa0.png" alt="" /></div>
+                                <div className="overflow-hidden rounded-[20px] h-48"><img draggable='false' className="object-cover h-full" src="https://www.choomcham.com/assets/images/b1eddfa0.png" alt="" /></div>
                                 <div className="grid ">
                                     <div className="text-xl font-bold">{post.title} {post.id}</div>
                                     <div>{post.description}</div>
@@ -288,6 +292,7 @@ function Service() {
 
             </div>
         </div>
+        <Script src="/js/dragtoscroll.js" />
         <Footer />
     </>
 }

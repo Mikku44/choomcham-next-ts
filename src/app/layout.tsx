@@ -3,7 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
-
+import { Providers } from "./providers";
 const cloudSoft = localFont({
   src: [
     {
@@ -19,15 +19,19 @@ const cloudSoft = localFont({
 
   ],
 })
-// const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน',
   description: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน',
-  authors:[{name:'Choomcham branding'}],
-  keywords:['Choomcham','Choomcham Branding','branding', 'courses', 'personal branding', 'marketing',' brand identity']
-  
+  authors: [{ name: 'Choomcham branding' }],
+  keywords: ['Choomcham', 'Choomcham Branding', 'branding', 'courses', 'personal branding', 'marketing', ' brand identity']
+
 }
+
+
+
+
 
 export default function RootLayout({
   children,
@@ -37,12 +41,16 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      
-      <body className={cloudSoft.className}>{children}</body>
+
+      <body className={cloudSoft.className}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
       {/* <body className={inter.className}>{children}</body> */}
-   
-    {/* <script src='app.js'></script> */}
+
+      {/* <script src='app.js'></script> */}
     </html>
-  
+
   )
 }
