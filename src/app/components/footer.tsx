@@ -6,7 +6,7 @@ function Footer(){
         <div className="footer p-10 ">
         <aside>
           <img width="250" src="https://www.choomcham.com/assets/images/6d557835.png" alt="choomcham logo" />
-          <p>Copyright © 2021 ชุ่มฉ่ำ branding.<br/>อยากสร้าง Brand ให้ชัดเล่าเรื่องให้โดนคุณมาถูกที่แล้ว</p>
+          <p>Copyright © 2024 ชุ่มฉ่ำ branding.<br/>อยากสร้าง Brand ให้ชัดเล่าเรื่องให้โดนคุณมาถูกที่แล้ว</p>
         </aside> 
         <nav>
           <div className="footer-title">Social</div> 
