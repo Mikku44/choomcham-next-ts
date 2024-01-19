@@ -5,16 +5,41 @@ import Navbar from './components/nav'
 import NavigationBar from './components/navbar'
 import { Button, Card, CardBody, CardHeader } from '@nextui-org/react'
 import Image from "next/image";
+
+
+// Import Swiper React components
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+
+
+// Import Swiper styles
+import 'swiper/css';
+
+// import 'swiper/modules/navigation.css'; // Navigation module
+// import 'swiper/modules/pagination.css'; // Pagination module
+
+
+
 export default function Home() {
 
+
     const videos = [
-        { id: '1', src: 'https://facebook.com/watch/?v=993405428609497', description: 'name' },
-        { id: '2', src: 'https://www.youtube.com/embed/c6Xxcyflb3o?si=db6h-ZqKwgDGcc7', description: 'name' },
-        { id: '3', src: 'https://www.youtube.com/embed/apSobqg8BKQ?si=lt2L_MmNOwLF1uxm', description: 'name' },
+        { id: '1', src: 'https://www.facebook.com/video.php?v=993405428609497', description: 'name', platform: "facebook" },
+        { id: '2', src: 'https://www.facebook.com/choomchambranding/videos/526606112193948/', description: 'name', platform: "facebook" },
+        { id: '3', src: 'https://www.facebook.com/choomchambranding/videos/215435620461048/', description: 'name', platform: "facebook" },
+    ]
+
+    const courses = [
+        { id: '1', title: "ที่ปรึกษาสะท้อนตัวตน 1:1", description: "ลองเปิดโอกาสให้คนนอกสนาม ช่วยสะท้อนสิ่งที่คุณไม่เห็นเพื่อให้ไปต่อได้ เปิดรับเพียงแค่ 5 แบรนด์/เดือน ไม่ได้รับทุกธุรกิจต้องผ่านการสัมภาษณ์ก่อนเท่านั้น", imageUrl: "https://scontent.fbkk29-1.fna.fbcdn.net/v/t39.30808-6/394540875_832637978869474_2998277435694377056_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=KKZh2vSZnq0AX_DGuQd&_nc_ht=scontent.fbkk29-1.fna&oh=00_AfAS9pAoTV6U6ajw0gtkLkeEpTCSVEJpMr-vqXtsa_yhbA&oe=65AD89E7", price: "15,000" },
+        { id: '2', title: "Keynote Speaker ", description: "บรรยายให้ผู้เข้าร่วมงานเข้าใจเรื่อง Branding หรือ Storytelling แบบง่ายๆ นำไปใช้ในชีวิตได้จริง", imageUrl: "https://scontent.fbkk29-6.fna.fbcdn.net/v/t1.15752-9/413902958_366481376005129_6244924999535793949_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=x9oyjf3_Au0AX_RXaMB&_nc_ht=scontent.fbkk29-6.fna&oh=03_AdR99ysdhDvfov2IjqpNC6BPXHj078v0SOiwytJbVl1mQw&oe=65CF3423", price: " 125,000" },
+        { id: '3', title: "In house Training ", description: "พัฒนาทีมให้เข้าใจการสร้าง Brand ยกระดับ Content ให้ได้ใจลูกค้าเพิ่ม ช่วยให้เจ้าของธุรกิจไม่ต้องเหนื่อย", imageUrl: "https://scontent.fbkk29-4.fna.fbcdn.net/v/t39.30808-6/394736445_831607658972506_7023956463251618192_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=QD9uI_a70GEAX9NZJzL&_nc_ht=scontent.fbkk29-4.fna&oh=00_AfCId5Hhmpz4_TeGAvLU-Swc7ZBHV2-ydzbiojq9kPLGbw&oe=65AD23E2", price: " 125,000" },
+        { id: '4', title: "Online Course  ", description: "คอร์สเข้าใจแบรนด์ตัวเอง คอร์สเล่าเรื่อง 3 นาทีให้มียอดขาย คอร์สสร้างคนดังในตำนาน เนื้อหาแน่น ห้ามพลาด", imageUrl: "https://scontent.fbkk29-7.fna.fbcdn.net/v/t39.30808-6/336890739_1354530558661892_5028428925110047977_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=VIkIn8LBXqoAX-Dvonk&_nc_ht=scontent.fbkk29-7.fna&oh=00_AfDdNl-E1cJuHTaW5_T-_HFkLe88yy_Q3pkbBRcpmWihhg&oe=65ACB443", price: " 555" },
     ]
     return <>
         <NavigationBar />
 
+        <div id="fb-root"></div>
+        <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v18.0&appId=156838349817980" nonce="WQnbcNzF"></script>
 
         <header>
             <div className="relative bg-blue-900 line  ">
@@ -118,28 +143,28 @@ export default function Home() {
                     </div>
 
                     <ul className="sm:text-2xl text-lg sm:flex grid justify-center items-strech  gap-10">
-                        <li className="hover:-translate-y-3 duration-200 rounded-2xl bg-white border border-black/10 shadow-md w-[250px]  p-3 grid ">
+                        <li className="hover:-translate-y-3 duration-200 rounded-2xl text-center w-[250px]  p-3 grid ">
                             <div><img src="/images/sticker24.png" alt="" /></div>
                             <div>
                                 <div className='font-bold text-[--green]'>1. จิตวิญญาณ</div>
                                 <div className="text-[18px]">ถอดตัวตนพิเศษของคุณออกมาวางกลยุทธ์แบรนด์</div>
                             </div>
                         </li>
-                        <li className="hover:-translate-y-3 duration-200 rounded-2xl bg-white border border-black/10 shadow-md w-[250px]  p-3 grid ">
+                        <li className="hover:-translate-y-3 duration-200 rounded-2xl text-center w-[250px]  p-3 grid ">
                             <div><img src="/images/sticker19.png" alt="" /></div>
                             <div>
                                 <div className="font-bold text-[--green]">2. ความสุข</div>
                                 <div className="text-[18px]">ใจใสใจสบายทำอะไรก็สำเร็จ</div>
                             </div>
                         </li>
-                        <li className="hover:-translate-y-3 duration-200 rounded-2xl bg-white border border-black/10 shadow-md w-[250px]  p-3 grid ">
+                        <li className="hover:-translate-y-3 duration-200 rounded-2xl text-center w-[250px]  p-3 grid ">
                             <div><img src="/images/sticker7.png" alt="" /></div>
                             <div>
                                 <div className="font-bold text-[--green]">3. ลูกค้า</div>
                                 <div className="text-[18px]">เขาคือคนสำคัญที่สุดของคุณนะ เข้าใจเขาลึกมากพอรึยัง?</div>
                             </div>
                         </li>
-                        <li className="hover:-translate-y-3 duration-200 rounded-2xl bg-white border border-black/10 shadow-md w-[250px]  p-3 grid ">
+                        <li className="hover:-translate-y-3 duration-200 rounded-2xl text-center w-[250px]  p-3 grid ">
                             <div><img src="/images/sticker21.png" alt="" /></div>
                             <div>
                                 <div className="font-bold text-[--green]">4. ชื่อเสียง</div>
@@ -150,29 +175,108 @@ export default function Home() {
                 </div>
             </section>
 
+            <section>
+                <div className="flex sm:flex-row flex-col justify-evenly items-center gap-5 p-10 ">
+                    <div className=' p-10 flex flex-col justify-between '>
+                        <div>
+                            <div className="text-3xl font-bold text-[--yellow]">Our Students</div>
+                            <div className="text-lg w-[300px] "> ธุรกิจคุณจะมีที่ยืนเมื่อคุณกล้าตัดสินใจจะเลิกอยู่ตรงกลาง</div>
+                        </div>
+                        <div className="py-10"><Button className=" bg-[--green] text-white text-lg px-10 " radius='full'>สำรวจคอร์สที่เหมาะกับคุณ</Button></div>
+                    </div>
+                    <div className="flex flex-wrap sm:w-[30%] w-[300px] gap-5 justify-center ">
+                        <img className="sm:h-[50px] h-[30px]" src="/images/100_logo.png" alt="โลโก้อายุน้อยร้อยล้าน" />
+                        <img className="sm:h-[50px] h-[30px]" src="/images/bdms_logo.jpg" alt="โลโก้คลินิคบีดีเอ็มเอส" />
+                        <img className="sm:h-[50px] h-[30px]" src="/images/chubbycheeks_logo.jpg" alt="โลโก้ชุบบี้ชิ๊กส์" />
+                        <img className="sm:h-[50px] h-[30px]" src="/images/madamfin_logo.jpg" alt="โลโก้มาดามฟิน" />
+                        <img className="sm:h-[50px] h-[30px]" src="/images/ondemand_logo.png" alt="โลโก้ออนดีมานด์" />
+                        <img className="sm:h-[50px] h-[30px]" src="/images/sowonclinic_logo.jpg" alt="โลโก้โซวอนคลีนิค" />
+                        <img className="sm:h-[50px] h-[30px]" src="/images/winkwhite_logo.jpg" alt="โลโก้วิ้งค์ไวท์" />
+                    </div>
+                </div>
+            </section>
+
+            <div className="divider-y"></div>
+
+            <section className='work'>
+          
+
+                <div className="px-10 ">
+                    <div className="text-2xl sm:text-4xl font-bold text-center py-10 ">
+                        What we do
+
+                    </div>
+                    <Swiper
+
+                        spaceBetween={50}
+                        slidesPerView={3}
+                    // onSlideChange={() => console.log('slide change')}
+                    // onSwiper={(swiper) => console.log(swiper)}
+                    >
+
+                        {courses.map(course =>
+                            <SwiperSlide className="py-10 px-4 ">
+                                <div className="card w-64 sm:w-96 bg-base-100 shadow-xl overflow-hidden " key={course.id}>
+                                    <figure className="h-[100px] sm:h-[240px] overflow-hidden"><img src={course.imageUrl} alt={course.title} /></figure>
+                                    <div className="card-body h-[250px] sm:h-[auto]">
+                                        <h2 className="card-title">
+                                            {course.title}
+                                            <div className="badge badge-secondary">NEW</div>
+                                        </h2>
+                                        <p className="h-[40px] sm:h-[80px] w-[auto] text-ellipsis overflow-hidden">{course.description}</p>
+                                        <div className="card-actions justify-between">
+                                            <Button>ดูรายละเอียด</Button>
+                                            <div>฿ {course.price}</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </SwiperSlide>)}
+
+
+                    </Swiper>
+                </div>
+            </section>
+
+
             <section className=''>
                 <div className='p-10'>
+
                     <div className="sm:text-3xl text-xl font-bold">ทำไมต้องชุ่มฉ่ำ?</div>
                     <div className="rounded-full h-1 w-[10%] bg-[#D33666]"></div>
                     <div className="py-3">
-                        <div className="grid sm:grid-cols-3 gap-10">
+                        <div className="grid sm:grid-cols-3 gap-10 items-center">
 
-                            {videos.map((video) => <>
-                                <motion.div initial={{ y: 20, opacity: 0 }}
-                                    whileInView={{ y: 0, opacity: 100 }} className="card sm:w-96 overflow-hidden shadow-xl ">
-                                    <figure className="h-48"><iframe width="560" src={video.src} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="object-cover h-full"></iframe></figure>
-                                </motion.div></>)}
+
+                            {
+                                videos.map((video) => {
+                                    return (
+                                        <>
+                                            <motion.div initial={{ y: 20, opacity: 0 }}
+                                                whileInView={{ y: 0, opacity: 100 }} className="card sm:w-96 overflow-hidden shadow-xl flex items-center bg-black">
+                                                <figure className="">
+                                                    {video.platform == "youtube"
+                                                        ? <iframe width="560" src={video.src} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="object-cover h-full"></iframe>
+                                                        : <iframe src={"https://www.facebook.com/plugins/video.php?href=" + video.src + ""} width="390" height={375} allowFullScreen={true}   ></iframe>}
+
+                                                </figure>
+                                            </motion.div></>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
             </section>
 
+
+
             <section className='flex justify-center p-10'>
                 <div className="w-[90vw] hero min-h-screen bg-slate-200  rounded-[40px] py-4 shadow-xl relative overflow-hidden">
-                    <span className='w-48 h-48 bg-[#D33666] rounded-full absolute top-0 -right-32'></span>
-                    <span className='w-96 h-96 bg-[#3C4297] rounded-full absolute bottom-0 -left-40'></span>
-                    <span className='w-56 h-56 bg-[#17A78A] rounded-full absolute top-0 -left-10'></span>
-                    <span className='w-[50rem] h-[50rem] bg-yellow-500 rounded-full absolute -bottom-[15rem] -right-[50px]'></span>
+                    <div className='w-48 h-48 bg-[#D33666] rounded-full absolute top-0 -right-32'></div>
+                    <div className='w-96 h-96 bg-[#3C4297] rounded-full absolute bottom-0 -left-40'></div>
+                    <div className='w-56 h-56 bg-[#17A78A] rounded-full absolute top-0 -left-10'></div>
+                    <div className='w-[50rem] h-[50rem] bg-yellow-500 rounded-full absolute -bottom-[15rem] -right-[50px]'></div>
 
                     <div className="hero-content flex-col lg:flex-row">
                         <div className="text-center lg:text-left p-5">
