@@ -240,7 +240,7 @@ export default function Home() {
                         {courses.map(course =>
 
                             <SwiperSlide key={course.id} className="py-10 px-4 cursor-default" >
-                                <div className="card  w-[60rem] sm:w-96 bg-base-100 shadow-xl overflow-hidden ">
+                                <div className="card  w-[60rem] sm:w-96 bg-white shadow-xl overflow-hidden ">
                                     <figure className="h-[210px] sm:h-[240px] overflow-hidden"><img src={course.imageUrl} alt={course.title} /></figure>
                                     <div className="card-body h-[202px] sm:h-[auto]">
                                         <div className="card-title">
@@ -320,35 +320,35 @@ export default function Home() {
                             <div className="">2.คุณรักการเรียนรู้และการพัฒนาตัวเอง</div>
                             <div className="">3.ธุรกิจคุณมี Feedback ที่ดีมากกว่าเสีย</div>
                         </div>
-                        <div className="card flex-shrink-2 w-full max-w-xl shadow-2xl bg-base-100">
-                            <div className=" card  bg-base-100 shadow-xl">
+                        <div className="card flex-shrink-2 w-full max-w-xl shadow-2xl bg-white">
+                            <div className=" card  bg-white shadow-xl">
                                 <div className="card-title text-2xl text-center p-10">ลงทะเบียนพูดคุยกับชุ่มฉ่ำ</div>
                                 <form action="" className="grid gap-5 px-10 pb-10">
                                     <div className="grid grid-flow-col gap-5">
                                         <div>
                                             <label htmlFor='name'>ชื่อ</label>
-                                            <input type="text" id='name' className="input input-bordered input-md w-full " placeholder="กรอกชื่อ" />
+                                            <input type="text" id='name' className="input input-bordered input-md w-full bg-white " placeholder="กรอกชื่อ" />
                                         </div>
                                         <div>
                                             <label htmlFor='tel'>เบอร์โทร</label>
-                                            <input type="text" id='tel' className="input input-bordered input-md w-full " placeholder="กรอกเบอร์โทรศัพท์" />
+                                            <input type="text" id='tel' className="input input-bordered input-md w-full bg-white " placeholder="กรอกเบอร์โทรศัพท์" />
                                         </div>
                                     </div>
                                     <div>
                                         <label htmlFor='email'>อีเมล์</label>
-                                        <input type="text" id='email' className="input input-bordered input-md w-full " placeholder="กรอกอีเมล์" />
+                                        <input type="text" id='email' className="input input-bordered input-md w-full bg-white " placeholder="กรอกอีเมล์" />
                                     </div>
                                     <div>
                                         <label htmlFor='bussines'>ชื่อองค์กร/ธุรกิจที่คุณทำอยู่</label>
-                                        <input type="text" id='bussines' className="input input-bordered input-md w-full " placeholder="กรอกชื่อองค์กร/ธุรกิจที่คุณทำอยู่" />
+                                        <input type="text" id='bussines' className="input input-bordered input-md w-full bg-white " placeholder="กรอกชื่อองค์กร/ธุรกิจที่คุณทำอยู่" />
                                     </div>
                                     <div>
                                         <label htmlFor='fb'>Facebook / fanpage</label>
-                                        <input type="text" id='fb' className="input input-bordered input-md w-full " placeholder="กรอกFacebook / fanpage" />
+                                        <input type="text" id='fb' className="input input-bordered input-md w-full bg-white " placeholder="กรอกFacebook / fanpage" />
                                     </div>
                                     <div>
                                         <label htmlFor='trouble'>ปัญหาที่อยากระบาย</label>
-                                        <textarea id='trouble' rows={50} className="input input-bordered input-md w-full " placeholder="ระบุ"></textarea>
+                                        <textarea id='trouble' rows={50} className="input input-bordered input-md w-full bg-white " placeholder="ระบุ"></textarea>
                                     </div>
 
                                     <button type="submit" className="btn bg-primary">ลงทะเบียน</button>
