@@ -24,10 +24,12 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน',
-  description: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน',
+  description: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน ทำไมต้อง ชุ่มฉ่ำ Branding จะช่วยธุรกิจคุณได้ยังไง? 3 สัญญาณเตือนเจ้าของธุรกิจต้องลงเรียนคอร์สเล่าเรื่องธุรกิจใน 3 นาทีให้ได้ใจ',
   authors: [{ name: 'Choomcham branding' }],
-  keywords: ['Choomcham', 'Choomcham Branding', 'branding', 'courses', 'personal branding', 'marketing', ' brand identity']
-
+  keywords: ['Choomcham', 'Choomcham Branding', 'branding', 'courses', 'personal branding', 'marketing', ' brand identity','ทำไมต้อง ชุ่มฉ่ำ Branding จะช่วยธุรกิจคุณได้ยังไง?','ชุ่มฉ่ำ Branding'],
+  publisher:"Vercel",
+  robots:{ index: true, follow: true },
+  icons:"https://blog.choomcham.com/wp-content/uploads/2021/09/cropped-logo.png"
 }
 
 
@@ -42,7 +44,6 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-
       <body className={cloudSoft.className}>
         <Providers>
           {children}

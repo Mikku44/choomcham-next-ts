@@ -18,7 +18,8 @@ export default function NavigationBar() {
 
                     <Link href="/">
                         <div className="pr-10"><img src="https://blog.choomcham.com/wp-content/uploads/2021/09/cropped-logo.png" alt="" />
-                            <img src="https://www.choomcham.com/assets/images/4277eb7d.png" className='hidden' alt="" /></div>
+                            {/* <img src="https://www.choomcham.com/assets/images/4277eb7d.png" className='hidden' alt="" /> */}
+                            </div>
                     </Link>
                     {/* <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
