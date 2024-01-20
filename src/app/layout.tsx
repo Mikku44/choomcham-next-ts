@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   publisher:"Vercel",
   themeColor:[{ media: "(prefers-color-scheme: light)", color: "#ffffff" }],
   robots:{ index: true, follow: true },
-  icons:"https://blog.choomcham.com/wp-content/uploads/2021/09/cropped-logo.png"
+  icons:"/images/cover2.png"
 }
 
 
