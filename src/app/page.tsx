@@ -49,7 +49,7 @@ export default function Home() {
             <div className="relative bg-blue-900 line  ">
                 <div className="absolute sm:top-[30%] top-[25%] sm:left-40 left-10">
                     <motion.div initial={{ y: 20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 100 }}> <h1 className="text-white">ชุ่มฉ่ำ แบรนดิ้ง</h1></motion.div>
+                        whileInView={{ y: 0, opacity: 100 }}> <h1 className="text-white">ตัวจริงต้องมีที่ยืน</h1></motion.div>
                     {/* top */}
                     <motion.div initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 100 }} className="">
@@ -60,11 +60,10 @@ export default function Home() {
 
                             {/* top */}
                             <div className="mb-10">
-                                <h2 className="text-2xl sm:text-5xl thai">อยากสร้างแบรนด์ให้ชัด <br />
-                                    เล่าเรื่องให้โดน  <br />
-                                    คุณมาถูกที่แล้ว</h2>
+                                <h2 className="text-2xl sm:text-4xl thai">ถึงเวลาแล้วที่คนดี <br/> มีของดีต้องสร้างแบรนด์ให้มีที่ยืน<br/>  ประเทศเราจะได้พัฒนา
+                                </h2>
                                 <br />
-                                <h4>การเป็นตัวจริงแต่ไม่มีที่ยืน มัน<u>เจ็บปวด</u>ใช่ไหม?</h4>
+                                <h4>ผลลัพธ์ของชีวิต ขึ้นอยู่กับ<u>การตัดสินใจ</u>ของคุณในวันนี้</h4>
                                 <br />
                                 {/* <Link href="/about"><div className="btn bg-primary rounded-full px-10 py-1 border-0 hover:scale-110 duration-150 text-white">About us</div></Link> */}
                                 <Button>About Us</Button>
@@ -91,7 +90,8 @@ export default function Home() {
                     <CardBody>
                         <h3 className='text-xl font-bold'>  Branding Strategist</h3>
                         <div className="text-[18px]">
-                            ถนัดวางแผนสร้างแบรนด์จาก 0 ให้มีชื่อเสียง
+                            ถนัดวางแผนสร้างแบรนด์จาก 0 ให้มีชื่อเสียง ด้วยทักษะพิเศษในการมองเห็นล่วงหน้า
+
                         </div>
                     </CardBody>
                 </Card>
@@ -117,7 +117,7 @@ export default function Home() {
                         </div>
                     </CardHeader>
                     <CardBody>
-                        <h3 className='text-xl font-bold'>  Mindfulness learner</h3>
+                        <h3 className='text-xl font-bold'> Spiritual practitioner </h3>
                         <div className="text-[18px]">
 
                             เน้นฝึกจิต ถือศีล 5 เป็นปกติ ตั้งแต่อายุ 13
