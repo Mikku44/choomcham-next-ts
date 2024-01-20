@@ -12,7 +12,7 @@ export default function NavigationBar() {
     return (
         <div className="absolute z-10 top-0 w-full flex justify-around ">
 
-            <div className="navbar px-20 text-white ">
+            <div className="navbar px-10 sm:px-20 text-white ">
                 <div className="navbar-start ">
 
 

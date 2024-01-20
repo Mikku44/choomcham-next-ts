@@ -161,6 +161,25 @@ body{
   padding: 0 30px;
 }
 
+.swiper-button-next:after,.swiper-button-prev:after{
+  color:rgba(0, 0, 0, 0.689);
+  padding: 10px 50px;
+  font-size:24px !important;
+  background: var(--yellow) !important;
+  border-radius: 100px;
+  /* border: 2px solid rgba(0, 0, 0, 0.689); */
+  line-height: 50px !important;
+  top:0% !important;
+  height:fit-content !important;
+}
+.swiper-pagination-bullet-active {
+  background:var(--green) !important; 
+  padding-left:20px;
+  border-radius: 100px !important;
+  transition: all 0.4s ease-in-out;
+}
+
+
 
 
 
@@ -173,7 +192,19 @@ body{
     /* background-size: inherit; */
     height: 50vh;
   }
+
+  .swiper {
+    /* width: 100vw;
+    display: grid; */
+
+    /* height: 300px; */
   
+  }
+  
+  .swiper-slide{
+    display: flex !important;
+    justify-content: center;
+  }
 }
 
 

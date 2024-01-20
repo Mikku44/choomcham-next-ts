@@ -7,16 +7,18 @@ import { Button, Card, CardBody, CardHeader } from '@nextui-org/react'
 import Image from "next/image";
 
 
-// Import Swiper React components
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
-
-// Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { SwiperOptions } from 'swiper/types'
 
-// import 'swiper/modules/navigation.css'; // Navigation module
-// import 'swiper/modules/pagination.css'; // Pagination module
+
+
+
+
 
 
 
@@ -35,7 +37,7 @@ export default function Home() {
         { id: '3', title: "In house Training ", description: "พัฒนาทีมให้เข้าใจการสร้าง Brand ยกระดับ Content ให้ได้ใจลูกค้าเพิ่ม ช่วยให้เจ้าของธุรกิจไม่ต้องเหนื่อย", imageUrl: "https://scontent.fbkk29-4.fna.fbcdn.net/v/t39.30808-6/394736445_831607658972506_7023956463251618192_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=QD9uI_a70GEAX9NZJzL&_nc_ht=scontent.fbkk29-4.fna&oh=00_AfCId5Hhmpz4_TeGAvLU-Swc7ZBHV2-ydzbiojq9kPLGbw&oe=65AD23E2", price: " 125,000" },
         { id: '4', title: "Online Course  ", description: "คอร์สเข้าใจแบรนด์ตัวเอง คอร์สเล่าเรื่อง 3 นาทีให้มียอดขาย คอร์สสร้างคนดังในตำนาน เนื้อหาแน่น ห้ามพลาด", imageUrl: "https://scontent.fbkk29-7.fna.fbcdn.net/v/t39.30808-6/336890739_1354530558661892_5028428925110047977_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=VIkIn8LBXqoAX-Dvonk&_nc_ht=scontent.fbkk29-7.fna&oh=00_AfDdNl-E1cJuHTaW5_T-_HFkLe88yy_Q3pkbBRcpmWihhg&oe=65ACB443", price: " 555" },
     ]
-    return <>
+    return <div>
         <NavigationBar />
 
         <div id="fb-root"></div>
@@ -80,45 +82,45 @@ export default function Home() {
             <section className=' flex flex-col gap-10  sm:flex-row sm:items-stretch items-center justify-items-center justify-between py-10 sm:px-36 work'>
                 <Card className=' w-[350px] shadow-xl bg-slate-100'>
                     <CardHeader>
-                        <p className='h-10 w-10 rounded-full '>
+                        <div className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
-                        </p>
+                        </div>
                     </CardHeader>
                     <CardBody>
                         <h3 className='text-xl font-bold'>  Branding Strategist</h3>
-                        <p className="text-[18px]">
+                        <div className="text-[18px]">
                             ถนัดวางแผนสร้างแบรนด์จาก 0 ให้มีชื่อเสียง
-                        </p>
+                        </div>
                     </CardBody>
                 </Card>
                 <Card className=' w-[350px] shadow-xl bg-slate-100'>
                     <CardHeader>
-                        <p className='h-10 w-10 rounded-full '>
+                        <div className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
-                        </p>
+                        </div>
                     </CardHeader>
                     <CardBody>
                         <h3 className='text-xl font-bold'>  Keynote Speaker </h3>
-                        <p className="text-[18px]">
+                        <div className="text-[18px]">
 
                             เปลี่ยนแปลงวิธีคิดในการสร้างแบรนด์ให้คนหลักพัน
 
-                        </p>
+                        </div>
                     </CardBody>
                 </Card>
                 <Card className=' w-[350px] shadow-xl bg-slate-100'>
                     <CardHeader>
-                        <p className='h-10 w-10 rounded-full '>
+                        <div className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
-                        </p>
+                        </div>
                     </CardHeader>
                     <CardBody>
                         <h3 className='text-xl font-bold'>  Mindfulness learner</h3>
-                        <p className="text-[18px]">
+                        <div className="text-[18px]">
 
                             เน้นฝึกจิต ถือศีล 5 เป็นปกติ ตั้งแต่อายุ 13
 
-                        </p>
+                        </div>
                     </CardBody>
                 </Card>
 
@@ -198,41 +200,64 @@ export default function Home() {
 
             <div className="divider-y"></div>
 
-            <section className='work'>
-          
+            <div className="text-2xl sm:text-4xl font-bold text-center py-10 flex flex-col justify-center items-center">
+                What we do?
+                <div className="rounded-full h-1 w-[100px] bg-[#D33666] "></div>
+            </div>
 
-                <div className="px-10 ">
-                    <div className="text-2xl sm:text-4xl font-bold text-center py-10 ">
-                        What we do
+            {/* scroll section */}
+            <section className=''>
 
-                    </div>
+
+                <div className=" rounded-3xl bg-slate-100 w-[100%]">
+
                     <Swiper
 
-                        spaceBetween={50}
-                        slidesPerView={3}
-                    // onSlideChange={() => console.log('slide change')}
-                    // onSwiper={(swiper) => console.log(swiper)}
+                        // spaceBetween={50}
+                        // slidesPerView={3}
+                        navigation={true}
+                        pagination={true} modules={[Pagination, Navigation]}
+
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 40,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 50,
+                            },
+                        }}
+
                     >
 
                         {courses.map(course =>
-                            <SwiperSlide className="py-10 px-4 ">
-                                <div className="card w-64 sm:w-96 bg-base-100 shadow-xl overflow-hidden " key={course.id}>
-                                    <figure className="h-[100px] sm:h-[240px] overflow-hidden"><img src={course.imageUrl} alt={course.title} /></figure>
-                                    <div className="card-body h-[250px] sm:h-[auto]">
-                                        <h2 className="card-title">
+
+                            <SwiperSlide key={course.id} className="py-10 px-4 cursor-default" >
+                                <div className="card  w-[60rem] sm:w-96 bg-base-100 shadow-xl overflow-hidden ">
+                                    <figure className="h-[210px] sm:h-[240px] overflow-hidden"><img src={course.imageUrl} alt={course.title} /></figure>
+                                    <div className="card-body h-[202px] sm:h-[auto]">
+                                        <div className="card-title">
                                             {course.title}
-                                            <div className="badge badge-secondary">NEW</div>
-                                        </h2>
+                                            <div className="badge bg-[--pink] text-[--yellow] py-3 px-5">NEW</div>
+                                        </div>
                                         <p className="h-[40px] sm:h-[80px] w-[auto] text-ellipsis overflow-hidden">{course.description}</p>
                                         <div className="card-actions justify-between">
                                             <Button>ดูรายละเอียด</Button>
-                                            <div>฿ {course.price}</div>
+                                            <div>
+                                                <div className="font-bold">เริ่มต้นที่</div>
+                                                <div className="text-[--dark-blue] font-bold">฿ {course.price}</div>
+                                            </div>
                                         </div>
                                     </div>
-
                                 </div>
-                            </SwiperSlide>)}
 
+                            </SwiperSlide>
+                        )}
 
                     </Swiper>
                 </div>
@@ -244,23 +269,25 @@ export default function Home() {
 
                     <div className="sm:text-3xl text-xl font-bold">ทำไมต้องชุ่มฉ่ำ?</div>
                     <div className="rounded-full h-1 w-[10%] bg-[#D33666]"></div>
-                    <div className="py-3">
-                        <div className="grid sm:grid-cols-3 gap-10 items-center">
+                    <div className="py-3 my-3 collapse sm:collapse-open collapse-arrow divide-y">
+                        <input type="checkbox" />
+                        <div className="collapse-title text-xl ">วีดีโอแนะนำฉ่ำ</div>
+                        <div className="flex collapse-content  flex-wrap gap-10 items-center justify-center sm:justify-between">
 
 
                             {
                                 videos.map((video) => {
                                     return (
-                                        <>
-                                            <motion.div initial={{ y: 20, opacity: 0 }}
-                                                whileInView={{ y: 0, opacity: 100 }} className="card sm:w-96 overflow-hidden shadow-xl flex items-center bg-black">
-                                                <figure className="">
-                                                    {video.platform == "youtube"
-                                                        ? <iframe width="560" src={video.src} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="object-cover h-full"></iframe>
-                                                        : <iframe src={"https://www.facebook.com/plugins/video.php?href=" + video.src + ""} width="390" height={375} allowFullScreen={true}   ></iframe>}
 
-                                                </figure>
-                                            </motion.div></>
+                                        <motion.div key={video.id} initial={{ y: 20, opacity: 0 }}
+                                            whileInView={{ y: 0, opacity: 100 }} className="card w-[250px] sm:w-96 overflow-hidden shadow-xl flex justify-center items-center bg-black">
+                                            <figure className="">
+                                                {video.platform == "youtube"
+                                                    ? <iframe width="560" src={video.src} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="object-cover  h-[auto]"></iframe>
+                                                    : <iframe src={"https://www.facebook.com/plugins/video.php?href=" + video.src + "&height=520"} width="390" className=' h-[400px]' allowFullScreen={true}   ></iframe>}
+
+                                            </figure>
+                                        </motion.div>
                                     )
                                 })
                             }
@@ -285,11 +312,11 @@ export default function Home() {
 
 
                             <div className="text-5xl font-bold " >เงื่อนไขก่อนสัมภาษณ์รับบริการ!</div>
-                            <p className="">1.ธุรกิจของท่านถูกศีลธรรม ไม่ขัดต่อศีล 5
+                            <div className="">1.ธุรกิจของท่านถูกศีลธรรม ไม่ขัดต่อศีล 5
 
-                            </p>
-                            <p className="">2.คุณรักการเรียนรู้และการพัฒนาตัวเอง</p>
-                            <p className="">3.ธุรกิจคุณมี Feedback ที่ดีมากกว่าเสีย</p>
+                            </div>
+                            <div className="">2.คุณรักการเรียนรู้และการพัฒนาตัวเอง</div>
+                            <div className="">3.ธุรกิจคุณมี Feedback ที่ดีมากกว่าเสีย</div>
                         </div>
                         <div className="card flex-shrink-2 w-full max-w-xl shadow-2xl bg-base-100">
                             <div className=" card  bg-base-100 shadow-xl">
@@ -334,5 +361,5 @@ export default function Home() {
 
 
         <Footer></Footer>
-    </>
+    </div>
 }
