@@ -49,7 +49,7 @@ export default function Home() {
             <div className="relative bg-blue-900 line  ">
                 <div className="absolute sm:top-[30%] top-[25%] sm:left-40 left-10">
                     <motion.div initial={{ y: 20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 100 }}> <h1 className="text-white">ตัวจริงต้องมีที่ยืน</h1></motion.div>
+                        whileInView={{ y: 0, opacity: 100 }}> <h1 className="text-white thai">ตัวจริงต้องมีที่ยืน</h1></motion.div>
                     {/* top */}
                     <motion.div initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 100 }} className="">
