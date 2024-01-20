@@ -27,9 +27,9 @@ export default function Home() {
 
 
     const videos = [
-        { id: '1', src: 'https://www.facebook.com/video.php?v=993405428609497', description: 'name', platform: "facebook" },
-        { id: '2', src: 'https://www.facebook.com/choomchambranding/videos/526606112193948/', description: 'name', platform: "facebook" },
-        { id: '3', src: 'https://www.facebook.com/choomchambranding/videos/215435620461048/', description: 'name', platform: "facebook" },
+        { id: '1', src: 'https://www.facebook.com/video.php?v=993405428609497', description: 'รับออกแบบทิศทางการสร้าง Brand ให้สอดคล้องคุณค่าชีวิต 5 แบรนด์/เดือน ยอดขายหลายล้านที่คุณทำหล่นหายไป เพราะแบรนด์ไม่ชัด', platform: "facebook",title:"รีวิวจากคุณทราย CEO MADAMFIN" },
+        { id: '2', src: 'https://www.facebook.com/choomchambranding/videos/526606112193948/', description: '#คอร์สเปลี่ยนอนาคต ช่วยเพิ่มทั้งยอดวิวและยอดขาย', platform: "facebook",title:"รีวิวจาก Jaymeen นักร้องนักแสดง & เจ้าของ Chubby cheek" },
+        { id: '3', src: 'https://www.facebook.com/choomchambranding/videos/215435620461048/', description: 'Creative อายุน้อยร้อยล้านมาเรียนคอร์สเล่าเรื่องใน 3 นาทีให้ได้ใจคนเป็นยังไง ?', platform: "facebook",title:"รีวิวจาก พี่ม่อน Producer อายุน้อยร้อยล้าน" },
     ]
 
     const courses = [
@@ -48,8 +48,8 @@ export default function Home() {
         <header>
             <div className="relative bg-blue-900 line  ">
                 <div className="absolute sm:top-[30%] top-[25%] sm:left-40 left-10">
-                    <motion.div initial={{ y: 20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 100 }}> <h1 className="text-white thai">ตัวจริงต้องมีที่ยืน</h1></motion.div>
+                    {/* <motion.div initial={{ y: 20, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 100 }}> <h1 className="text-white thai">ตัวจริงต้องมีที่ยืน</h1></motion.div> */}
                     {/* top */}
                     <motion.div initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 100 }} className="">
@@ -60,10 +60,13 @@ export default function Home() {
 
                             {/* top */}
                             <div className="mb-10">
-                                <h2 className="text-2xl sm:text-4xl thai">ถึงเวลาแล้วที่คนดี <br/> มีของดีต้องสร้างแบรนด์ให้มีที่ยืน<br/>  ประเทศเราจะได้พัฒนา
+                                <h2 className="text-2xl sm:text-4xl thai w-[50vw]">คนดี  มีของดี
+                                    <br />
+                                    ต้องสร้างแบรนด์เป็น จนมีที่ยืน
+
                                 </h2>
                                 <br />
-                                <h4>ผลลัพธ์ของชีวิต ขึ้นอยู่กับ<u>การตัดสินใจ</u>ของคุณในวันนี้</h4>
+                                <h4 className="text-md sm:text-lg thai w-[56vw]">ผลลัพธ์ของชีวิต ขึ้นอยู่กับการตัดสินใจของคุณในวันนี้</h4>
                                 <br />
                                 {/* <Link href="/about"><div className="btn bg-primary rounded-full px-10 py-1 border-0 hover:scale-110 duration-150 text-white">About us</div></Link> */}
                                 <Button>About Us</Button>
@@ -88,7 +91,7 @@ export default function Home() {
                         </div>
                     </CardHeader>
                     <CardBody>
-                        <h3 className='text-xl font-bold'>  Branding Strategist</h3>
+                        <h3 className='text-xl font-bold'>  Brand Strategist </h3>
                         <div className="text-[18px]">
                             ถนัดวางแผนสร้างแบรนด์จาก 0 ให้มีชื่อเสียง ด้วยทักษะพิเศษในการมองเห็นล่วงหน้า
 
@@ -203,7 +206,7 @@ export default function Home() {
             <div className="divider-y"></div>
 
             <div className="text-2xl sm:text-4xl font-bold text-center py-10 flex flex-col justify-center items-center">
-                What we do?
+                Our services
                 <div className="rounded-full h-1 w-[100px] bg-[#D33666] "></div>
             </div>
 
@@ -213,7 +216,30 @@ export default function Home() {
 
                 <div className=" rounded-3xl bg-slate-100 w-[100%]">
 
-                    <Swiper
+
+                    <div className="flex flex-wrap justify-center gap-10 py-5 px-4">
+                        {courses.map((course) =>
+                            <div className="card  w-96 sm:w-96 bg-white/50 shadow-xl overflow-hidden  ">
+                                <figure className={"h-[210px] sm:h-[240px] overflow-hidden "}><img src={course.imageUrl} alt={course.title}  className='object-cover '/></figure>
+                                <div className="card-body h-[202px] sm:h-[auto]">
+                                    <div className="card-title text-[--green]">
+                                        {course.title}
+                                        {/* <div className="badge bg-[--pink] text-[--yellow] py-3 px-5">NEW</div> */}
+                                    </div>
+                                    <p className="h-[40px] sm:h-[80px] w-[auto] text-ellipsis overflow-hidden">{course.description}</p>
+                                    <div className="card-actions justify-between">
+                                        <Button className="bg-[--yellow]" radius='full'>ดูรายละเอียด</Button>
+                                        <div>
+                                            <div className="font-bold">เริ่มต้นที่</div>
+                                            <div className="text-[--dark-blue] font-bold">฿ {course.price}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* <Swiper
 
                         // spaceBetween={50}
                         // slidesPerView={3}
@@ -261,7 +287,7 @@ export default function Home() {
                             </SwiperSlide>
                         )}
 
-                    </Swiper>
+                    </Swiper> */}
                 </div>
             </section>
 
@@ -271,12 +297,11 @@ export default function Home() {
 
                     <div className="sm:text-3xl text-xl font-bold">ทำไมต้องชุ่มฉ่ำ?</div>
                     <div className="rounded-full h-1 w-[10%] bg-[#D33666]"></div>
-                    <div className="py-3 my-3 collapse sm:collapse-open collapse-arrow divide-y">
-                        <input type="checkbox" />
-                        <div className="collapse-title text-xl ">วีดีโอแนะนำฉ่ำ</div>
-                        <div className="flex collapse-content  flex-wrap gap-10 items-center justify-center sm:justify-between">
+                    <div className="py-3 my-3  divide-y">
 
+                        <div className="flex   flex-wrap gap-5 items-center justify-center ">
 
+                            {/* 
                             {
                                 videos.map((video) => {
                                     return (
@@ -292,7 +317,27 @@ export default function Home() {
                                         </motion.div>
                                     )
                                 })
-                            }
+                            } */}
+
+                            {videos.map((video) => {
+                                return (
+                                    <div className="card  card-side bg-[--pink] glass shadow-xl w-[346px] h-[548px] overflow-hidden sm:w-[640px]  sm:h-[380px] flex-col sm:flex-row">
+                                        <figure className='bg-black w-[350px] sm:w-[50%] h-full  flex items-center justify-center overflow-hidden '> 
+                                            <iframe src={"https://www.facebook.com/plugins/video.php?href=" + video.src + ""} className='sm:h-[400px]' allowFullScreen={true}  allow='autoplay' ></iframe></figure>
+                                        <div className="card-body sm:flex-col flex-row text-white sm:w-[50%] sm:h-[auto] ">
+                                            <div>
+                                                <h2 className="card-title sm:text-3xl font-bold text-[--yellow] text-xl sm:w-[auto] overflow-hidden text-ellipsis">{video.title}!</h2>
+                                                <p className="text-ellipsis sm:w-[auto] h-[120px] text-[14px] sm:text-xl overflow-hidden">{video.description}.</p>
+                                            </div>
+                                            <div className="card-actions justify-end">
+                                                <a href={video.src} target='blank'><Button className="bg-[--yellow] ">Watch</Button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+
+
                         </div>
                     </div>
                 </div>
@@ -313,7 +358,7 @@ export default function Home() {
 
 
 
-                            <div className="text-5xl font-bold " >เงื่อนไขก่อนสัมภาษณ์รับบริการ!</div>
+                            <div className="text-5xl font-bold " >เงื่อนไขก่อนรับบริการ!</div>
                             <div className="">1.ธุรกิจของท่านถูกศีลธรรม ไม่ขัดต่อศีล 5
 
                             </div>

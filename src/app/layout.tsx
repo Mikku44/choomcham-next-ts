@@ -24,13 +24,19 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน',
-  description: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน ทำไมต้อง ชุ่มฉ่ำ Branding จะช่วยธุรกิจคุณได้ยังไง? 3 สัญญาณเตือนเจ้าของธุรกิจต้องลงเรียนคอร์สเล่าเรื่องธุรกิจใน 3 นาทีให้ได้ใจ',
+  description: 'ชุ่มฉ่ำ branding ตัวจริงต้องมีที่ยืน คนดี มีของดี ต้องสร้างแบรนด์เป็น จนมีที่ยืน ผลลัพธ์ของชีวิต ขึ้นอยู่กับการตัดสินใจของคุณในวันนี้ ทำไมต้อง ชุ่มฉ่ำ Branding จะช่วยธุรกิจคุณได้ยังไง? วางจิตให้ชุ่มฉ่ำ เดี๋ยวผลลัพธ์จะฉ่ำเอง',
   authors: [{ name: 'Choomcham branding' }],
-  keywords: ['Choomcham', 'Choomcham Branding', 'branding', 'courses', 'personal branding', 'marketing', ' brand identity','ทำไมต้อง ชุ่มฉ่ำ Branding จะช่วยธุรกิจคุณได้ยังไง?','ชุ่มฉ่ำ Branding'],
-  publisher:"Vercel",
-  themeColor:[{ media: "(prefers-color-scheme: light)", color: "#ffffff" }],
-  robots:{ index: true, follow: true },
-  icons:"/images/cover2.png"
+  keywords: ['Choomcham', 'Choomcham Branding', 'branding', 'courses', 'personal branding','Brand Strategist','Keynote Speaker','Spiritual practitioner','อีฟ ภัทรัดจารินท์​ สุวัชรานนท์', 'marketing', ' brand identity', 'ทำไมต้อง ชุ่มฉ่ำ Branding จะช่วยธุรกิจคุณได้ยังไง?', 'ชุ่มฉ่ำ Branding'],
+  publisher: "Vercel",
+  themeColor: [{ media: "(prefers-color-scheme: light)", color: "#ffffff" }],
+  robots: { index: true, follow: true },
+  icons: "https://blog.choomcham.com/wp-content/uploads/2021/09/cropped-logo.png",
+  openGraph: {
+
+    images: [{
+      url: "https://choomcham.vercel.app/images/cover2.png",
+    }]
+  }
 }
 
 
