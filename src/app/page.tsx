@@ -219,7 +219,7 @@ export default function Home() {
 
                     <div className="flex flex-wrap justify-center gap-10 py-5 px-4">
                         {courses.map((course) =>
-                            <div className="card  w-96 sm:w-96 bg-white/50 shadow-xl overflow-hidden  ">
+                            <div className="card  w-96 sm:w-96 bg-white/50 shadow-xl overflow-hidden  " key={course.id}>
                                 <figure className={"h-[210px] sm:h-[240px] overflow-hidden "}><img src={course.imageUrl} alt={course.title}  className='object-cover '/></figure>
                                 <div className="card-body h-[202px] sm:h-[auto]">
                                     <div className="card-title text-[--green]">
