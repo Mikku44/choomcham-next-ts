@@ -1,5 +1,6 @@
 'use client'
-import Navbar from "../components/nav"
+// import Navbar from "../components/nav"
+import NavigationBar from '../components/navbar';
 import Footer from '../components/footer';
 import { motion } from "framer-motion"
 
@@ -7,19 +8,25 @@ function About() {
     return (
         <>
 
-            <Navbar />
-            <main className="relative">
+            {/* <Navbar /> */}
+            <NavigationBar />
+            <div className="bg-slate-200 ">
+                <div className="text-black  w-full h-[80px]   rounded-3xl">
+                    .
+                </div>
+            </div>
+            {/* <main className="relative">
 
 
                 <div>
-                    <img draggable='false' src="https://www.choomcham.com/assets/images/4bf230f2.png" alt="" className="w-full sm:mb-0 mb-10" />
+                    <img draggable='false' src="/images/kruEve_image.jpg" alt="" className="w-96 rounded-2xl sm:mb-0 mb-10" />
                 </div>
                 <div
                     className=" px-10 sm:absolute top-52 sm:left-2/4">
                     <motion.div
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 100 }} >เกี่ยวกับ ครูอีฟ ชุ่มฉ่ำ แบรนดิ้ง</motion.div>
-                    {/* top */}
+                   
                     <div
                         className="pb-10 ">
                         <div>
@@ -87,7 +94,22 @@ function About() {
                 </div>
 
 
-            </main>
+            </main> */}
+
+            <section className="bg-slate-100">
+                <div className="p-10 flex justify-evenly items-center">
+                    <div className="relative">
+                        <img draggable='false' src="/images/kruEve_image.jpg" alt="" className="w-96 rounded-2xl sm:mb-0 mb-10 rotate-6" />
+                    </div>
+                    <div>
+                        <h2 className=" text-3xl font-bold">ครูอีฟ ภัทรัดจารินท์ สุวัชรานนท์ </h2>
+                        <div className="w-[450px] text-xl">นักสร้างแบรนด์รุ่นใหม่สายคุณค่า
+                            บัณฑิตคณะศิลปศาสตร์ เอกภาษาศาสตร์ มหาวิทยาลัยธรรมศาสตร์
+                            อดีตผู้ร่วมก่อตั้งสร้างแบรนด์ “เกลา นิสัยอันตราย” ผู้ติดตามล้านคน
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <Footer />
         </>

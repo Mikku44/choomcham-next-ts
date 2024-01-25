@@ -192,13 +192,13 @@ export default function Home() {
                         <div className="py-10"><Button className=" bg-[--green] text-white text-lg px-10 " radius='full'>สำรวจคอร์สที่เหมาะกับคุณ</Button></div>
                     </div>
                     <div className="flex flex-wrap sm:w-[30%] w-[300px] gap-5 justify-center ">
-                        <img className="sm:h-[50px] h-[30px]" src="/images/100_logo.png" alt="โลโก้อายุน้อยร้อยล้าน" />
-                        <img className="sm:h-[50px] h-[30px]" src="/images/bdms_logo.jpg" alt="โลโก้คลินิคบีดีเอ็มเอส" />
-                        <img className="sm:h-[50px] h-[30px]" src="/images/chubbycheeks_logo.jpg" alt="โลโก้ชุบบี้ชิ๊กส์" />
-                        <img className="sm:h-[50px] h-[30px]" src="/images/madamfin_logo.jpg" alt="โลโก้มาดามฟิน" />
-                        <img className="sm:h-[50px] h-[30px]" src="/images/ondemand_logo.png" alt="โลโก้ออนดีมานด์" />
-                        <img className="sm:h-[50px] h-[30px]" src="/images/sowonclinic_logo.jpg" alt="โลโก้โซวอนคลีนิค" />
-                        <img className="sm:h-[50px] h-[30px]" src="/images/winkwhite_logo.jpg" alt="โลโก้วิ้งค์ไวท์" />
+                        <img className="sm:h-[80px] h-[50px]" src="/images/100_logo.png" alt="โลโก้อายุน้อยร้อยล้าน" />
+                        <img className="sm:h-[80px] h-[50px]" src="/images/bdms_logo.jpg" alt="โลโก้คลินิคบีดีเอ็มเอส" />
+                        <img className="sm:h-[80px] h-[50px]" src="/images/chubbycheeks_logo.jpg" alt="โลโก้ชุบบี้ชิ๊กส์" />
+                        <img className="sm:h-[80px] h-[50px]" src="/images/madamfin_logo.jpg" alt="โลโก้มาดามฟิน" />
+                        <img className="sm:h-[80px] h-[50px]" src="/images/ondemand_logo.png" alt="โลโก้ออนดีมานด์" />
+                        <img className="sm:h-[80px] h-[50px]" src="/images/sowonclinic_logo.jpg" alt="โลโก้โซวอนคลีนิค" />
+                        <img className="sm:h-[80px] h-[50px]" src="/images/winkwhite_logo.jpg" alt="โลโก้วิ้งค์ไวท์" />
                     </div>
                 </div>
             </section>

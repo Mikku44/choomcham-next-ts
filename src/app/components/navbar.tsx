@@ -12,10 +12,10 @@ export default function NavigationBar() {
     return (
         <div className="absolute z-10 top-0 w-full flex justify-around ">
 
-            <div className="navbar px-10 sm:px-20 text-white ">
+            <div className={"navbar px-10 sm:px-20  " }>
                 <div className="navbar-start ">
 
-
+                
                     <Link href="/">
                         <div className="pr-10"><img src="https://blog.choomcham.com/wp-content/uploads/2021/09/cropped-logo.png" alt="" />
                             {/* <img src="https://www.choomcham.com/assets/images/4277eb7d.png" className='hidden' alt="" /> */}
@@ -35,20 +35,20 @@ export default function NavigationBar() {
 
                 </div>
                 <div className="navbar-center sm:flex  gap-10 hidden">
-                    <ul className='duration-[500] gap-5 hidden font-medium sm:flex items-center'>
+                    <ul className=' gap-5 hidden font-medium sm:flex items-center'>
 
-                        <Link className='hover:text-pink-600 text-white' href="/service">
+                        <a className=' text-white hover:text-[--pink] duration-200' href="/service">
                             <li>Services</li>
-                        </Link>
-                        <Link className='hover:text-pink-600 text-white' href="/works">
+                        </a>
+                        <a className=' text-white hover:text-[--pink] duration-200' href="/works">
                             <li>Our Works</li>
-                        </Link>
-                        <Link className='hover:text-pink-600 text-white' href="/blog">
+                        </a>
+                        <a className=' text-white hover:text-[--pink] duration-200' href="/blog">
                             <li>Content</li>
-                        </Link>
-                        <Link className='hover:text-pink-600 text-white' href="/about">
+                        </a>
+                        <a className=' text-white hover:text-[--pink] duration-200' href="/about">
                             <li>About us</li>
-                        </Link>
+                        </a>
 
                     </ul>
                 </div>
@@ -77,7 +77,7 @@ export default function NavigationBar() {
                             <li><a>Services</a></li>
                             <li><a>Our Works</a></li>
                             <li><a>Contents</a></li>
-                            <li><a>About Us</a></li>
+                            <li><a href="/about">About Us</a></li>
                             <li><a>Analystic</a></li>
 
                             <h4 className="pt-10">Contact us</h4>
