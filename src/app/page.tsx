@@ -195,7 +195,7 @@ export default function Home() {
 
             <section className='p-10 flex justify-evenly items-center'>
                 <motion.div initial={{ opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 100 }} > <img width="250" src="https://www.choomcham.com/assets/images/6d557835.png" alt="อิโมจิชุ่มฉ่ำ ตัวจริงต้องมีที่ยืน" /></motion.div>
+                    whileInView={{ y: 0, opacity: 100 }} > <img width="250" src="/images/sticker6.png" alt="อิโมจิชุ่มฉ่ำ ตัวจริงต้องมีที่ยืน" /></motion.div>
                 <motion.div initial={{ opacity: 0 }}
                     whileInView={{ y: 0, opacity: 100 }} className='w-[450px]'>
                     <div className="text-xl sm:text-3xl font-bold  text-yellow-500 ">

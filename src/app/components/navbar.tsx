@@ -1,3 +1,4 @@
+"use client"
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { useState } from "react";
 
@@ -37,16 +38,16 @@ export default function NavigationBar() {
                 <div className="navbar-center sm:flex  gap-10 hidden">
                     <ul className=' gap-5 hidden font-medium sm:flex items-center'>
 
-                        <a className=' text-white hover:text-[--pink] duration-200' href="/service">
+                        <a className='  hover:text-[--pink] duration-200' href="/service">
                             <li>Services</li>
                         </a>
-                        <a className=' text-white hover:text-[--pink] duration-200' href="/works">
+                        <a className='  hover:text-[--pink] duration-200' href="/works">
                             <li>Our Works</li>
                         </a>
-                        <a className=' text-white hover:text-[--pink] duration-200' href="/blog">
+                        <a className='  hover:text-[--pink] duration-200' href="/blog">
                             <li>Content</li>
                         </a>
-                        <a className=' text-white hover:text-[--pink] duration-200' href="/about">
+                        <a className='  hover:text-[--pink] duration-200' href="/about">
                             <li>About us</li>
                         </a>
 
@@ -62,10 +63,10 @@ export default function NavigationBar() {
                             <span className="badge badge-xs badge-primary indicator-item"></span>
                         </div>
                     </button> */}
-                    <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-                    <div className="drawer-content">
+                    <input id="my-drawer" type="checkbox" className="drawer-toggle " />
+                    <div className="drawer-content flex items-center justify-center">
                         {/* Page content here */}
-                        <label htmlFor="my-drawer" className="drawer-button btn-ghost btn-circle">
+                        <label htmlFor="my-drawer" className="drawer-button btn-ghost p-2 duration-150 rounded-md block">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                         </label>
                     </div>
