@@ -7,24 +7,9 @@ import NavigationBar from './components/navbar'
 import { Button, Card, CardBody, CardHeader } from '@nextui-org/react'
 import Image from "next/image";
 
-// const { Firestore } = require('@google-cloud/firestore');
-
-// // Create a new client
-// const firestore = new Firestore();
-
-// async function quickstart() {
-//     // Obtain a document reference.
-//     const document = firestore.doc('posts/intro-to-firestore');
-
-//     ;
-
-//     // Read the document.
-//     const doc = await document.get();
-//     console.log('Read the document');
-
-// }
-// quickstart();
-
+import { db } from './firebaseConfig'
+import { collection, getDocs } from "firebase/firestore";
+import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react'
 
 
 // import { Swiper, SwiperSlide } from 'swiper/react';
@@ -34,13 +19,60 @@ import Image from "next/image";
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 // import { SwiperOptions } from 'swiper/types'
+class Course {
+    id: string;
+    title: string;
+    description: string;
+    imageUrl: string;
+    price: string;
+    // static courseConverter: any
+
+    constructor(id: string, title: string, description: string, imageUrl: string, price: any) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.imageUrl = imageUrl;
+        this.price = price;
+    }
+
+    // Firestore data converter
+    static courseConverter = {
+        toFirestore: (course: { id: any; title: any; description: any; imageUrl: any, price: any }) => {
+            return {
+                id: course.id,
+                title: course.title,
+                description: course.description,
+                imageUrl: course.imageUrl,
+                price: course.price,
+            };
+        },
+        fromFirestore: (snapshot: { data: (arg0: any) => any }, options: any) => {
+            const data = snapshot.data(options);
+            return new Course(data.id, data.title, data.description, data.imageUrl, data.price);
+        }
+    };
+}
 
 
+async function getContentData() {
+    const querySnapshot = await getDocs(collection(db, "course"));
+    const data: Course[] = [];
+
+    querySnapshot.forEach((doc) => {
+        data.push(Course.courseConverter.fromFirestore(doc, ""));
+    });
+
+    return data;
+}
 
 
 
 
 export default function Home() {
+
+    // var contents;
+    const [contents, setContents] = useState<Course[]>([]);
+
 
 
     const videos = [
@@ -57,9 +89,22 @@ export default function Home() {
         { id: '5', title: "Online Course  ", description: "คอร์สเข้าใจแบรนด์ตัวเอง คอร์สเล่าเรื่อง 3 นาทีให้มียอดขาย คอร์สสร้างคนดังในตำนาน เนื้อหาแน่น ห้ามพลาด", imageUrl: "https://scontent.fbkk29-7.fna.fbcdn.net/v/t39.30808-6/336890739_1354530558661892_5028428925110047977_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=VIkIn8LBXqoAX-Dvonk&_nc_ht=scontent.fbkk29-7.fna&oh=00_AfDdNl-E1cJuHTaW5_T-_HFkLe88yy_Q3pkbBRcpmWihhg&oe=65ACB443", price: " 555" },
         { id: '6', title: "ชุ่มฉ่ำ Studio   ", description: "ถ่ายภาพโปรไฟล์สำหรับ CEO เพื่อสร้าง Personal Brand ดึงความเป็นตัวคุณออกมาให้มีเสน่ห์ ถ่ายภาพให้ดูมีชีวิตชุ่มฉ่ำ", imageUrl: "https://scontent.fbkk29-7.fna.fbcdn.net/v/t39.30808-6/336890739_1354530558661892_5028428925110047977_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=VIkIn8LBXqoAX-Dvonk&_nc_ht=scontent.fbkk29-7.fna&oh=00_AfDdNl-E1cJuHTaW5_T-_HFkLe88yy_Q3pkbBRcpmWihhg&oe=65ACB443", price: " 19,000" },
     ]
+
+    useEffect(() => {
+        async function fetchData() {
+            const data = await getContentData();
+            setContents(data);
+        }
+
+        fetchData();
+    }, []);
+
+
     return <div>
+        <div className="text-white">
 
         <NavigationBar />
+        </div>
 
         <div id="fb-root"></div>
         <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v18.0&appId=156838349817980" nonce="WQnbcNzF"></script>
@@ -232,8 +277,33 @@ export default function Home() {
 
 
                 <div className=" rounded-3xl bg-slate-100 w-[100%]">
+                    <div className="flex flex-wrap justify-center gap-10 py-5 px-4">
 
+                        {
+                            (contents != null) ?
+                                contents.map((content) =>
+                                    <div className="card  w-96 sm:w-96 bg-white/50 shadow-xl overflow-hidden  " key={content.id}>
+                                        <figure className={"h-[210px] sm:h-[240px] overflow-hidden "}><img src={content.imageUrl} alt={content.title} className='object-cover ' /></figure>
+                                        <div className="card-body h-[202px] sm:h-[auto]">
+                                            <div className="card-title text-[--green]">
+                                                {content.title}
+                                                {/* <div className="badge bg-[--pink] text-[--yellow] py-3 px-5">NEW</div> */}
+                                            </div>
+                                            <p className="h-[40px] sm:h-[80px] w-[auto] text-ellipsis overflow-hidden">{content.description}</p>
+                                            <div className="card-actions justify-between">
+                                                <Button href='#' className="bg-[--yellow]" radius='full'>ดูรายละเอียด</Button>
+                                                <div>
+                                                    <div className="font-bold">เริ่มต้นที่</div>
+                                                    <div className="text-[--dark-blue] font-bold">฿ {content.price}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : <div>Nothing here</div>}
 
+                    </div>
+
+                    {/* 
                     <div className="flex flex-wrap justify-center gap-10 py-5 px-4">
                         {courses.map((course) =>
                             <div className="card  w-96 sm:w-96 bg-white/50 shadow-xl overflow-hidden  " key={course.id}>
@@ -241,7 +311,7 @@ export default function Home() {
                                 <div className="card-body h-[202px] sm:h-[auto]">
                                     <div className="card-title text-[--green]">
                                         {course.title}
-                                        {/* <div className="badge bg-[--pink] text-[--yellow] py-3 px-5">NEW</div> */}
+                                      
                                     </div>
                                     <p className="h-[40px] sm:h-[80px] w-[auto] text-ellipsis overflow-hidden">{course.description}</p>
                                     <div className="card-actions justify-between">
@@ -254,7 +324,7 @@ export default function Home() {
                                 </div>
                             </div>
                         )}
-                    </div>
+                    </div> */}
 
                     {/* <Swiper
 
