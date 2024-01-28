@@ -146,7 +146,7 @@ export default function Home() {
 
         <section>
             <section className=' flex flex-col gap-10  sm:flex-row sm:items-stretch items-center justify-items-center justify-between py-10 sm:px-10 work'>
-                <Card className='w-[calc(100vw-20px)] sm:w-[350px] shadow-xl bg-slate-100'>
+                <Card className='w-[calc(100vw-20px)] sm:w-[350px] shadow-xl bg-white/80 glass'>
                     <CardHeader>
                         <div className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
@@ -160,7 +160,7 @@ export default function Home() {
                         </div>
                     </CardBody>
                 </Card>
-                <Card className='w-[calc(100vw-20px)] sm:w-[350px] shadow-xl bg-slate-100'>
+                <Card className='w-[calc(100vw-20px)] sm:w-[350px] shadow-xl bg-white/80 glass'>
                     <CardHeader>
                         <div className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
@@ -175,7 +175,7 @@ export default function Home() {
                         </div>
                     </CardBody>
                 </Card>
-                <Card className='w-[calc(100vw-20px)] sm:w-[350px] shadow-xl bg-slate-100'>
+                <Card className='w-[calc(100vw-20px)] sm:w-[350px] shadow-xl bg-white/80 glass'>
                     <CardHeader>
                         <div className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
