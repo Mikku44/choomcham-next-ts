@@ -109,9 +109,9 @@ export default function Home() {
         <div id="fb-root"></div>
         <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v18.0&appId=156838349817980" nonce="WQnbcNzF"></script>
 
-        <header>
+        <section>
             <div className="relative bg-blue-900 line  ">
-                <div className="absolute sm:top-[30%] top-[25%] sm:left-40 left-10">
+                <div className="absolute sm:top-[30%] top-[25%] sm:left-[3%] left-10">
                     {/* <motion.div initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 100 }}> <h1 className="text-white thai">ตัวจริงต้องมีที่ยืน</h1></motion.div> */}
                     {/* top */}
@@ -124,11 +124,11 @@ export default function Home() {
 
                             {/* top */}
                             <div className="mb-10">
-                                <h2 className="text-2xl sm:text-4xl thai w-[50vw]">ชุ่มฉ่ำ Branding คือ <br /> โรงเรียนปั้นเจ้าของธุรกิจคนดี <br /> มีของดีสร้างแบรนด์มีที่ยืน
+                                <h2 className=" sm:text-[2.5vw] thai sm:w-[50vw] small">ชุ่มฉ่ำ Branding คือ <br /> โรงเรียนปั้นเจ้าของธุรกิจคนดี <br /> มีของดีสร้างแบรนด์มีที่ยืน
 
                                 </h2>
                                 <br />
-                                <h4 className="text-md sm:text-lg thai w-[56vw]">การพบกันของเราไม่ใช่เรื่องบังเอิญ</h4>
+                                <h4 className="text-[14px] sm:text-large thai w-[56vw]">การพบกันของเราไม่ใช่เรื่องบังเอิญ</h4>
                                 <br />
                                 {/* <Link href="/about"><div className="btn bg-primary rounded-full px-10 py-1 border-0 hover:scale-110 duration-150 text-white">About us</div></Link> */}
                                 <Button>About Us</Button>
@@ -137,16 +137,16 @@ export default function Home() {
                         <br />
                     </motion.div>
                 </div>
-                <h4 className="absolute right-5 sm:right-20 bottom-5 sm:bottom-40 text-white thai">
+                <h4 className="absolute right-5 sm:right-20 bottom-5 sm:bottom-40 text-white thai sm:text-base text-[12px]">
                     <div>อีฟ ภัทรัดจารินท์​ สุวัชรานนท์</div>
                     <div>Brand Consultant / Teacher</div>
                 </h4>
             </div>
-        </header>
+        </section>
 
-        <main>
-            <section className=' flex flex-col gap-10  sm:flex-row sm:items-stretch items-center justify-items-center justify-between py-10 sm:px-36 work'>
-                <Card className=' w-[350px] shadow-xl bg-slate-100'>
+        <section>
+            <section className=' flex flex-col gap-10  sm:flex-row sm:items-stretch items-center justify-items-center justify-between py-10 sm:px-10 work'>
+                <Card className='w-[calc(100vw-20px)] sm:w-[350px] shadow-xl bg-slate-100'>
                     <CardHeader>
                         <div className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
@@ -160,7 +160,7 @@ export default function Home() {
                         </div>
                     </CardBody>
                 </Card>
-                <Card className=' w-[350px] shadow-xl bg-slate-100'>
+                <Card className='w-[calc(100vw-20px)] sm:w-[350px] shadow-xl bg-slate-100'>
                     <CardHeader>
                         <div className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
@@ -175,7 +175,7 @@ export default function Home() {
                         </div>
                     </CardBody>
                 </Card>
-                <Card className=' w-[350px] shadow-xl bg-slate-100'>
+                <Card className='w-[calc(100vw-20px)] sm:w-[350px] shadow-xl bg-slate-100'>
                     <CardHeader>
                         <div className='h-10 w-10 rounded-full '>
                             <Image className='' width={300} height={300} src="./icon.svg" alt="" />
@@ -249,11 +249,11 @@ export default function Home() {
                     <div className=' p-10 flex flex-col justify-between '>
                         <div>
                             <div className="text-3xl font-bold text-[--yellow]">Our Students</div>
-                            <div className="text-lg w-[300px] "> ธุรกิจคุณจะมีที่ยืนเมื่อคุณกล้าตัดสินใจจะเลิกอยู่ตรงกลาง</div>
+                            <div className="text-lg w-[95vw] sm:w-auto "> ธุรกิจคุณจะมีที่ยืนเมื่อคุณกล้าตัดสินใจจะเลิกอยู่ตรงกลาง</div>
                         </div>
                         <div className="py-10"><Button className=" bg-[--green] text-white text-lg px-10 " radius='full'>สำรวจคอร์สที่เหมาะกับคุณ</Button></div>
                     </div>
-                    <div className="flex flex-wrap sm:w-[30%] w-[300px] gap-5 justify-center ">
+                    <div className="flex flex-wrap sm:w-[30%] w-[95vw] gap-5 justify-center ">
                         <img className="sm:h-[80px] h-[50px]" src="/images/100_logo.png" alt="โลโก้อายุน้อยร้อยล้าน" />
                         <img className="sm:h-[80px] h-[50px]" src="/images/bdms_logo.jpg" alt="โลโก้คลินิคบีดีเอ็มเอส" />
                         <img className="sm:h-[80px] h-[50px]" src="/images/chubbycheeks_logo.jpg" alt="โลโก้ชุบบี้ชิ๊กส์" />
@@ -490,7 +490,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-        </main>
+        </section>
 
 
 

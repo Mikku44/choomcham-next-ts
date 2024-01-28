@@ -102,13 +102,13 @@ function About() {
                     <div className="bg-[--green] w-[100px] h-[100px] absolute sm:bottom-0  sm:right-[300px] rounded-t-full">.</div>
                     <div className="bg-[--yellow] w-[100px] h-[100px] absolute sm:bottom-0  sm:right-[450px] rounded-t-full">.</div>
                     <div className="bg-[--pink] w-[100px] h-[150px] absolute sm:bottom-0 sm:right-[600px] rounded-t-full">.</div>
-                    <div className="relative">
-                        <img src="./icon.svg" className="z-[3] absolute w-[90px] sm:w-[200px]" alt="choomcham icon - splash water" />
-                        <img draggable='false' src="/images/kruEve_image.jpg" alt="รูปครูอีฟ กำลังยิ้ม" className="w-72 max-w-[auto] sm:w-96 rounded-2xl sm:mb-0  rotate-6" />
+                    <div className="relative p-10">
+                        <img src="./icon.svg" className="z-[3] absolute w-[90px] sm:w-[5vw]" alt="choomcham icon - splash water" />
+                        <img draggable='false' src="/images/kruEve_image.jpg" alt="รูปครูอีฟ กำลังยิ้ม" className="w-72 max-w-[auto] rounded-2xl sm:mb-0  rotate-6" />
                     </div>
                     <div>
                         <h2 className="text-xl sm:text-3xl font-bold">ครูอีฟ ภัทรัดจารินท์ สุวัชรานนท์ </h2>
-                        <div className=" sm:w-[450px] text-lg sm:text-xl">นักสร้างแบรนด์รุ่นใหม่สายคุณค่า
+                        <div className=" sm:w-[500px] text-lg sm:text-xl">นักสร้างแบรนด์รุ่นใหม่สายคุณค่า
                             บัณฑิตคณะศิลปศาสตร์ เอกภาษาศาสตร์ มหาวิทยาลัยธรรมศาสตร์
                             อดีตผู้ร่วมก่อตั้งสร้างแบรนด์ “เกลา นิสัยอันตราย” ผู้ติดตามล้านคน
                         </div>
@@ -119,14 +119,14 @@ function About() {
 
             <section>
                 <div className="p-10 grid sm:flex justify-items-center justify-around flex-row-reverse gap-5 ">
-                    <div className="relative">
+                    <div className="relative p-10">
                         <img src="./icon.svg" className="z-[3] absolute w-[90px] sm:w-[200px] right-0 bottom-4" alt="choomcham icon - splash water" />
                         <img draggable='false' src="/images/kruEve_image2.jpg" alt="รูปครูอีฟ กำลังทำมือผิด" className="w-72 max-w-[auto] sm:w-96 rounded-2xl sm:mb-0  -rotate-6" />
                     </div>
                     <div>
 
                         <div className="sm:text-4xl text-xl font-bold ">ความเป็นมา</div>
-                        <p className="sm:text-xl text-lg w-[300px] sm:w-[500px] text-pretty indent-10">
+                        <p className="sm:text-xl text-lg w-[calc(45vw - 50px)] sm:w-[calc(50vw-20px)] text-pretty indent-10">
                             พูดไปคงไม่มีใครเชื่อว่าเมื่อก่อนอีฟเป็นเด็กขี้อาย พูดไม่รู้เรื่องคนหนึ่ง ไม่คิดไม่ฝันว่าโตขึ้นมาจะทำอาชีพที่ตรงกันข้ามกับนิสัยตัวเองแบบสุดขั้ว แต่จุดเปลี่ยนมันเกิดขึ้นจากที่หลังจากเรียนจบมา อีฟตั้งใจกับตัวเองว่าจะสละเวลาชีวิต 2 ปีทำอะไรเพื่อคนอื่นบ้าง เลยมาจบที่งานมูลนิธิ ขณะนั้นเป็นผู้หิวกระหายในการทดลองวิชาการสร้างแบรนด์
                         </p>
                         <div className='flex justify-center gap-2 p-4 w-[100%]'>
@@ -134,7 +134,7 @@ function About() {
                             <div className="rounded-full bg-[--pink] text-[--pink] w-5 h-5 text-center">.</div>
                             <div className="rounded-full bg-[--pink] text-[--pink] w-5 h-5 text-center">.</div>
                         </div>
-                        <p className="sm:text-xl text-lg w-[300px] sm:w-[500px] text-pretty indent-10">แม้ไม่เคยเรียนด้านนี้โดยตรง แต่ใจชอบเรื่องการค้าขาย การทำคอนเทนต์ สร้างเวบบอร์ดมาตั้งแต่เด็ก และเป็นคนชอบฟังธรรมแต่เด็ก เลยสงสัยว่า จะดีไหมถ้าเราปรับแพคเกจศีลธรรมให้เด็กรุ่นใหม่สนใจ จนในที่สุดก็สร้างแบรนด์ประสบความสำเร็จ และมีเจ้าของธุรกิจหลายคนอยากรู้วิธีทำยังไง เลยเกิดขึ้นมาเป็นคอร์สเล่าเรื่อง 3 นาทีให้ได้ใจคน ที่มีผู้เรียนมากกว่า 1,000 คน สร้างความสำเร็จให้กับเจ้าของธุรกิจ SME หน้าใหม่ได้มีที่ยืนในประเทศ</p>
+                        <p className="sm:text-xl text-lg w-[calc(45vw - 50px)] sm:w-[calc(50vw-20px)] text-pretty indent-10">แม้ไม่เคยเรียนด้านนี้โดยตรง แต่ใจชอบเรื่องการค้าขาย การทำคอนเทนต์ สร้างเวบบอร์ดมาตั้งแต่เด็ก และเป็นคนชอบฟังธรรมแต่เด็ก เลยสงสัยว่า จะดีไหมถ้าเราปรับแพคเกจศีลธรรมให้เด็กรุ่นใหม่สนใจ จนในที่สุดก็สร้างแบรนด์ประสบความสำเร็จ และมีเจ้าของธุรกิจหลายคนอยากรู้วิธีทำยังไง เลยเกิดขึ้นมาเป็นคอร์สเล่าเรื่อง 3 นาทีให้ได้ใจคน ที่มีผู้เรียนมากกว่า 1,000 คน สร้างความสำเร็จให้กับเจ้าของธุรกิจ SME หน้าใหม่ได้มีที่ยืนในประเทศ</p>
 
                     </div>
 
@@ -142,14 +142,14 @@ function About() {
             </section>
             <section className="bg-slate-100">
                 <div className="p-10 grid sm:flex justify-items-center justify-around  gap-5 ">
-                    <div className="relative">
+                    <div className="relative p-10">
                         <img src="./icon.svg" className="z-[3] absolute w-[90px] sm:w-[150px] right-0 top-4" alt="choomcham icon - splash water" />
                         <img draggable='false' src="/images/kruEve_image3.jpg" alt="รูปครูอีฟ กำลังทำมือผิด" className="w-72 max-w-[auto] sm:w-96 rounded-2xl sm:mb-0  rotate-6" />
                     </div>
                     <div>
 
                         <div className="sm:text-4xl text-xl font-bold text-[--yellow]">ทำไมต้องชื่อชุ่มฉ่ำ?</div>
-                        <p className="sm:text-xl text-lg w-[300px] sm:w-[500px] text-pretty indent-10">
+                        <p className="sm:text-xl text-lg w-[calc(45vw - 50px)] sm:w-[calc(50vw-20px)] text-pretty indent-10">
                             ถ้าตอบตามจริงคือตอนแรกไม่มีความหมายอะไร นอกจากเป็นแค่คำพูดติดปากของเรา แต่เมื่อปลายปี 65 เป็นปีที่อีฟเกือบเลิกทำชุ่มฉ่ำ เพราะไม่มีความสุขกับสิ่งที่ตัวเองทำเลย หาจิตวิญญาณตัวเองไม่เจอว่าทำไปทำไม จนกระทั่งถอยห่างออกจากธุรกิจนี้ ไม่ทำอะไรเลย นอกจากไปปฏิบัติธรรมหรือเข้าหาธรรมชาติเพื่อตกผลึกกับตัวเอง ว่า ที่ผ่านมาเกิดอะไรขึ้น เลยเห็นภาพตัวเองในอดีตว่า เราทำอย่างไม่มีสติ เผลอไปใช้ตัวเลขนำทาง จนเกิดความเครียด กดดัน เพราะเราไม่ได้สร้างแบรนด์ด้วยจิตที่ชุ่มฉ่ำ ผลลัพธ์มันเลยไม่ชัดเจน เราก็เครียดที่ไม่ได้เป็นตัวของตัวเองเท่าที่ควร
 
                         </p>
@@ -158,7 +158,7 @@ function About() {
                             <div className="rounded-full bg-[--pink] text-[--pink] w-5 h-5 text-center">.</div>
                             <div className="rounded-full bg-[--pink] text-[--pink] w-5 h-5 text-center">.</div>
                         </div>
-                        <p className="sm:text-xl text-lg w-[300px] sm:w-[500px] text-pretty indent-10">ตอนนี้ค้นพบแล้วว่า ความหมายของ<b>ชุ่มฉ่ำ</b> มัน<b>คือการที่คุณต้องวางจิตให้ชุ่มฉ่ำ เบิกบานอยู่เสมอ</b> คุณถึงจะมองเห็นตัวเองได้ชัดและสร้างแบรนด์ให้คนมีความสุขตามไปด้วยได้
+                        <p className="sm:text-xl text-lg w-[calc(45vw - 50px)] sm:w-[calc(50vw-20px)] text-pretty indent-10">ตอนนี้ค้นพบแล้วว่า ความหมายของ<b>ชุ่มฉ่ำ</b> มัน<b>คือการที่คุณต้องวางจิตให้ชุ่มฉ่ำ เบิกบานอยู่เสมอ</b> คุณถึงจะมองเห็นตัวเองได้ชัดและสร้างแบรนด์ให้คนมีความสุขตามไปด้วยได้
 
 
                             และอยากบอกเจ้าของธุรกิจทุกคนว่า อย่าทำมุ่งหน้าหาแต่เงินจนลืมไปว่าเราทุกคนก็ต้องตาย <b>ทำทุกอย่างให้ดีที่สุดและอย่าลืมดูแลใจของตัวเองให้ฉ่ำตลอดเวลาด้วย เมื่อใจเราฉ่ำ ผลลัพธ์ก็จะฉ่ำตาม</b>

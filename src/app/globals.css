@@ -19,6 +19,10 @@
   font-weight:400;
   weight: '400';
 }
+section{
+  overflow: hidden;
+  width: 100%;
+}
 
 :root {
   --white: #ffffff;
@@ -204,6 +208,16 @@ body{
   .swiper-slide{
     display: flex !important;
     justify-content: center;
+  }
+
+  small{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 280px){
+  small{
+    font-size: 4vw;
   }
 }
 
