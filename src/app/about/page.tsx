@@ -117,11 +117,11 @@ function About() {
                 </div>
             </section>
 
-            <section>
+            <section className="">
                 <div className="p-10 grid sm:flex justify-items-center justify-around flex-row-reverse gap-5 items-center">
                     <div className="relative p-10">
                         <img src="./icon.svg" className="z-[3] absolute w-[90px] sm:w-[200px] right-0 bottom-4" alt="choomcham icon - splash water" />
-                        <img draggable='false' src="/images/kruEve_image2.jpg" alt="รูปครูอีฟ กำลังทำมือผิด" className="w-72 max-w-[auto] sm:w-96 rounded-2xl sm:mb-0  -rotate-6" />
+                        <img draggable='false' src="/images/kruEve_image4.jpg" alt="รูปครูอีฟ กำลังทำมือผิด" className="w-72 max-w-[auto] sm:w-96 rounded-2xl sm:mb-0  -rotate-6" />
                     </div>
                     <div>
 
@@ -169,13 +169,13 @@ function About() {
                 </div>
             </section>
 
-            <section>
+            <section className="">
                 <div className="p-10">
                     <div className="flex gap-5 justify-center">
-                        <img src="/images/kruEve_image4.jpg" alt="krueve" className="w-96 rounded-full" />
+                        <img src="/images/kruEve_image2.jpg" alt="krueve" className="w-96 rounded-full" />
                         <img src="/images/kruEve_image5.jpg" alt="krueve" className="w-96 rounded-full" />
                     </div>
-                    <div className="p-5">
+                    <div className="py-8">
                         <div className="ssm:grid sm:flex gap-10">
                             <div className="text-lg sm:text-3xl font-bold sm:w-[40%] sm:text-end ">ทักษะพิเศษของชุ่มฉ่ำ</div>
                             <div className="text-sm sm:text-xl w-[70vw] sm:w-[35vw] ">
