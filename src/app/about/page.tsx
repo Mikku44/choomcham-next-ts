@@ -9,7 +9,7 @@ function About() {
         <>
 
             {/* <Navbar /> */}
-            <NavigationBar />
+            <NavigationBar current="3" />
             <div className="bg-slate-200 ">
                 <div className="text-black  w-full h-[80px]   rounded-3xl">
                     .
@@ -96,7 +96,7 @@ function About() {
 
             </main> */}
 
-            <section className="bg-slate-100">
+            <section className="bg-slate-200">
                 <div className="p-10 gap-5 sm:gap-0 sm:flex grid justify-items-center  sm:justify-evenly items-center relative">
                     <div className="bg-[--dark-blue] w-[100px] h-[150px] absolute sm:bottom-0 sm:right-[100px] sm:block hidden rounded-t-full">.</div>
                     <div className="bg-[--green] w-[100px] h-[100px] absolute sm:bottom-0  sm:right-[300px] sm:block hidden rounded-t-full">.</div>
@@ -104,7 +104,7 @@ function About() {
                     <div className="bg-[--pink] w-[100px] h-[150px] absolute sm:bottom-0 sm:right-[600px] sm:block hidden rounded-t-full">.</div>
                     <div className="relative p-10">
                         <img src="./icon.svg" className="z-[3] absolute w-[90px] sm:w-[5vw]" alt="choomcham icon - splash water" />
-                        <img draggable='false' src="/images/kruEve_image.jpg" alt="รูปครูอีฟ กำลังยิ้ม" className="w-72 max-w-[auto] rounded-2xl sm:mb-0  rotate-6" />
+                        <img draggable='false' src="/images/kruEve_image.jpg" alt="รูปครูอีฟ กำลังยิ้ม" className="w-72 max-w-[auto] rounded-tl-[60px] rounded-br-[60px] sm:mb-0  " />
                     </div>
                     <div>
                         <h2 className="text-xl sm:text-3xl font-bold">ครูอีฟ ภัทรัดจารินท์ สุวัชรานนท์ </h2>
@@ -117,15 +117,17 @@ function About() {
                 </div>
             </section>
 
-            <section className="">
+            <section className="bg-orange-100 bg-opacity-50">
                 <div className="p-10 grid sm:flex justify-items-center justify-around flex-row-reverse gap-5 items-center">
                     <div className="relative p-10">
                         <img src="./icon.svg" className="z-[3] absolute w-[90px] sm:w-[200px] right-0 bottom-4" alt="choomcham icon - splash water" />
-                        <img draggable='false' src="/images/kruEve_image4.jpg" alt="รูปครูอีฟ กำลังทำมือผิด" className="w-72 max-w-[auto] sm:w-96 rounded-2xl sm:mb-0  -rotate-6" />
+                        {/* <div draggable='false'  className="absolute top-5 right-6 w-72 max-w-[auto] h-96 sm:h-[550px] sm:w-96 rounded-2xl sm:mb-0 bg-black  -rotate-6" >.</div> */}
+                        {/* <img draggable='false' src="/images/kruEve_image4.jpg" alt="รูปครูอีฟ กำลังทำมือผิด" className="w-72 max-w-[auto] sm:w-96 rounded-2xl sm:mb-0  -rotate-6" /> */}
+                        <div className="outline outline-offset-4 outline-[--yellow] rounded-xl"><img draggable='false' src="/images/kruEve_image4.jpg" alt="รูปครูอีฟ กำลังทำมือผิด" className="w-72 max-w-[auto] sm:w-96 rounded-2xl sm:mb-0  -rotate-6" /></div>
                     </div>
                     <div>
 
-                        <div className="sm:text-4xl text-xl font-bold ">ความเป็นมา</div>
+                        <div className="sm:text-4xl text-xl font-bold text-[--pink]">ความเป็นมา</div>
                         <p className="sm:text-xl text-lg w-[calc(45vw - 50px)] sm:w-[calc(50vw-20px)] text-pretty indent-10">
                             พูดไปคงไม่มีใครเชื่อว่าเมื่อก่อนอีฟเป็นเด็กขี้อาย พูดไม่รู้เรื่องคนหนึ่ง ไม่คิดไม่ฝันว่าโตขึ้นมาจะทำอาชีพที่ตรงกันข้ามกับนิสัยตัวเองแบบสุดขั้ว แต่จุดเปลี่ยนมันเกิดขึ้นจากที่หลังจากเรียนจบมา อีฟตั้งใจกับตัวเองว่าจะสละเวลาชีวิต 2 ปีทำอะไรเพื่อคนอื่นบ้าง เลยมาจบที่งานมูลนิธิ ขณะนั้นเป็นผู้หิวกระหายในการทดลองวิชาการสร้างแบรนด์
                         </p>
@@ -144,11 +146,11 @@ function About() {
                 <div className="p-10 grid sm:flex justify-items-center justify-around  gap-5 items-center">
                     <div className="relative p-10">
                         <img src="./icon.svg" className="z-[3] absolute w-[90px] sm:w-[150px] right-0 top-4" alt="choomcham icon - splash water" />
-                        <img draggable='false' src="/images/kruEve_image3.jpg" alt="รูปครูอีฟ กำลังทำมือผิด" className="w-72 max-w-[auto] sm:w-96 rounded-2xl sm:mb-0  rotate-6" />
+                        <div className=" outline outline-offset-4 outline-[--dark-blue] rounded-xl"><img draggable='false' src="/images/kruEve_image3.jpg" alt="รูปครูอีฟ กำลังทำมือผิด" className="w-72 max-w-[auto] sm:w-96 rounded-2xl sm:mb-0  rotate-6" /></div>
                     </div>
                     <div>
 
-                        <div className="sm:text-4xl text-xl font-bold text-[--yellow]">ทำไมต้องชื่อชุ่มฉ่ำ?</div>
+                        <div className="sm:text-4xl text-xl font-bold text-[--dark-blue]">ทำไมต้องชื่อชุ่มฉ่ำ?</div>
                         <p className="sm:text-xl text-lg w-[calc(45vw - 50px)] sm:w-[calc(50vw-20px)] text-pretty indent-10">
                             ถ้าตอบตามจริงคือตอนแรกไม่มีความหมายอะไร นอกจากเป็นแค่คำพูดติดปากของเรา แต่เมื่อปลายปี 65 เป็นปีที่อีฟเกือบเลิกทำชุ่มฉ่ำ เพราะไม่มีความสุขกับสิ่งที่ตัวเองทำเลย หาจิตวิญญาณตัวเองไม่เจอว่าทำไปทำไม จนกระทั่งถอยห่างออกจากธุรกิจนี้ ไม่ทำอะไรเลย นอกจากไปปฏิบัติธรรมหรือเข้าหาธรรมชาติเพื่อตกผลึกกับตัวเอง ว่า ที่ผ่านมาเกิดอะไรขึ้น เลยเห็นภาพตัวเองในอดีตว่า เราทำอย่างไม่มีสติ เผลอไปใช้ตัวเลขนำทาง จนเกิดความเครียด กดดัน เพราะเราไม่ได้สร้างแบรนด์ด้วยจิตที่ชุ่มฉ่ำ ผลลัพธ์มันเลยไม่ชัดเจน เราก็เครียดที่ไม่ได้เป็นตัวของตัวเองเท่าที่ควร
 
@@ -172,20 +174,21 @@ function About() {
             <section className="">
                 <div className="p-10">
                     <div className="flex gap-5 justify-center">
-                        <img src="/images/kruEve_image2.jpg" alt="krueve" className="w-96 rounded-full" />
-                        <img src="/images/kruEve_image5.jpg" alt="krueve" className="w-96 rounded-full" />
+                        <img src="/images/kruEve_image2.jpg" alt="krueve" className="w-56 sm:w-96 rounded-full" />
+                        <img src="/images/kruEve_image5.jpg" alt="krueve" className="w-56 sm:w-96 rounded-full" />
+                        <img src="/images/kruEve_image2.jpg" alt="krueve" className="w-56 sm:w-96 rounded-full" />
                     </div>
-                    <div className="py-8">
-                        <div className="ssm:grid sm:flex gap-10">
-                            <div className="text-lg sm:text-3xl font-bold sm:w-[40%] sm:text-end ">ทักษะพิเศษของชุ่มฉ่ำ</div>
-                            <div className="text-sm sm:text-xl w-[70vw] sm:w-[35vw] ">
+                    <div className="py-8 sm:flex justify-center gap-5">
+                        <div className="ssm:grid gap-3">
+                            <div className="text-xl sm:text-3xl font-bold sm:w-[80%]  text-[--pink]">ทักษะพิเศษของชุ่มฉ่ำ</div>
+                            <div className="text-md sm:text-xl w-[70vw] sm:w-[35vw] ">
                                 อีฟเป็นคนประหลาดที่ไม่ชอบเห็นคนมีของดี แต่ไม่สื่อสารออกมาให้ตรงจุด ทำให้คนเหล่านั้นพลาดโอกาสดีๆในชีวิตไปมากมาย อีฟสามารถสะท้อน Who you are ได้ตรงจุด จับประเด็นได้คล่อง ดึง DNA เจ้าของออกมาสื่อสารได้ไม่มีใครเหมือน โดยคงเสน่ห์ของคนๆนั้นไว้ ไม่ให้ซ้ำใคร เพราะคำว่าแบรนด์คือเอาความแตกต่างของสิ่งนั้นออกมาขยี้ให้คนจดจำได้
                             </div>
                         </div>
                         <div className="py-5"></div>
-                        <div className="ssm:grid sm:flex gap-10">
-                            <div className="text-lg sm:text-3xl font-bold sm:w-[40%] sm:text-end ">ภารกิจของชุ่มฉ่ำ คืออะไร?</div>
-                            <div className="text-sm sm:text-xl w-[70vw] sm:w-[35vw] ">
+                        <div className="ssm:grid gap-3 ">
+                            <div className="text-xl sm:text-3xl font-bold sm:w-[80%]  text-[--yellow]">ภารกิจของชุ่มฉ่ำ คืออะไร?</div>
+                            <div className="text-md sm:text-xl w-[70vw] sm:w-[35vw] ">
                             แรงผลักดันการทำธุรกิจของอีฟตอนนี้คือ อยากช่วยเจ้าของธุรกิจทุกคนหา DNA พิเศษเฉพาะแบรนด์ ช่วยให้แบรนด์ค้นพบ Key message ทองคำเพื่อนำไปสื่อสารต่อ ให้สังคมได้เกิดการตื่นรู้หันมาทำสิ่งดีๆในชีวิตเพิ่มขึ้น อย่าง Nike มี Just do it ช่วยให้คนที่กลัว ไม่กล้า หันมาลงมือทำเพิ่มขึ้น แบรนด์อื่นๆในประเทศไทยก็ควรที่จะมี Message ดีๆเพื่อถ่ายทอดให้คนเกิดการเปลี่ยนแปลงเชิงบวกได้เช่นกัน
                             </div>
                         </div>

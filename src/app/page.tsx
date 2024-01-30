@@ -4,11 +4,11 @@ import { motion } from 'framer-motion'
 import Footer from './components/footer'
 import Navbar from './components/nav'
 import NavigationBar from './components/navbar'
-import { Button, Card, CardBody, CardHeader } from '@nextui-org/react'
+import { Button, Card, CardBody, CardHeader, Link } from '@nextui-org/react'
 import Image from "next/image";
 
 import { db } from './firebaseConfig'
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react'
 
 
@@ -55,7 +55,7 @@ class Course {
 
 
 async function getContentData() {
-    const querySnapshot = await getDocs(collection(db, "course"));
+    const querySnapshot = await getDocs(query(collection(db, "course"), orderBy("id", "asc")));
     const data: Course[] = [];
 
     querySnapshot.forEach((doc) => {
@@ -103,7 +103,7 @@ export default function Home() {
     return <div>
         <div className="text-white">
 
-        <NavigationBar />
+            <NavigationBar current="" />
         </div>
 
         <div id="fb-root"></div>
@@ -124,14 +124,14 @@ export default function Home() {
 
                             {/* top */}
                             <div className="mb-10">
-                                <h2 className=" sm:text-[2.5vw] thai sm:w-[50vw] small">ชุ่มฉ่ำ Branding คือ <br /> โรงเรียนปั้นเจ้าของธุรกิจคนดี <br /> มีของดีสร้างแบรนด์มีที่ยืน
+                                <h2 className=" sm:text-[2.5vw] thai sm:w-[50vw] small">แบรนด์ที่สนใจเรื่องความดียุคนี้ได้เปรียบ <br />เพราะยิ่งคุณค่าชัด ยิ่งโตแบบยั่งยืน
 
                                 </h2>
                                 <br />
-                                <h4 className="text-[14px] sm:text-large thai w-[56vw]">การพบกันของเราไม่ใช่เรื่องบังเอิญ</h4>
+                                <h4 className="text-[14px] sm:text-large thai w-[56vw]">ผลงานสร้างแบรนด์สายคุณค่าระดับประเทศ</h4>
                                 <br />
                                 {/* <Link href="/about"><div className="btn bg-primary rounded-full px-10 py-1 border-0 hover:scale-110 duration-150 text-white">About us</div></Link> */}
-                                <Button>About Us</Button>
+                                <Link href="/about"><Button>About Us</Button></Link>
                             </div>
                         </div>
                         <br />
@@ -249,7 +249,9 @@ export default function Home() {
                     <div className=' p-10 flex flex-col justify-between '>
                         <div>
                             <div className="text-3xl font-bold text-[--yellow]">Our Students</div>
-                            <div className="text-lg w-[95vw] sm:w-auto "> ธุรกิจคุณจะมีที่ยืนเมื่อคุณกล้าตัดสินใจจะเลิกอยู่ตรงกลาง</div>
+                            <div className="text-lg sm:text-2xl w-[95vw] sm:w-auto ">
+                                 ธุรกิจคุณจะมีที่ยืน เมื่อคุณตัดสินใจจะเลิกอยู่ตรงกลาง
+                            </div>
                         </div>
                         <div className="py-10"><Button className=" bg-[--green] text-white text-lg px-10 " radius='full'>สำรวจคอร์สที่เหมาะกับคุณ</Button></div>
                     </div>
@@ -293,8 +295,10 @@ export default function Home() {
                                             <div className="card-actions justify-between">
                                                 <Button href='#' className="bg-[--yellow]" radius='full'>ดูรายละเอียด</Button>
                                                 <div>
-                                                    <div className="font-bold">เริ่มต้นที่</div>
-                                                    <div className="text-[--dark-blue] font-bold">฿ {content.price}</div>
+                                                    {content.price != "" ?
+                                                    <><div className="font-bold">เริ่มต้นที่</div><div className="text-[--dark-blue] font-bold">฿ {content.price}</div></>
+                                                    : <div></div>
+                                                    }
                                                 </div>
                                             </div>
                                         </div>

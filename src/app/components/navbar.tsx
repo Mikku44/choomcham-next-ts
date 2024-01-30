@@ -1,14 +1,15 @@
 "use client"
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
-import { useState } from "react";
+import { Double } from "mongodb";
+import { useEffect, useState } from "react";
 
 
-export default function NavigationBar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const menuItems = [
-        "Our Works",
-        "Blog",
-    ];
+export default function NavigationBar(props:{current:String}) {
+    var currentPage = parseInt(props.current.toString()); 
+    // if (currentPage > 0 || currentPage < 4)
+    //     currentPage = 0;
+    const activeList = [" ", " ", " ", " "];
+    activeList[currentPage] = "shadow-lg shadow-[--sky-blue] bg-[--sky-blue] hover:text-white px-4 py-2 text-white rounded-full border-[--sky-blue]";
 
     return (
         <div className="absolute z-10 top-0 w-full flex justify-around ">
@@ -38,16 +39,16 @@ export default function NavigationBar() {
                 <div className="navbar-center sm:flex  gap-10 hidden">
                     <ul className=' gap-5 hidden font-medium sm:flex items-center'>
 
-                        <a className='  hover:text-[--pink] duration-200' href="/service">
+                        <a className={activeList[0]+'  hover:text-[--pink] duration-200'} href="/service">
                             <li>Services</li>
                         </a>
-                        <a className='  hover:text-[--pink] duration-200' href="/works">
+                        <a className={activeList[1]+'  hover:text-[--pink] duration-200'} href="/works">
                             <li>Our Works</li>
                         </a>
-                        <a className='  hover:text-[--pink] duration-200' href="/blog">
+                        <a className={activeList[2]+'  hover:text-[--pink] duration-200'} href="/blog">
                             <li>Content</li>
                         </a>
-                        <a className='  hover:text-[--pink] duration-200' href="/about">
+                        <a className={activeList[3]+'  hover:text-[--pink] duration-200'} href="/about">
                             <li>About us</li>
                         </a>
 

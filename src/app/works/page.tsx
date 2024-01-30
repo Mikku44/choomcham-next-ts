@@ -2,9 +2,12 @@
 import Navbar from "../components/nav";
 import Footer from '../components/footer';
 import { motion } from "framer-motion";
+import NavigationBar from "../components/navbar";
 function Work(){
     return(
-        <><Navbar /><main className="">
+        <div>
+        <NavigationBar current="1" />
+        <main className="">
        
         <div className="p-32 sm:p-48 bg-blue-900 work ">
             <motion.div initial={{ y: 20, opacity: 0 }}
@@ -97,7 +100,7 @@ function Work(){
         </motion.div>
     </main>
     <Footer />
-    </>
+    </div>
     )
 }
 
