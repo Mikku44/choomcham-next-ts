@@ -10,6 +10,7 @@ import Image from "next/image";
 import { db } from './firebaseConfig'
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react'
+import Loading from './components/loading'
 
 
 // import { Swiper, SwiperSlide } from 'swiper/react';
@@ -250,7 +251,7 @@ export default function Home() {
                         <div>
                             <div className="text-3xl font-bold text-[--yellow]">Our Students</div>
                             <div className="text-lg sm:text-2xl w-[95vw] sm:w-auto ">
-                                 ธุรกิจคุณจะมีที่ยืน เมื่อคุณตัดสินใจจะเลิกอยู่ตรงกลาง
+                                ธุรกิจคุณจะมีที่ยืน เมื่อคุณตัดสินใจจะเลิกอยู่ตรงกลาง
                             </div>
                         </div>
                         <div className="py-10"><Button className=" bg-[--green] text-white text-lg px-10 " radius='full'>สำรวจคอร์สที่เหมาะกับคุณ</Button></div>
@@ -281,8 +282,10 @@ export default function Home() {
                 <div className=" rounded-3xl bg-slate-100 w-[100%]">
                     <div className="flex flex-wrap justify-center gap-10 py-5 px-4">
 
+
                         {
-                            (contents != null) ?
+                            (contents.length != 0) ?
+
                                 contents.map((content) =>
                                     <div className="card  w-96 sm:w-96 bg-white/50 shadow-xl overflow-hidden  " key={content.id}>
                                         <figure className={"h-[210px] sm:h-[240px] overflow-hidden "}><img src={content.imageUrl} alt={content.title} className='object-cover ' /></figure>
@@ -296,14 +299,33 @@ export default function Home() {
                                                 <Button href='#' className="bg-[--yellow]" radius='full'>ดูรายละเอียด</Button>
                                                 <div>
                                                     {content.price != "" ?
-                                                    <><div className="font-bold">เริ่มต้นที่</div><div className="text-[--dark-blue] font-bold">฿ {content.price}</div></>
-                                                    : <div></div>
+                                                        <><div className="font-bold">เริ่มต้นที่</div><div className="text-[--dark-blue] font-bold">฿ {content.price}</div></>
+                                                        : <div></div>
                                                     }
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                ) : <div>Nothing here</div>}
+                                ) :
+                                courses.map((content) => {
+                                    return <div className="card  w-96 sm:w-96 bg-white/50 shadow-xl overflow-hidden  " key={content.id}>
+                                    <figure className={"h-[210px] sm:h-[240px] overflow-hidden "}><Loading /></figure>
+                                    <div className="card-body h-[202px] sm:h-[auto]">
+                                        <div className="card-title text-[--green]">
+                                            กำลังโหลด
+                                        </div>
+                                        <p className="h-[40px] sm:h-[80px] w-[auto] text-ellipsis overflow-hidden">เนื้อหาเพื่อแสดง</p>
+                                        <div className="card-actions justify-between">
+                                            <Button href='#' className="bg-[--yellow]" radius='full'></Button>
+                                            <div>
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                })
+
+                        }
 
                     </div>
 
