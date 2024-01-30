@@ -1,7 +1,5 @@
 "use client"
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
-import { Double } from "mongodb";
-import { useEffect, useState } from "react";
 
 
 export default function NavigationBar(props:{current:String}) {
