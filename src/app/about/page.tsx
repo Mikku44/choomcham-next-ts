@@ -3,6 +3,7 @@
 import NavigationBar from '../components/navbar';
 import Footer from '../components/footer';
 import { motion } from "framer-motion"
+import { Image } from '@nextui-org/react';
 
 function About() {
     return (
@@ -104,7 +105,7 @@ function About() {
                     <div className="bg-[--pink] w-[100px] h-[150px] absolute sm:bottom-0 sm:right-[600px] sm:block hidden rounded-t-full">.</div>
                     <div className="relative p-10">
                         <img src="./icon.svg" className="z-[3] absolute w-[90px] sm:w-[5vw]" alt="choomcham icon - splash water" />
-                        <img draggable='false' src="/images/kruEve_image.jpg" alt="รูปครูอีฟ กำลังยิ้ม" className="w-72 max-w-[auto] rounded-tl-[60px] rounded-br-[60px] sm:mb-0  " />
+                        <Image  draggable='false' src="/images/kruEve_image.jpg" alt="รูปครูอีฟ กำลังยิ้ม" className="w-72 max-w-[auto] rounded-tl-[60px] rounded-br-[60px] sm:mb-0  " />
                     </div>
                     <div>
                         <h2 className="text-xl sm:text-3xl font-bold">ครูอีฟ ภัทรัดจารินท์ สุวัชรานนท์ </h2>
@@ -174,9 +175,9 @@ function About() {
             <section className="">
                 <div className="p-10">
                     <div className="flex gap-5 justify-center">
-                        <img src="/images/kruEve_image2.jpg" alt="krueve" className="w-56 sm:w-96 rounded-full" />
-                        <img src="/images/kruEve_image5.jpg" alt="krueve" className="w-56 sm:w-96 rounded-full" />
-                        <img src="/images/kruEve_image2.jpg" alt="krueve" className="w-56 sm:w-96 rounded-full" />
+                        <Image src="/images/kruEve_image2.jpg" alt="krueve" className="w-56 sm:w-96 rounded-full" />
+                        <Image src="/images/kruEve_image5.jpg" alt="krueve" className="w-56 sm:w-96 rounded-full" />
+                        <Image src="/images/kruEve_image2.jpg" alt="krueve" className="w-56 sm:w-96 rounded-full" />
                     </div>
                     <div className="py-8 sm:flex justify-center gap-5">
                         <div className="ssm:grid gap-3">
