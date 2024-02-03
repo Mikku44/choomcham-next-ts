@@ -74,9 +74,8 @@ export default function NavigationBar(props:{current:String}) {
                         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
                             {/* Sidebar content here */}
                             <li><a href="/">Home</a></li>
-                            <li><a>Services</a></li>
-                            <li><a>Consult & Courses</a></li>
-                            <li><a>Articles</a></li>
+                            <li><a href="/service">Consult & Courses</a></li>
+                            <li><a href="/articles">Articles</a></li>
                             <li><a href="/about">About Us</a></li>
                             {/* <li><a>Analystic</a></li> */}
 
