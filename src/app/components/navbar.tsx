@@ -76,6 +76,7 @@ export default function NavigationBar(props:{current:String}) {
                             <li><a href="/">Home</a></li>
                             <li><a href="/service">Consult & Courses</a></li>
                             <li><a href="/articles">Articles</a></li>
+                            <li><a href="/testimonials">Testimonials</a></li>
                             <li><a href="/about">About Us</a></li>
                             {/* <li><a>Analystic</a></li> */}
 
