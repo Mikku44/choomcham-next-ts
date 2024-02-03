@@ -38,13 +38,13 @@ export default function NavigationBar(props:{current:String}) {
                     <ul className=' gap-5 hidden font-medium sm:flex items-center'>
 
                         <a className={activeList[0]+'  hover:text-[--pink] duration-200'} href="/service">
-                            <li>Services</li>
+                            <li>Consult & Courses</li>
                         </a>
-                        <a className={activeList[1]+'  hover:text-[--pink] duration-200'} href="/works">
-                            <li>Our Works</li>
+                        <a className={activeList[2]+'  hover:text-[--pink] duration-200'} href="/articles">
+                            <li>Articles</li>
                         </a>
-                        <a className={activeList[2]+'  hover:text-[--pink] duration-200'} href="/blog">
-                            <li>Content</li>
+                        <a className={activeList[1]+'  hover:text-[--pink] duration-200'} href="/testimonials">
+                            <li>Testimonials</li>
                         </a>
                         <a className={activeList[3]+'  hover:text-[--pink] duration-200'} href="/about">
                             <li>About us</li>
@@ -73,12 +73,12 @@ export default function NavigationBar(props:{current:String}) {
                         <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
                         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
                             {/* Sidebar content here */}
-                            <li><a>Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a>Services</a></li>
-                            <li><a>Our Works</a></li>
-                            <li><a>Contents</a></li>
+                            <li><a>Consult & Courses</a></li>
+                            <li><a>Articles</a></li>
                             <li><a href="/about">About Us</a></li>
-                            <li><a>Analystic</a></li>
+                            {/* <li><a>Analystic</a></li> */}
 
                             <h4 className="pt-10">Contact us</h4>
                             <div className="grid gap-2 grid-flow-col items-center">
