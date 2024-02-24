@@ -1,25 +1,25 @@
 "use client"
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenu, NavbarMenuItem, NavbarMenuToggle, Accordion, AccordionItem } from "@nextui-org/react";
 
 
-export default function NavigationBar(props:{current:String}) {
-    var currentPage = parseInt(props.current.toString()); 
+export default function NavigationBar(props: { current: String }) {
+    var currentPage = parseInt(props.current.toString());
     // if (currentPage > 0 || currentPage < 4)
     //     currentPage = 0;
     const activeList = [" ", " ", " ", " "];
-    activeList[currentPage] = "shadow-lg shadow-[--sky-blue] bg-[--sky-blue] hover:text-white px-4 py-2 text-white rounded-full border-[--sky-blue]";
+    activeList[currentPage] = "shadow-lg shadow-[--pink] bg-[--pink] hover:text-white hover:bg-[--pink]  text-white rounded-lg border-[--pink]";
 
     return (
-        <div className="absolute z-10 top-0 w-full flex justify-around ">
+        <div className=" z-10 top-0 w-full flex justify-around glass fixed">
 
-            <div className={"navbar px-10 sm:px-20  " }>
+            <div className={"navbar px-10 sm:px-20  "}>
                 <div className="navbar-start ">
 
-                
+
                     <Link href="/">
                         <div className="pr-10"><img src="https://blog.choomcham.com/wp-content/uploads/2021/09/cropped-logo.png" alt="" />
                             {/* <img src="https://www.choomcham.com/assets/images/4277eb7d.png" className='hidden' alt="" /> */}
-                            </div>
+                        </div>
                     </Link>
                     {/* <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -37,16 +37,16 @@ export default function NavigationBar(props:{current:String}) {
                 <div className="navbar-center sm:flex  gap-10 hidden">
                     <ul className=' gap-5 hidden font-medium sm:flex items-center'>
 
-                        <a className={activeList[0]+'  hover:text-[--pink] duration-200'} href="/service">
+                        <a className={'hover:bg-pink-400/10' + activeList[0] + '  hover:text-[--pink]  rounded-lg px-4 py-2 duration-200'} href="/service">
                             <li>Consult & Courses</li>
                         </a>
-                        <a className={activeList[2]+'  hover:text-[--pink] duration-200'} href="/articles">
+                        <a className={'hover:bg-pink-400/10' + activeList[2] + '  hover:text-[--pink]  rounded-lg px-4 py-2 duration-200'} href="/articles">
                             <li>Articles</li>
                         </a>
-                        <a className={activeList[1]+'  hover:text-[--pink] duration-200'} href="/testimonials">
+                        <a className={'hover:bg-pink-400/10' + activeList[1] + '  hover:text-[--pink]  rounded-lg px-4 py-2 duration-200'} href="/testimonials">
                             <li>Testimonials</li>
                         </a>
-                        <a className={activeList[3]+'  hover:text-[--pink] duration-200'} href="/about">
+                        <a className={'hover:bg-pink-400/10' + activeList[3] + '  hover:text-[--pink]  rounded-lg px-4 py-2 duration-200'} href="/about">
                             <li>About us</li>
                         </a>
 
@@ -74,7 +74,16 @@ export default function NavigationBar(props:{current:String}) {
                         <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
                             {/* Sidebar content here */}
                             <li><a href="/">Home</a></li>
-                            <li><a href="/service">Consult & Courses</a></li>
+                            <li className="text-[12px]">
+                                <Accordion >
+                                    <AccordionItem key="anchor" aria-label="Consult & Course" className="text-[12px] w-full"  title="Consult & Course">
+                                        <li><a href="/service">Couses</a></li>
+                                        <li><a href="/service/consult">Consults</a></li>
+                                    </AccordionItem>
+                                
+                                </Accordion>
+                            </li>
+
                             <li><a href="/articles">Articles</a></li>
                             <li><a href="/testimonials">Testimonials</a></li>
                             <li><a href="/about">About Us</a></li>
@@ -85,8 +94,8 @@ export default function NavigationBar(props:{current:String}) {
                                 <a target="_blank" href="https://lin.ee/5p0JD5t">
                                     <Button isIconOnly={true}>
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" className="text-black fill-current" width="24" height="24" viewBox="0 0 50 50">
-                                        <path d="M 9 4 C 6.24 4 4 6.24 4 9 L 4 41 C 4 43.76 6.24 46 9 46 L 41 46 C 43.76 46 46 43.76 46 41 L 46 9 C 46 6.24 43.76 4 41 4 L 9 4 z M 25 11 C 33.27 11 40 16.359219 40 22.949219 C 40 25.579219 38.959297 27.960781 36.779297 30.300781 C 35.209297 32.080781 32.660547 34.040156 30.310547 35.660156 C 27.960547 37.260156 25.8 38.519609 25 38.849609 C 24.68 38.979609 24.44 39.039062 24.25 39.039062 C 23.59 39.039062 23.649219 38.340781 23.699219 38.050781 C 23.739219 37.830781 23.919922 36.789063 23.919922 36.789062 C 23.969922 36.419063 24.019141 35.830937 23.869141 35.460938 C 23.699141 35.050938 23.029062 34.840234 22.539062 34.740234 C 15.339063 33.800234 10 28.849219 10 22.949219 C 10 16.359219 16.73 11 25 11 z M 23.992188 18.998047 C 23.488379 19.007393 23 19.391875 23 20 L 23 26 C 23 26.552 23.448 27 24 27 C 24.552 27 25 26.552 25 26 L 25 23.121094 L 27.185547 26.580078 C 27.751547 27.372078 29 26.973 29 26 L 29 20 C 29 19.448 28.552 19 28 19 C 27.448 19 27 19.448 27 20 L 27 23 L 24.814453 19.419922 C 24.602203 19.122922 24.294473 18.992439 23.992188 18.998047 z M 15 19 C 14.448 19 14 19.448 14 20 L 14 26 C 14 26.552 14.448 27 15 27 L 18 27 C 18.552 27 19 26.552 19 26 C 19 25.448 18.552 25 18 25 L 16 25 L 16 20 C 16 19.448 15.552 19 15 19 z M 21 19 C 20.448 19 20 19.448 20 20 L 20 26 C 20 26.552 20.448 27 21 27 C 21.552 27 22 26.552 22 26 L 22 20 C 22 19.448 21.552 19 21 19 z M 31 19 C 30.448 19 30 19.448 30 20 L 30 26 C 30 26.552 30.448 27 31 27 L 34 27 C 34.552 27 35 26.552 35 26 C 35 25.448 34.552 25 34 25 L 32 25 L 32 24 L 34 24 C 34.553 24 35 23.552 35 23 C 35 22.448 34.553 22 34 22 L 32 22 L 32 21 L 34 21 C 34.552 21 35 20.552 35 20 C 35 19.448 34.552 19 34 19 L 31 19 z"></path>
-                                                                        </svg>
+                                            <path d="M 9 4 C 6.24 4 4 6.24 4 9 L 4 41 C 4 43.76 6.24 46 9 46 L 41 46 C 43.76 46 46 43.76 46 41 L 46 9 C 46 6.24 43.76 4 41 4 L 9 4 z M 25 11 C 33.27 11 40 16.359219 40 22.949219 C 40 25.579219 38.959297 27.960781 36.779297 30.300781 C 35.209297 32.080781 32.660547 34.040156 30.310547 35.660156 C 27.960547 37.260156 25.8 38.519609 25 38.849609 C 24.68 38.979609 24.44 39.039062 24.25 39.039062 C 23.59 39.039062 23.649219 38.340781 23.699219 38.050781 C 23.739219 37.830781 23.919922 36.789063 23.919922 36.789062 C 23.969922 36.419063 24.019141 35.830937 23.869141 35.460938 C 23.699141 35.050938 23.029062 34.840234 22.539062 34.740234 C 15.339063 33.800234 10 28.849219 10 22.949219 C 10 16.359219 16.73 11 25 11 z M 23.992188 18.998047 C 23.488379 19.007393 23 19.391875 23 20 L 23 26 C 23 26.552 23.448 27 24 27 C 24.552 27 25 26.552 25 26 L 25 23.121094 L 27.185547 26.580078 C 27.751547 27.372078 29 26.973 29 26 L 29 20 C 29 19.448 28.552 19 28 19 C 27.448 19 27 19.448 27 20 L 27 23 L 24.814453 19.419922 C 24.602203 19.122922 24.294473 18.992439 23.992188 18.998047 z M 15 19 C 14.448 19 14 19.448 14 20 L 14 26 C 14 26.552 14.448 27 15 27 L 18 27 C 18.552 27 19 26.552 19 26 C 19 25.448 18.552 25 18 25 L 16 25 L 16 20 C 16 19.448 15.552 19 15 19 z M 21 19 C 20.448 19 20 19.448 20 20 L 20 26 C 20 26.552 20.448 27 21 27 C 21.552 27 22 26.552 22 26 L 22 20 C 22 19.448 21.552 19 21 19 z M 31 19 C 30.448 19 30 19.448 30 20 L 30 26 C 30 26.552 30.448 27 31 27 L 34 27 C 34.552 27 35 26.552 35 26 C 35 25.448 34.552 25 34 25 L 32 25 L 32 24 L 34 24 C 34.553 24 35 23.552 35 23 C 35 22.448 34.553 22 34 22 L 32 22 L 32 21 L 34 21 C 34.552 21 35 20.552 35 20 C 35 19.448 34.552 19 34 19 L 31 19 z"></path>
+                                        </svg>
                                     </Button>
                                 </a>
                                 <a target="_blank" href="https://youtube.com/channel/UCqiaFEL0g1TAFiK_x7acvRw"><Button isIconOnly={true}>

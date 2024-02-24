@@ -1,7 +1,8 @@
 'use client'
 import Link from 'next/link'
+
 function Navbar() {
-    const actStyl = "active px-5 py-1 rounded-full  bg-black  shadow-xl"
+    const actStyl = " active px-5 py-1 rounded-full  bg-black  shadow-xl"
     const norStyl = "hover:bg-white/50 rounded-full py-1 px-5 hover:shadow-xl   duration-150"
 
 
