@@ -150,16 +150,16 @@ function Service() {
                             </div>
                         </div>
                     </div>
-                    <div className="absolute left-[10%] top-[25%] opacity-95  z-10">
+                    <div className="absolute left-[10%] top-[25%] opacity-95 z-10">
                         <Image src="/images/kruEve_image3.jpg" className="w-[20vw] " alt="Description" width={1780} height={1280} />
                     </div>
                 </div>
             </div>
 
-            <div className="bg-gradient-to-tr from-[#F2C762] to-slate-400 flex justify-around pt-20 pb-10 ">
+            <div className="bg-gradient-to-tr from-[#F2C762] to-slate-50 flex justify-around pt-20 pb-10 ">
 
 
-                <div className="w-[25vw] h-[250px]  bg-gradient-to-tr from-[#F2C762] to-[#D33666] rounded-2xl ">
+                <div className="w-[25vw] h-[250px]  bg-gradient-to-tr from-white to-[#D33666] rounded-2xl ">
                     <div className="text-xl text-balance text-start pl-10 pt-10">
                         <p className="font-bold">เหมาะกับใครบ้าง? </p>
                         <a>- เจ้าของธุรกิจที่เพิ่งเริ่ม</a><br />
@@ -170,8 +170,8 @@ function Service() {
                 </div>
 
 
-                <div className="w-[25vw] h-[250px] bg-gradient-to-br from-[#F2C762] to-[#D33666] rounded-2xl ">
-                    <div className="text-xl text-balance text-start gap-3 pl-10 pt-10">
+                <div className="w-[25vw] h-[250px] bg-gradient-to-tr from-[#F2C762] to-white rounded-2xl ">
+                    <div className="text-xl  text-balance text-start gap-3 pl-10 pt-10">
                         <p className="font-bold">คุณสมบัติผู้เข้าร่วม</p>
                         <div className="flex gap-3" >
                             <p className="font-bold">-</p>
