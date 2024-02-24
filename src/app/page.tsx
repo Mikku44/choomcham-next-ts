@@ -20,6 +20,8 @@ import Loading from './components/loading'
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 // import { SwiperOptions } from 'swiper/types'
+
+
 class Course {
     id: string;
     title: string;
@@ -68,11 +70,37 @@ async function getContentData() {
 
 
 
-
 export default function Home() {
 
     // var contents;
     const [contents, setContents] = useState<Course[]>([]);
+    useEffect(function mount() {
+        function onScroll() {
+            const nav = document.getElementById("scroll_nav");
+
+            if (window.scrollY > 50 && !nav?.classList.contains('bg-white')) {
+
+
+                nav?.classList.add("bg-white");
+                nav?.classList.remove("text-white");
+
+
+            } else if (window.scrollY < 50 && nav?.classList.contains('bg-white')) {
+
+                nav?.classList.remove("bg-white");
+                nav?.classList.add("text-white");
+
+            }
+        }
+
+        window.addEventListener("scroll", onScroll);
+
+        return function unMount() {
+            window.removeEventListener("scroll", onScroll);
+        };
+    });
+
+
 
 
 
@@ -102,7 +130,7 @@ export default function Home() {
 
 
     return <div>
-        <div className="text-white">
+        <div className="text-white fixed  z-10 w-full duration-200 glass" id="scroll_nav">
 
             <NavigationBar current="" />
         </div>
@@ -309,20 +337,20 @@ export default function Home() {
                                 ) :
                                 courses.map((content) => {
                                     return <div className="card  w-96 sm:w-96 bg-white/50 shadow-xl overflow-hidden  " key={content.id}>
-                                    <figure className={"h-[210px] sm:h-[240px] overflow-hidden "}><Loading /></figure>
-                                    <div className="card-body h-[202px] sm:h-[auto]">
-                                        <div className="card-title text-[--green]">
-                                            กำลังโหลด
-                                        </div>
-                                        <p className="h-[40px] sm:h-[80px] w-[auto] text-ellipsis overflow-hidden">เนื้อหาเพื่อแสดง</p>
-                                        <div className="card-actions justify-between">
-                                            <Button href='#' className="bg-[--yellow]" radius='full'></Button>
-                                            <div>
-                                              
+                                        <figure className={"h-[210px] sm:h-[240px] overflow-hidden "}><Loading /></figure>
+                                        <div className="card-body h-[202px] sm:h-[auto]">
+                                            <div className="card-title text-[--green]">
+                                                กำลังโหลด
+                                            </div>
+                                            <p className="h-[40px] sm:h-[80px] w-[auto] text-ellipsis overflow-hidden">เนื้อหาเพื่อแสดง</p>
+                                            <div className="card-actions justify-between">
+                                                <Button href='#' className="bg-[--yellow]" radius='full'></Button>
+                                                <div>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 })
 
                         }

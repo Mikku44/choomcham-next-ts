@@ -10,7 +10,10 @@ function About() {
         <>
 
             {/* <Navbar /> */}
-            <NavigationBar current="3" />
+            <div className="z-20 fixed">
+                <NavigationBar current="3" />
+            </div>
+            
             <div className="bg-slate-200 ">
                 <div className="text-black  w-full h-[80px]   rounded-3xl">
                     .
