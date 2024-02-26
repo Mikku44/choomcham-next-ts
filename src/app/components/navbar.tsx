@@ -37,9 +37,18 @@ export default function NavigationBar(props: { current: String }) {
                 <div className="navbar-center sm:flex  gap-10 hidden">
                     <ul className=' gap-5 hidden font-medium sm:flex items-center'>
 
-                        <a className={'hover:bg-pink-400/10' + activeList[0] + '  hover:text-[--pink]  rounded-lg px-4 py-2 duration-200'} href="/service">
+                        <div className={'hover:bg-pink-400/10' + activeList[0] + '  hover:text-[--pink]  rounded-lg px-4 py-2 duration-200 relative group cursor-default'} >
                             <li>Consult & Courses</li>
-                        </a>
+
+                            <div className="rounded-2xl  p-5 absolute glass w-[200px] group-hover:opacity-100 group-hover:text-black z-0 group-hover:translate-y-[2rem] opacity-0 -translate-y-[16rem] duration-200  ">
+                                <a href="/service">
+                                    <li className="p-3 rounded-xl hover:bg-pink-400/10 w-full hover:text-[--pink] ">Consult</li>
+                                </a>
+                                <a href="/service/consult">
+                                    <li className="p-3 rounded-xl hover:bg-pink-400/10 w-full hover:text-[--pink] ">Courses</li>
+                                </a>
+                            </div>
+                        </div>
                         <a className={'hover:bg-pink-400/10' + activeList[2] + '  hover:text-[--pink]  rounded-lg px-4 py-2 duration-200'} href="/articles">
                             <li>Articles</li>
                         </a>
@@ -52,6 +61,8 @@ export default function NavigationBar(props: { current: String }) {
 
                     </ul>
                 </div>
+
+                {/*?? SIDE BAR PART */}
                 <div className="navbar-end drawer drawer-end">
                     {/* <button className="btn btn-ghost btn-circle">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>

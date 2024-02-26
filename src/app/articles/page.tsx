@@ -61,7 +61,7 @@ function Blog() {
                                             <div className="badge p-3 text-slate-400 hover:text-white ring-[#F2C762] cursor-pointer hover:bg-[#F2C762]">Bussiness</div>
                                             <div className="badge p-3 text-slate-400 hover:text-white ring-[#F2C762] cursor-pointer hover:bg-[#F2C762]">Products</div>
                                         </div>
-                                        <Link href={"./blog/" + (blog.id).toString()} className="btn">อ่านต่อ</Link>
+                                        <Link href={"./articles/" + (blog.id).toString()} className="btn">อ่านต่อ</Link>
                                     </div>
                                 </motion.div>
                             </>

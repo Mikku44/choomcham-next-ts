@@ -13,8 +13,9 @@ export default function Page({ params }: { params: { id: string } }) {
 
     return <>
 
-        <div className="fixed"><Indicator /></div>
-
+        <div className="fixed z-10 "><Indicator /></div>
+        
+        <div className="py-5"></div>
         <div className="py-10">
             <div className="card-actions justify-center">
                 <div className="badge p-5 text-black text-md hover:text-white ring-[#F2C762] cursor-pointer hover:bg-[#F2C762]">Bussiness</div>
