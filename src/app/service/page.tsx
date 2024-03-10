@@ -86,7 +86,7 @@ function Service() {
                 {/* <div className="absolute top-[22%] opacity-50 right-[14%] w-[550px] h-[450px] bg-[#F2E6D7] blur-[8px] rounded-3xl "></div> */}
             </div>
             <div className="block md:hidden w-full h-10"></div>
-            <div className="flex justify-around  xl:pt-11 xl:pb-7 h-auto w-[100%] bg-[#Ffff] border-5 border-[#F2E6D7] rounded-3xl ">
+            <div className="flex justify-around  xl:pt-11 xl:pb-7 p-2 h-auto w-[100%] bg-[#Ffff] border-5 border-[#F2E6D7] rounded-3xl ">
                 {/* <button className="btn bg-black w-[200px] h-10 text-white text-center text-lg rounded-3xl"><p>หลักสูตรเจ้าของธุรกิจ</p></button>
                 <button className="btn bg-black w-[200px] h-10 text-white text-center text-lg rounded-3xl"><p>สำหรับงานโปรดักชั่น</p></button>
                 <button className="btn bg-black w-[200px] h-10 text-white text-center text-lg rounded-3xl"><p>คอร์สออนไลน์ </p></button> */}
@@ -95,7 +95,7 @@ function Service() {
                         ชุ่มฉ่ำ Circle คือ
                     </p>
                     <span className="text-[#070814] xl:text-3xl text-sm">
-                        กิจกรรม Mini Workshop เจอตัวประจำเดือน ให้นักธุรกิจตัวจริงมาเจอกัน<br className="xl:hidden" />
+                        กิจกรรม Mini Workshop เจอตัวประจำเดือน <br className="xl:hidden" /> ให้นักธุรกิจตัวจริงมาเจอกัน<br className="xl:hidden" />
                         เพื่อฝึกสติให้ชุ่มฉ่ำจะได้สร้างแบรนด์สำเร็จอย่างมีความสุข <br />
                         ช่วยเหลือแบ่งปันเพื่อนธุรกิจให้สร้างแบรนด์ส่งต่อคุณค่าได้เพิ่มขึ้น
                     </span>
@@ -119,7 +119,7 @@ function Service() {
                         </div>
                     </div>
                 </div>
-                <div className="absolute xl:top-[20%] top-[23%] animate-pulse xl:right-[20%] right-[4%] ">
+                <div className="absolute xl:top-[20%] top-[29%] animate-pulse xl:right-[20%] right-[4%] ">
                     <Image src="/icon.svg" className="xl:w-[10vw] w-[30vw] " alt="Description" width={1780} height={1280} />
                 </div>
                 <div className="absolute hidden md:block top-[5.5%]  left-[0%]">
