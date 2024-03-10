@@ -40,7 +40,7 @@ function Service() {
             <div className="relative">
                 <motion.div initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 70 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="">
                     <div className="flex justify-start  bg-gradient-to-l from-white via-white via-20% to-[#F2E6D7]  xl:pl-32 pl-0  ">
-                        <Image src="/images/kruEve_image4.jpg" className="xl:opacity-100 opacity-60 xl:w-[450px] w-[250px]   blur-[0px]" alt="Description" width={1780} height={1280} />
+                        <Image src="/images/kruEve_image4.jpg" className="rounded-full xl:opacity-100 opacity-60 xl:w-[450px] w-[250px]   blur-[0px]" alt="Description" width={1780} height={1280} />
                     </div>
 
                     <div className="  text-start absolute lg:w-[550px] w-[250px]   xl:top-[120px] top-[20px] xl:right-[250px] right-[10px] shadow-2xl bg-gradient-to-b from-white via-white via-20% to-[#F2E6D7] p-2 xl:p-5  ">
@@ -105,10 +105,10 @@ function Service() {
         </section >
 
         <section>
-            <div className="relative  bg-gradient-to-b from-white to-[#F2E6D7]  pt-10 xl:pr-10 h-[800px]">
+            <div className="relative  bg-gradient-to-b from-white to-[#F2E6D7]  pt-10 xl:pr-10 xl:h-[800px] h-auto" >
                 <div className="flex justify-start">
                     <div className="w-[75vw] h-[200px]  bg-white rounded-2xl shadow-2xl  ">
-                        <div className=" xl:pl-10 pt-10 p-2">
+                        <div className=" xl:pl-14 xl:pt-14 pt-10 p-2">
                             <span className="xl:text-2xl text-base xl:text-center">
                                 ชุ่มฉ่ำอยากให้คุณสร้างแบรนด์ได้สำเร็จอย่างยั่งยืน
                                 ระหว่างทางจึงสำคัญไม่แพ้การตั้งเป้าหมาย<br className="lg:hidden" />
@@ -120,13 +120,14 @@ function Service() {
                     </div>
                 </div>
                 <div className="absolute xl:top-[20%] top-[23%] animate-pulse xl:right-[20%] right-[4%] ">
-                    <Image src="/icon.svg" className="xl:w-[10vw] w-[20vw] " alt="Description" width={1780} height={1280} />
+                    <Image src="/icon.svg" className="xl:w-[10vw] w-[30vw] " alt="Description" width={1780} height={1280} />
                 </div>
                 <div className="absolute hidden md:block top-[5.5%]  left-[0%]">
                     <Image src="/masker.svg" className="w-[10vw] " alt="Description" width={1780} height={1280} />
                 </div>
-                <div className="flex justify-end pt-20">
-                    <div className="xl:w-[95vw] w-[70vw] h-[350px] bg-white  rounded-2xl shadow-2xl z-0">
+
+                <div className="flex justify-end xl:pt-20 pt-4 pb-4">
+                    <div className="xl:w-[95vw] w-[80vw] h-[350px] bg-white  rounded-2xl shadow-2xl xl:z-0 z-10">
                         <div className="xl:text-2xl text-start gap-3  xl:pl-[550px] xl:pt-10 pt-5 pl-2">
                             <div>
                                 <p className="font-bold">รายละเอียด</p>
@@ -161,18 +162,18 @@ function Service() {
                         </div>
                     </div>
 
-                    <div className="absolute left-[10%]  xl:top-[25%] top-[26%] opacity-95 z-10">
-                        <Image src="/images/kruEve_image3.jpg" className="xl:w-[20vw] w-[150px] " alt="Description" width={1780} height={1280} />
+                    <div className="absolute left-[10%] hidden md:block xl:top-[25%] top-[26%] opacity-95 xl:z-10 z-0">
+                        <Image src="/images/kruEve_image3.jpg" className="xl:w-[20vw] xl:rounded-none rounded-full w-[200px] " alt="Description" width={1780} height={1280} />
                     </div>
 
                 </div>
             </div>
 
-            <div className="relative bg-cover bg-center flex justify-around pt-20 pb-10 " >
+            <div className="relative xl:bg-cover xl:bg-center xl:flex xl:justify-around xl:pt-20 xl:pb-10 " >
 
 
-                <div className="w-[25vw] h-[250px] bg-gradient-to-l from-white via-[#F2E6D7] via-100% to-[#F2E6D7] rounded-2xl ">
-                    <div className="text-xl text-balance text-start pl-10 pt-10">
+                <div className="xl:w-[25vw] xl:h-[250px] shadow-xl xl:shadow-none m-2 bg-gradient-to-l from-white via-[#F2E6D7] via-100% to-[#F2E6D7] rounded-2xl ">
+                    <div className="text-xl text-balance text-start pl-10 p-2 xl:pt-10">
                         <p className="font-bold ">เหมาะกับใครบ้าง? </p>
                         <a>- เจ้าของธุรกิจที่เพิ่งเริ่ม</a><br />
                         <a>- เจ้าของธุรกิจที่ต้องการหา Connection</a><br />
@@ -180,13 +181,16 @@ function Service() {
                     </div>
 
                 </div>
+                <div className="flex justify-center pt-5 " >
+                    <Image src="/images/sulmanservices/Rectangle 48.svg" className="w-[90vw] block md:hidden" alt="Description" width={1780} height={1280} />
+                </div>
 
-                <div className="absolute top-[20.5%] left-[43%] animate-pulse">
+                <div className="absolute hidden md:block top-[20.5%] left-[43%] animate-pulse">
                     <Image src="/images/sulmanservices/Rectangle 48.svg" className="w-[250px] " alt="Description" width={1780} height={1280} />
                 </div>
 
-                <div className="w-[25vw] h-[250px] bg-gradient-to-r from-white via-[#F2E6D7] via-100% to-[#F2E6D7] rounded-2xl ">
-                    <div className="text-xl  text-balance text-start gap-3 pl-10 pt-10">
+                <div className="xl:w-[25vw] xl:h-[250px] shadow-xl xl:shadow-none m-2 bg-gradient-to-r from-white via-[#F2E6D7] via-100% to-[#F2E6D7] rounded-2xl ">
+                    <div className="text-xl  text-balance text-start gap-3 pl-10 p-2 xl:pt-10">
                         <p className="font-bold">คุณสมบัติผู้เข้าร่วม</p>
                         <div className="flex gap-3" >
                             <p className="font-bold">-</p>
@@ -208,8 +212,8 @@ function Service() {
                     </div>
                 </div>
             </div>
-            <div className="bg-gradient-to-tr from-[#F2C762] to-red-400 flex justify-around pt-10 pb-10 ">
-                <h1 className="font-bold text-white text-3xl"> ค่าเข้าร่วม สอบถามราคาอัพเดทกับ Admin น้องฉ่ำใน LINE : @choomchambranding </h1>
+            <div className="bg-gradient-to-tr from-[#F2C762] to-red-400 flex justify-around ">
+                <h1 className="font-bold text-white xl:text-3xl p-2"> ค่าเข้าร่วม สอบถามราคาอัพเดทกับ <br className="block md:hidden" /> Admin น้องฉ่ำใน LINE : @choomchambranding </h1>
             </div>
         </section>
 
