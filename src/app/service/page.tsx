@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Script from 'next/script';
 import NavigationBar from "../components/navbar";
+import { motion } from "framer-motion";
 
 
 
@@ -34,90 +35,100 @@ function Service() {
         </div>
         <section className="">
 
+
+
             <div className="relative">
-                <div className="flex justify-start bg-[#d7b58b] pl-10">
-                    <Image src="/images/kruEve_image4.jpg" className="w-[60vw] h-[60vw] blur-[0px]" alt="Description" width={1780} height={1280} />
-                </div>
-                <div className=" text-start absolute  z-10 top-[240px] right-[100px] ">
-                    <p className="text-[#549deb] pb-6 font-bold text-5xl">ชุ่มฉ่ำ Mindful Circle</p>
-                    <span className="text-[#FFFF] font-normal text-3xl ">
-                        สังคมกัลยาณมิตรธุรกิจ
-                        ไปด้วยกัน ไปได้ไกลฉ่ำ
-                    </span>
-                    <div className="text-center pt-2 text-xl bg-[#D33666] rounded-3xl w-[240px] h-[40px] mt-5 mb-5 text-white ">
-                        <p>ปัญหาของตัวจริงไม่มีที่ยืน</p>
+                <motion.div initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 70 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="">
+                    <div className="flex justify-start  bg-gradient-to-l from-white via-white via-20% to-[#F2E6D7]  xl:pl-32 pl-0  ">
+                        <Image src="/images/kruEve_image4.jpg" className="rounded-full xl:opacity-100 opacity-60 xl:w-[450px] w-[250px]   blur-[0px]" alt="Description" width={1780} height={1280} />
                     </div>
-                    <div className="text-white text-2xl mb-5">
-                        <div className="flex gap-2 ">
-                            <span>01</span>
-                            <span>ไม่มั่นใจในคอนเทนต์ของตัวเอง</span>
+
+                    <div className="  text-start absolute lg:w-[550px] w-[250px]   xl:top-[120px] top-[20px] xl:right-[250px] right-[10px] shadow-2xl bg-gradient-to-b from-white via-white via-20% to-[#F2E6D7] p-2 xl:p-5  ">
+
+                        <p className="text-[#549deb] pl-5 xl:pb-6 font-bold xl:text-5xl text-lg">ชุ่มฉ่ำ Mindful Circle</p>
+                        <p className="text-[#000000] pl-5 font-normal xl:text-2xl text-base text-wrap">
+                            สังคมกัลยาณมิตรธุรกิจ <br className="xl:hidden" />
+                            ไปด้วยกัน ไปได้ไกลฉ่ำ
+                        </p>
+                        <div className="text-center  xl:pt-2 underline underline-offset-8  xl:mt-5 xl:mb-5 ">
+                            <p className="xl:leading-[50px] text-[#17A78A] font-bold xl:text-xl text-sm">ปัญหาของตัวจริงไม่มีที่ยืน</p>
                         </div>
-                        <div className="flex gap-2 ">
-                            <span>02</span>
-                            <span>เครียดง่ายเวลาเจอปัญหายอดตก</span>
+                        <div className="text-[#000000] pl-5 xl:text-xl text-sm mb-5 mt-5  " >
+                            <div className="flex gap-2 mb-3 mt-3">
+                                <span className="text-black font-bold">01</span>
+                                <span className="">ไม่มั่นใจในคอนเทนต์ของตัวเอง</span>
+                            </div>
+                            <div className="flex gap-2 mb-3 mt-3">
+                                <span className="text-black font-bold">02</span>
+                                <span className="">เครียดง่ายเวลาเจอปัญหายอดตก</span>
+                            </div>
+                            <div className="flex gap-2 mb-3 mt-3">
+                                <span className="text-black font-bold">03</span>
+                                <span className="">ไม่มีเพื่อนคุณภาพ อยากหา Connection
+                                    <br />เพิ่มเติมเพื่อต่อยอด</span>
+                            </div>
+                            <div className="flex gap-2 mb-3 mt-3">
+                                <span className="text-black font-bold">03</span>
+                                <span className="">ไม่มีไอเดีย รู้สึกตันๆกับตัวเอง</span>
+                            </div>
                         </div>
-                        <div className="flex gap-2 ">
-                            <span>03</span>
-                            <span>ไม่มีเพื่อนคุณภาพ อยากหา Connection
-                                <br />เพิ่มเติมเพื่อต่อยอด</span>
-                        </div>
-                        <div className="flex gap-2 ">
-                            <span>03</span>
-                            <span>ไม่มีไอเดีย รู้สึกตันๆกับตัวเอง</span>
-                        </div>
+                        <button className="btn btn-outline btn-warning  btn-xs sm:btn-sm md:btn-md lg:btn-lg rounded-xl xl:w-[200px] w-[120px] bg-white  xl:text-xl text-xs " ><p className="text-[#17A78A]">สอบถามเพิ่มเติม</p></button>
                     </div>
-                    <button className="btn rounded-xl w-[200px]  bg-white text-[#17A78A] text-xl" ><p>สอบถามเพิ่มเติม</p></button>
+                </motion.div>
+
+
+                <div className="absolute xl:top-[0%] top-[1%] animate-pulse rotate-180 opacity-100">
+                    <Image src="/images/sulmanservices/icon 1.png" className="xl:w-[300px] w-[150px] " alt="Description" width={1780} height={1280} />
                 </div>
-                <div className="absolute top-[40%] left-[12%]">
-                    <Image src="/images/sulmanservices/icon 1.png" className="w-[50vw] " alt="Description" width={1780} height={1280} />
+                <div className=" absolute xl:top-[60%] top-[75%] right-[5%]">
+                    <Image src="/images/sticker19.png" className="xl:w-[20vw] w-[30vw]  " alt="Description" width={1780} height={1280} />
                 </div>
-                {/* <div className="absolute top-[70%] right-[15%]">
-                    <Image src="/images/ondemand_logo.png" className="w-[20vw] " alt="Description" width={1780} height={1280} />
-                </div> */}
-                <div className="absolute top-[70%] right-[15%]">
-                    <Image src="/images/sticker19.png" className="w-[20vw] " alt="Description" width={1780} height={1280} />
-                </div>
-                {/* <div className="absolute top-[22%] opacity-20 right-[4%] w-[550px] h-[450px] bg-slate-400 blur-[8px] rounded-3xl "></div> */}
+                {/* <div className="absolute top-[22%] opacity-50 right-[14%] w-[550px] h-[450px] bg-[#F2E6D7] blur-[8px] rounded-3xl "></div> */}
             </div>
-            <div className="flex justify-around pt-11 pb-7 h-auto bg-gradient-to-r from-slate-200  to-[#F2C762] ">
+            <div className="block md:hidden w-full h-10"></div>
+            <div className="flex justify-around  xl:pt-11 xl:pb-7 p-2 h-auto w-[100%] bg-[#Ffff] border-5 border-[#F2E6D7] rounded-3xl ">
                 {/* <button className="btn bg-black w-[200px] h-10 text-white text-center text-lg rounded-3xl"><p>หลักสูตรเจ้าของธุรกิจ</p></button>
                 <button className="btn bg-black w-[200px] h-10 text-white text-center text-lg rounded-3xl"><p>สำหรับงานโปรดักชั่น</p></button>
                 <button className="btn bg-black w-[200px] h-10 text-white text-center text-lg rounded-3xl"><p>คอร์สออนไลน์ </p></button> */}
-                <div className="text-3xl">
-                    <p className=" font-bold">
+                <div className="">
+                    <p className="xl:text-3xl text-lg font-bold">
                         ชุ่มฉ่ำ Circle คือ
                     </p>
-                    <span className="text-[#070814]">
-                        กิจกรรม Mini Workshop เจอตัวประจำเดือน
-                        ให้นักธุรกิจตัวจริงมาเจอกันเพื่อฝึกสติให้ชุ่มฉ่ำจะได้สร้างแบรนด์สำเร็จอย่างมีความสุข <br />
+                    <span className="text-[#070814] xl:text-3xl text-sm">
+                        กิจกรรม Mini Workshop เจอตัวประจำเดือน <br className="xl:hidden" /> ให้นักธุรกิจตัวจริงมาเจอกัน<br className="xl:hidden" />
+                        เพื่อฝึกสติให้ชุ่มฉ่ำจะได้สร้างแบรนด์สำเร็จอย่างมีความสุข <br />
                         ช่วยเหลือแบ่งปันเพื่อนธุรกิจให้สร้างแบรนด์ส่งต่อคุณค่าได้เพิ่มขึ้น
                     </span>
                 </div>
 
             </div>
-        </section>
+        </section >
 
         <section>
-            <div className="relative bg-[#D33666]   pt-10 pr-10 h-[700px]">
-                <div className="w-[75vw] h-[200px]  bg-white rounded-2xl  z-10">
-                    <div className="text-2xl text-balance text-center pl-10 pt-10">
-                        <span >ชุ่มฉ่ำอยากให้คุณสร้างแบรนด์ได้สำเร็จอย่างยั่งยืน
-                            ระหว่างทางจึงสำคัญไม่แพ้การตั้งเป้าหมาย<br />
-                            การสร้างแบรนด์ให้สำเร็จเป็นการเดินทางไกล
-                            เพื่อส่งต่อคุณค่าในระยะยาว
-                            มีเพื่อนที่ดีจะทำให้คุณไม่หลงทาง
-                        </span>
+            <div className="relative  bg-gradient-to-b from-white to-[#F2E6D7]  pt-10 xl:pr-10 xl:h-[800px] h-auto" >
+                <div className="flex justify-start">
+                    <div className="w-[75vw] h-[200px]  bg-white rounded-2xl shadow-2xl  ">
+                        <div className=" xl:pl-14 xl:pt-14 pt-10 p-2">
+                            <span className="xl:text-2xl text-base xl:text-center">
+                                ชุ่มฉ่ำอยากให้คุณสร้างแบรนด์ได้สำเร็จอย่างยั่งยืน
+                                ระหว่างทางจึงสำคัญไม่แพ้การตั้งเป้าหมาย<br className="lg:hidden" />
+                                การสร้างแบรนด์ให้สำเร็จเป็นการเดินทางไกล
+                                เพื่อส่งต่อคุณค่าในระยะยาว
+                                มีเพื่อนที่ดีจะทำให้คุณไม่หลงทาง
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div className="absolute top-[20%] right-[20%]">
-                    <Image src="/icon.svg" className="w-[10vw] " alt="Description" width={1780} height={1280} />
+                <div className="absolute xl:top-[20%] top-[29%] animate-pulse xl:right-[20%] right-[4%] ">
+                    <Image src="/icon.svg" className="xl:w-[10vw] w-[30vw] " alt="Description" width={1780} height={1280} />
                 </div>
-                <div className="absolute top-[5.5%] l left-[0%]">
+                <div className="absolute hidden md:block top-[5.5%]  left-[0%]">
                     <Image src="/masker.svg" className="w-[10vw] " alt="Description" width={1780} height={1280} />
                 </div>
-                <div className="flex justify-end pt-20">
-                    <div className="w-[95vw] h-[350px] bg-white  rounded-2xl z-0">
-                        <div className="text-2xl text-balance text-start gap-3  pl-[550px] pt-10">
+
+                <div className="flex justify-end xl:pt-20 pt-4 pb-4">
+                    <div className="xl:w-[95vw] w-[80vw] h-[350px] bg-white  rounded-2xl shadow-2xl xl:z-0 z-10">
+                        <div className="xl:text-2xl text-start gap-3  xl:pl-[550px] xl:pt-10 pt-5 pl-2">
                             <div>
                                 <p className="font-bold">รายละเอียด</p>
                             </div>
@@ -150,28 +161,36 @@ function Service() {
                             </div>
                         </div>
                     </div>
-                    <div className="absolute left-[10%] top-[25%] opacity-95  z-10">
-                        <Image src="/images/kruEve_image3.jpg" className="w-[20vw] " alt="Description" width={1780} height={1280} />
+
+                    <div className="absolute left-[10%] hidden md:block xl:top-[25%] top-[26%] opacity-95 xl:z-10 z-0">
+                        <Image src="/images/kruEve_image3.jpg" className="xl:w-[20vw] xl:rounded-none rounded-full w-[200px] " alt="Description" width={1780} height={1280} />
                     </div>
+
                 </div>
             </div>
 
-            <div className="bg-gradient-to-tr from-[#F2C762] to-slate-400 flex justify-around pt-20 pb-10 ">
+            <div className="relative xl:bg-cover xl:bg-center xl:flex xl:justify-around xl:pt-20 xl:pb-10 " >
 
 
-                <div className="w-[25vw] h-[250px]  bg-gradient-to-tr from-[#F2C762] to-[#D33666] rounded-2xl ">
-                    <div className="text-xl text-balance text-start pl-10 pt-10">
-                        <p className="font-bold">เหมาะกับใครบ้าง? </p>
+                <div className="xl:w-[25vw] xl:h-[250px] shadow-xl xl:shadow-none m-2 bg-gradient-to-l from-white via-[#F2E6D7] via-100% to-[#F2E6D7] rounded-2xl ">
+                    <div className="text-xl text-balance text-start pl-10 p-2 xl:pt-10">
+                        <p className="font-bold ">เหมาะกับใครบ้าง? </p>
                         <a>- เจ้าของธุรกิจที่เพิ่งเริ่ม</a><br />
                         <a>- เจ้าของธุรกิจที่ต้องการหา Connection</a><br />
                         <a>- เจ้าของธุรกิจที่สำเร็จแล้วอยากแบ่งปัน</a>
                     </div>
 
                 </div>
+                <div className="flex justify-center pt-5 " >
+                    <Image src="/images/sulmanservices/Rectangle 48.svg" className="w-[90vw] block md:hidden" alt="Description" width={1780} height={1280} />
+                </div>
 
+                <div className="absolute hidden md:block top-[20.5%] left-[43%] animate-pulse">
+                    <Image src="/images/sulmanservices/Rectangle 48.svg" className="w-[250px] " alt="Description" width={1780} height={1280} />
+                </div>
 
-                <div className="w-[25vw] h-[250px] bg-gradient-to-br from-[#F2C762] to-[#D33666] rounded-2xl ">
-                    <div className="text-xl text-balance text-start gap-3 pl-10 pt-10">
+                <div className="xl:w-[25vw] xl:h-[250px] shadow-xl xl:shadow-none m-2 bg-gradient-to-r from-white via-[#F2E6D7] via-100% to-[#F2E6D7] rounded-2xl ">
+                    <div className="text-xl  text-balance text-start gap-3 pl-10 p-2 xl:pt-10">
                         <p className="font-bold">คุณสมบัติผู้เข้าร่วม</p>
                         <div className="flex gap-3" >
                             <p className="font-bold">-</p>
@@ -193,8 +212,8 @@ function Service() {
                     </div>
                 </div>
             </div>
-            <div className="bg-gradient-to-tr from-[#F2C762] to-red-400 flex justify-around pt-10 pb-10 ">
-                <h1 className="font-bold text-white text-3xl"> ค่าเข้าร่วม สอบถามราคาอัพเดทกับ Admin น้องฉ่ำใน LINE : @choomchambranding </h1>
+            <div className="bg-gradient-to-tr from-[#F2C762] to-red-400 flex justify-around ">
+                <h1 className="font-bold text-white xl:text-3xl p-2"> ค่าเข้าร่วม สอบถามราคาอัพเดทกับ <br className="block md:hidden" /> Admin น้องฉ่ำใน LINE : @choomchambranding </h1>
             </div>
         </section>
 
