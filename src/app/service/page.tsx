@@ -34,17 +34,17 @@ function Service() {
             <NavigationBar current="0" />
         </div>
 
-        <section className="bg-gradient-to-l from-white via-white via-20% to-[#F2E6D7] sm:py-28 pt-20 relative">
+        <section className="bg-[--sky-blue] sm:py-28 pt-20 relative">
 
             <div className="flex sm:flex-row gap-5 flex-col sm:justify-around items-center text-white">
                 <div className="relative">
-                    <Image src="/images/kruEve_image4.jpg" className=" sm:w-[450px] w-[30vw]" alt="Description" width={1780} height={1280} />
+                    <Image src="/images/kruEve_image5.jpg" className="rounded-full sm:w-[450px] w-[30vw]" alt="Description" width={1780} height={1280} />
 
                     <div className="absolute top-0 z-10 opacity-100">
                         <Image src="/images/sulmanservices/icon 1.png" className="xl:w-[300px] w-[50px] " alt="Description" width={500} height={500} />
                     </div>
                 </div>
-                <div className="sm:w-[35%] sm:h-[80%] p-10 rounded-2xl shadow-2xl relative bg-[--pink]">
+                <div className="sm:w-[35%] sm:h-[80%] p-10 rounded-2xl relative ">
 
                     <p className="text-[--yellow] pl-5 xl:pb-6 font-bold xl:text-5xl text-lg">ชุ่มฉ่ำ Mindful Circle</p>
                     <p className=" pl-5 font-normal xl:text-2xl text-base text-wrap">
@@ -52,7 +52,7 @@ function Service() {
                         ไปด้วยกัน ไปได้ไกลฉ่ำ
                     </p>
                     <div className="text-center text-black xl:pt-2 underline underline-offset-8  xl:mt-5 xl:mb-5 ">
-                        <p className="xl:leading-[50px] text-[#17A78A]  font-bold xl:text-xl text-sm">ปัญหาของตัวจริงไม่มีที่ยืน</p>
+                        <p className="xl:leading-[50px]   font-bold xl:text-xl text-sm">ปัญหาของตัวจริงไม่มีที่ยืน</p>
                     </div>
                     <div className=" pl-5 xl:text-xl text-sm mb-5 mt-5" >
                         <div className="flex gap-2 mb-3 mt-3">
