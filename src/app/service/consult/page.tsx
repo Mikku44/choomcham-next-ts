@@ -28,7 +28,7 @@ function Consult() {
             <NavigationBar current="0" />
         </div>
 
-        <section className="p-10 relative">
+        <section className="p-10 relative bg-[beige]">
 
             <div className="text-center flex items-center flex-col justify-center ">
                 <div className="flex justify-center p-10">
@@ -38,15 +38,16 @@ function Consult() {
                 <div className="sm:text-[42px] text-[24px] font-bold sm:w-1/3 w-1/2  rounded-md text-black/80 ">วิธีการสร้างแบรนด์ให้คนรักอย่างยั่งยืนใน 3-6 เดือน</div>
             </div>
 
-            <motion.div animate={controls} custom={3} className="w-[15vw] h-[15vw] bg-[--pink] absolute p-3 rounded-full -z-10 top-10 left-[1%]" />
-            <motion.div animate={controls} custom={1} className="w-[100px] h-[100px] bg-[--dark-blue] absolute p-3 rounded-full -z-10 top-10 right-[2%]" />
-            <motion.div animate={controls} custom={2} className="w-[50px] h-[50px] bg-[--green] absolute p-3 rounded-full -z-10 bottom-[10%] right-[18%]" />
-            <motion.div animate={controls} custom={2} className="w-[50px] h-[50px] bg-[--yellow] absolute p-3 rounded-full -z-10 bottom-[10%] left-[20%]" />
+            <motion.div animate={controls} custom={3} className="w-[15vw] h-[15vw] bg-[--pink] absolute p-3 rounded-full -z-0 top-10 left-[1%]" />
+            <motion.div animate={controls} custom={1} className="w-[100px] h-[100px] bg-[--dark-blue] absolute p-3 rounded-full -z-0 top-10 right-[2%]" />
+            <motion.div animate={controls} custom={2} className="w-[50px] h-[50px] bg-[--green] absolute p-3 rounded-full -z-0 bottom-[10%] right-[18%]" />
+            <motion.div animate={controls} custom={2} className="w-[50px] h-[50px] bg-[--yellow] absolute p-3 rounded-full -z-0 bottom-[10%] left-[20%]" />
+            <div className="w-full flex items-center justify-center p-10">
+                <div className="w-48 h-4 bg-[--dark-blue] rounded-full">.</div>
+            </div>
         </section>
 
-        <div className="w-full flex items-center justify-center p-10">
-            <div className="w-48 h-4 bg-[--dark-blue] rounded-full">.</div>
-        </div>
+
 
 
         <section className="p-10 ">
@@ -68,27 +69,27 @@ function Consult() {
             </div>
         </section>
 
-        <section className="p-10 bg-slate-300">
+        <section className="p-10 bg-[--dark-blue] ">
             <div className="flex sm:flex-row flex-col justify-between items-center gap-5 ">
-                <div className='font-bold sm:text-[24px] shadow-md  sm:w-1/4 rounded-xl glass bg-white/50 p-5  sm:h-[250px] '>
+                <div className=' sm:text-[20px] shadow-md  sm:w-1/4 sm:rounded-none rounded-xl bg-[--light-blue] border-1 border-black  p-5  sm:h-[250px] '>
                     <div className="text-center bg-[--pink] w-10  rounded-full text-white">2</div>
                     <div className="">
                         เริ่มออกแบบ <span className='text-[--pink] sm:text-[32px]'>Graphic Design</span> ให้สอดคล้องกับฐานด้านบน</div>
 
                 </div>
-                <div className='font-bold sm:text-[24px] shadow-md  sm:w-1/4 rounded-xl glass bg-white/50 p-5  sm:h-[250px] '>
+                <div className=' sm:text-[20px] shadow-md  sm:w-1/4 sm:rounded-none rounded-xl bg-[--light-blue] border-1 border-black  p-5  sm:h-[250px] '>
                     <div className="text-center bg-[--yellow] w-10  rounded-full text-white">3</div>
                     <div className="">
                         ออกแบบคอนเทนต์ให้สะกดคนดู <span className='text-[--yellow] sm:text-[32px]'>LIVE ให้ถี่</span> คอนเทนต์สั้นโพสให้ได้ทุกวัน</div>
 
                 </div>
-                <div className='font-bold sm:text-[24px] shadow-md  sm:w-1/4 rounded-xl glass bg-white/50 p-5  sm:h-[250px] '>
+                <div className=' sm:text-[20px] shadow-md  sm:w-1/4 sm:rounded-none rounded-xl bg-[--light-blue] border-1 border-black  p-5  sm:h-[250px] '>
                     <div className="text-center bg-[--dark-blue] w-10  rounded-full text-white">4</div>
                     <div className="">
                         รับ <span className='text-[--dark-blue] sm:text-[32px]'>Feedback</span> ของลูกค้ามาพัฒนาแผนการตลาด บริการ </div>
 
                 </div>
-                <div className='font-bold sm:text-[24px] shadow-md  sm:w-1/4 rounded-xl glass bg-white/50 p-5  sm:h-[250px] '>
+                <div className=' sm:text-[20px] shadow-md  sm:w-1/4 sm:rounded-none rounded-xl bg-[--light-blue] border-1 border-black  p-5  sm:h-[250px] '>
                     <div className="text-center bg-[--green] w-10  rounded-full text-white">5</div>
                     <div className="">
                         <span className='text-[--green] sm:text-[32px]'>พัฒนาความรู้</span>ให้พนักงานเข้าใจแบรนด์แบบฝังลึก</div>
@@ -99,23 +100,31 @@ function Consult() {
 
 
 
-        <section className="p-10">
+        <section className="p-10 " >
             <div className="flex sm:flex-row flex-col sm:h-[400px] justify-between items-center gap-5 text-md sm:text-[24px] ">
 
-                <div className='bg-white  rounded-3xl border-2 border-[--dark-blue] p-2 sm:p-10 sm:w-1/2 w-[90%] h-full'>
-                    <div className="text-[24px] sm:text-[32px] font-bold">ผลลัพธ์ที่คุณควรจะได้</div>
+                <div className='bg-white  rounded-3xl border-2 border-black p-2 sm:p-10 sm:w-1/2 w-[90%] h-full relative overflow-clip shadow-xl hover:scale-95 duration-150'>
+                    <div className="text-[24px] sm:text-[32px] font-bold text-[--green]">ผลลัพธ์ที่คุณควรจะได้</div>
                     <li className=" sm:w-full list-none flex items-center p-2 gap-3"><div className="p-1 bg-black rounded-full h-1 w-1"></div> เจอลูกค้าที่ใช่ จ่ายง่าย จ่ายคล่อง เพราะเขารักและศรัทธาในตัวคุณ</li>
                     <li className=" sm:w-full list-none flex items-center p-2 gap-3"><div className="p-1 bg-black rounded-full h-1 w-1"></div> คนทั่วประเทศรู้จักแบรนด์ของคุณ</li>
                     <li className=" sm:w-full list-none flex items-center p-2 gap-3"><div className="p-1 bg-black rounded-full h-1 w-1"></div> ลดค่าการตลาด มีงบเหลือๆมาพัฒนาบริการให้ลูกค้าติดใจไม่ไปไหน</li>
                     <li className=" sm:w-full list-none flex items-center p-2 gap-3"><div className="p-1 bg-black rounded-full h-1 w-1"></div> สื่อมาขอสัมภาษณ์เพราะแบรนด์คุณชัดจนเป็นไอดอลของใครหลายคน</li>
+
+                    <div className="bg-[--pink]  rounded-full w-10 h-10  sm:-right-10 sm:p-20 p-72 absolute -z-1"></div>
+                    <div className="bg-[--green] rounded-full w-10 h-10 sm:-top-5 sm:-right-10 sm:p-20 p-40 absolute -z-1"></div>
+                    <div className="bg-[--yellow] right-20 rounded-full sm:-left-10 sm:p-20 w-10 h-10 p-56 absolute -z-1"></div>
                 </div>
-                <div className='bg-white  rounded-3xl border-2 border-[--pink] p-2 sm:p-10 sm:w-1/2 w-[90%] h-full'>
-                    <div className="text-[24px] sm:text-[32px] font-bold">ทำไมคน 90% ถึงทำไม่ได้?</div>
+                <div className='bg-white  rounded-3xl border-2 border-black p-2 sm:p-10 sm:w-1/2 w-[90%] h-full relative overflow-clip shadow-xl hover:scale-95 duration-150'>
+                    <div className="text-[24px] sm:text-[32px] font-bold text-[--green]">ทำไมคน <span className="text-[--yellow] underline">90%</span> ถึงทำไม่ได้?</div>
                     <li className=" sm:w-full list-none flex items-center p-2 gap-3"><div className="p-1 bg-black rounded-full h-1 w-1"></div> เรามองไม่เห็นคิ้วตัวเอง</li>
                     <li className=" sm:w-full list-none flex items-center p-2 gap-3"><div className="p-1 bg-black rounded-full h-1 w-1"></div> การเป็น CEO ทำให้มีสิ่งที่ต้องโฟกัสหลายอย่างมากไป </li>
                     <li className=" sm:w-full list-none flex items-center p-2 gap-3"><div className="p-1 bg-black rounded-full h-1 w-1"></div> ให้ค่ากับสิ่งที่ไม่สำคัญจนลืมโฟกัส 20% ที่ทำให้เกมเปลี่ยน</li>
                     <li className=" sm:w-full list-none flex items-center p-2 gap-3"><div className="p-1 bg-black rounded-full h-1 w-1"></div> ไม่มีความรู้เรื่องการสร้างแบรนด์มาก่อน</li>
                     <li className=" sm:w-full list-none flex items-center p-2 gap-3"><div className="p-1 bg-black rounded-full h-1 w-1"></div> สิ่งที่วางแผนไม่ได้สอดคล้องกับจิตวิญญาณข้างในจริง แผนที่วางออกมาเลยเป็นแค่เปลือก</li>
+
+                    <div className="bg-[--pink]  rounded-full w-10 h-10  sm:-right-10 sm:p-20 p-72 absolute -z-1"></div>
+                    <div className="bg-[--green] rounded-full w-10 h-10 sm:-top-5 sm:-right-10 sm:p-20 p-40 absolute -z-1"></div>
+                    <div className="bg-[--yellow] right-20 rounded-full sm:-left-10 sm:p-20 w-10 h-10 p-56 absolute -z-1"></div>
                 </div>
 
 
@@ -168,7 +177,7 @@ function Consult() {
                     />
                     <CardFooter className="absolute bottom-0 ">
                         <div>
-                            
+
                             <Button className="text-black text-tiny">ราคาเพียง 29,999 บาท</Button>
                         </div>
 
@@ -189,7 +198,7 @@ function Consult() {
                     />
                     <CardFooter className="absolute bottom-0 ">
                         <div>
-                            
+
                             <Button className="text-black text-tiny">ราคาเพียง 29,900 บาท</Button>
                         </div>
 
@@ -210,7 +219,7 @@ function Consult() {
                     />
                     <CardFooter className="absolute bottom-0 ">
                         <div>
-                            
+
                             <Button className="text-black text-tiny">ราคาเพียง 49,999 บาท</Button>
                         </div>
 
