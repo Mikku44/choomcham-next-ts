@@ -10,7 +10,7 @@ function layout({
 
     return(
         <>
-       <div className="glass z-[100] fixed w-full">
+       <div className=" z-[100] fixed w-full">
          <NavigationBar current="2" />
        </div>
         {children}

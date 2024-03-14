@@ -40,7 +40,7 @@ export default function NavigationBar(props: { current: String }) {
                         <div className={'hover:bg-pink-400/10' + activeList[0] + '  hover:text-[--pink]  rounded-lg px-4 py-2 duration-200 relative group cursor-default'} >
                             <li>Consult & Courses</li>
 
-                            <div className="rounded-2xl  p-5 absolute glass w-[200px] group-hover:opacity-100 group-hover:text-black z-0 group-hover:translate-y-[2rem] opacity-0 -translate-y-[16rem] duration-200  ">
+                            <div className="rounded-2xl  p-5 absolute bg-white/80 w-[200px]  group-hover:text-black glass scale-0 group-hover:scale-100 translate-y-3 duration-200  ">
                                 <a href="/service">
                                     <li className="p-3 rounded-xl hover:bg-pink-400/10 w-full hover:text-[--pink] ">Consult</li>
                                 </a>

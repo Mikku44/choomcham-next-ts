@@ -130,7 +130,7 @@ export default function Home() {
 
 
     return <div>
-        <div className="text-white fixed  z-10 w-full duration-200 glass" id="scroll_nav">
+        <div className="text-white fixed  z-10 w-full duration-200" id="scroll_nav">
 
             <NavigationBar current="" />
         </div>
