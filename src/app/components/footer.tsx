@@ -20,7 +20,7 @@ function Footer() {
         </div>
         <div className="grid gap-4">
           <div>
-            <div className="text-[--dark-blue] font-bold text-xl">Let's Stay connectd</div>
+            <div className="text-[--dark-blue] font-bold text-xl">Let&quot;s Stay connectd</div>
             <p>ลงทะเบียนเพื่อรับข้อเสนอกับชุ่มฉ่ำ</p>
             <div className="flex gap-2 items-end justify-center">
               <Input
