@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import Navbar from "../components/nav";
 import Footer from '../components/footer';
 import Head from "next/head";
@@ -12,16 +12,16 @@ import { motion } from "framer-motion";
 
 
 
-const bussiness = [
-    { id: '0', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
-    { id: '1', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
-    { id: '2', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
-    { id: '3', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
-    { id: '4', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
-    { id: '5', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
-    { id: '6', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
-    { id: '7', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
-]
+// const bussiness = [
+//     { id: '0', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
+//     { id: '1', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
+//     { id: '2', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
+//     { id: '3', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
+//     { id: '4', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
+//     { id: '5', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
+//     { id: '6', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
+//     { id: '7', title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolor.' },
+// ]
 
 
 
@@ -36,9 +36,15 @@ function Service() {
 
         <section className="bg-[--sky-blue] sm:py-28 pt-20 relative">
 
+        <svg id="svg" viewBox="0 0 1440 690" xmlns="http://www.w3.org/2000/svg" className="transition duration-300 ease-in-out delay-150 absolute z-0 left-0  bottom-[-10px] ">
+                <path d="M 0,700 L 0,131 C 156.53333333333336,161.93333333333334 313.0666666666667,192.86666666666665 467,178 C 620.9333333333333,163.13333333333335 772.2666666666667,102.46666666666667 934,87 C 1095.7333333333333,71.53333333333333 1267.8666666666668,101.26666666666667 1440,131 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#3c4297" fill-opacity="0.4" className="transition-all duration-300 ease-in-out delay-150 path-0 "></path>
+                <path d="M 0,700 L 0,306 C 201.06666666666666,280.26666666666665 402.1333333333333,254.5333333333333 554,271 C 705.8666666666667,287.4666666666667 808.5333333333333,346.1333333333334 948,359 C 1087.4666666666667,371.8666666666666 1263.7333333333333,338.9333333333333 1440,306 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#3c4297" fill-opacity="0.53" className="transition-all duration-300 ease-in-out delay-150 path-1 "></path>
+                <path d="M 0,700 L 0,481 C 111.86666666666667,489.66666666666663 223.73333333333335,498.3333333333333 396,491 C 568.2666666666667,483.6666666666667 800.9333333333334,460.33333333333337 985,456 C 1169.0666666666666,451.66666666666663 1304.5333333333333,466.3333333333333 1440,481 L 1440,700 L 0,700 Z" stroke="none" stroke-width="0" fill="#3c4297" fill-opacity="1" className="transition-all duration-300 ease-in-out delay-150 path-2"></path>
+            </svg>
+
             <div className="flex sm:flex-row gap-5 flex-col sm:justify-around items-center text-white">
                 <div className="relative">
-                    <Image src="/images/kruEve_image5.jpg" className="rounded-full sm:w-[450px] w-[30vw]" alt="Description" width={1780} height={1280} />
+                    <Image src="/images/kruEve_image5.jpg" className="rounded-full sm:w-[450px] w-[30vw]" alt="Description" width={800} height={620} />
 
                     <div className="absolute top-0 z-10 opacity-100">
                         <Image src="/images/sulmanservices/icon 1.png" className="xl:w-[300px] w-[50px] " alt="Description" width={500} height={500} />
@@ -75,23 +81,34 @@ function Service() {
                     </div>
                     <Button className=" bg-[--yellow] btn-xs sm:btn-sm md:btn-md lg:btn-lg rounded-xl xl:w-[200px] w-[120px] xl:text-xl text-xs " ><p className="text-black">สอบถามเพิ่มเติม</p></Button>
                     <div className=" absolute -bottom-5 sm:-right-24 -right-5">
-                        <Image src="/images/sticker19.png" className="xl:w-[20vw] w-[30vw]  " alt="Description" width={1780} height={1280} />
+                        <Image src="/images/sticker19.png" className="xl:w-[20vw] w-[30vw]  " alt="Description" width={800} height={620} />
                     </div>
                 </div>
             </div>
 
 
-            <div className="block md:hidden w-full h-10"></div>
+       
 
         </section >
 
-        <section className="p-8 grid gap-3">
-            <div className="flex justify-around py-10 h-auto w-[100%] bg-[--sky-blue] glass border-5 border-black  rounded-3xl ">
+        <section className="px-10 py-24 flex  xl:flex-row flex-col gap-10 items-center">
+            <div className="flex flex-wrap items-center  justify-center justify-items-end gap-1 w-3/4 ">
+                <div className="w-56 h-40 basis-72 bg-black rounded-xl overflow-clip"><img src="https://scontent.furt2-1.fna.fbcdn.net/v/t39.30808-6/306644360_821854525896201_1011233369411570365_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeETeIXCuHx8bg7W-BwNKRworPmFsMDE8tGs-YWwwMTy0ab4FJFeenQHI1EQCNeDo34JU6xHNDFYDI8CIGQI7xg8&_nc_ohc=oMpUl5MCXPgAX-zVOHo&_nc_ht=scontent.furt2-1.fna&oh=00_AfAKNA4stfdYUIlmoBx9XRRQk_sJIQbssVuRrUuQZa9tkg&oe=65FDB10E" alt="" /></div>
+                <div className="w-56 h-40 bg-black rounded-xl overflow-clip"><img src="https://scontent.furt2-1.fna.fbcdn.net/v/t39.30808-6/306948908_821854275896226_2800974571083684052_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGAT4dl8FkZSDZvhqVObP8Kggt3oRBo8BuCC3ehEGjwG-fWtMfA_z5AtiuIiuinGLY5An-BCJwCwl4b06JYT1l2&_nc_ohc=QvoOHyNk5DEAX_t8MR5&_nc_ht=scontent.furt2-1.fna&oh=00_AfCNqAy4h62soPn5kbwa5hE9cAkqqp1H7OptVGMA-eXKIw&oe=65FCE095" alt="" /></div>
+                <div className="w-56 h-40 bg-black rounded-xl overflow-clip"><img src="https://scontent.furt2-1.fna.fbcdn.net/v/t39.30808-6/394566752_831607092305896_7433676045894544483_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF--qUz8a9d6vdYbRDboCcTCDibquuc148IOJuq65zXjwy2J4kzQy5GxxN6GklbvaJqioUmwVcz2ywIHReubUVb&_nc_ohc=a03c0KtP1yAAX_iBMvG&_nc_ht=scontent.furt2-1.fna&oh=00_AfAlUofvbqh1opa8a13pBclK30aW7NX3UNp0f4OrM1l25Q&oe=65FD1ACB" className="object-fill h-full" alt="" /></div>
+                <div className="w-56 h-40 basis-72 bg-black rounded-xl overflow-clip"><img src="https://scontent.furt2-1.fna.fbcdn.net/v/t39.30808-6/394293622_831606998972572_7555265462730581701_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFhwHO2Kg7euQueb3k4rzRkI3wb4qHqTVUjfBvioepNVRkFpMaVe3-pcWkJjqtM6cW0LHbEMFzzNRGb5YBYt4v5&_nc_ohc=fujFfFHxVLoAX_29Ebs&_nc_ht=scontent.furt2-1.fna&oh=00_AfD-FMQUo7uG8AYrEpugJyF9tNaT31QxaHVUj3cPXtY5jg&oe=65FBF219" alt="" /></div>
+
+
+            </div>
+            <div className="flex justify-around py-10 h-auto w-[100%]  relative ">
+
+
+                <div className="absolute left-[-10px] top-0"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/quote-left.png" alt="quote-left" /></div>
 
                 {/* <button className="btn bg-black w-[200px] h-10 text-white text-center text-lg rounded-3xl"><p>สำหรับงานโปรดักชั่น</p></button> */}
                 {/* <button className="btn bg-black w-[200px] h-10 text-white text-center text-lg rounded-3xl"><p>คอร์สออนไลน์ </p></button> */}
                 <div className="grid gap-4 p-4">
-                    <p className="xl:text-3xl text-lg font-bold bg-black sm:w-[30vw] w-[50vw] text-white text-center rounded-full p-2">
+                    <p className="xl:text-3xl text-lg font-bold sm:w-[30vw] w-[50vw] ">
                         {/* <button className="btn bg-black w-[200px] h-10 text-white text-center text-lg rounded-3xl"><p>หลักสูตรเจ้าของธุรกิจ</p></button> */}
                         ชุ่มฉ่ำ Circle คือ
                     </p>
@@ -100,22 +117,17 @@ function Service() {
                         เพื่อฝึกสติให้ชุ่มฉ่ำจะได้สร้างแบรนด์สำเร็จอย่างมีความสุข <br />
                         ช่วยเหลือแบ่งปันเพื่อนธุรกิจให้สร้างแบรนด์ส่งต่อคุณค่าได้เพิ่มขึ้น
                     </span>
-                </div>
-            </div>
 
-            <div className="w-[75vw] flex justify-around h-auto py-10 bg-[--dark-blue] glass rounded-2xl border-5 border-black  relative">
-                <div className="p-8 grid gap-3">
-                    <span className="xl:text-2xl text-base">
+                    <p className="xl:text-xl text-base">
                         ชุ่มฉ่ำอยากให้คุณสร้างแบรนด์ได้สำเร็จอย่างยั่งยืน
                         ระหว่างทางจึงสำคัญไม่แพ้การตั้งเป้าหมาย<br className="lg:hidden" />
                         การสร้างแบรนด์ให้สำเร็จเป็นการเดินทางไกล
                         เพื่อส่งต่อคุณค่าในระยะยาว
                         มีเพื่อนที่ดีจะทำให้คุณไม่หลงทาง
-                    </span>
+                    </p>
                 </div>
-                <div className="absolute bottom-0 right-0 ">
-                    <Image src="/icon.svg" className="xl:w-[10vw] w-[30vw] rounded-xl " alt="Description" width={1780} height={1280} />
-                </div>
+                <div className="absolute bottom-0 right-0"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/quote-right.png" alt="quote-right" /></div>
+
             </div>
 
 
@@ -126,12 +138,12 @@ function Service() {
 
             <div className="flex sm:flex-row flex-col items-center gap-10">
 
-                <div className="">
-                    <Image src="/images/kruEve_image3.jpg" className="xl:w-[20vw]  rounded-full w-[200px] " alt="Description" width={1780} height={1280} />
-                </div>
+                {/* <div className="">
+                    <Image src="/images/kruEve_image3.jpg" className="xl:w-[20vw]  rounded-full w-[200px] " alt="Description" width={800} height={620} />
+                </div> */}
 
                 <div className="xl:w-[95vw] w-[80vw] bg-white border-2 border-black rounded-2xl shadow-lg xl:z-0 z-10 relative overflow-hidden">
-                   
+
                     <div className="sm:text-2xl p-10">
                         <div>
                             <p className="font-bold text-3xl text-[--green]">รายละเอียด</p>
@@ -193,11 +205,11 @@ function Service() {
 
                 </div>
                 <div className="flex justify-center pt-5 " >
-                    <Image src="/images/sulmanservices/Rectangle 48.svg" className="sm:w-[20vw] w-[40vw] block md:hidden" alt="Description" width={1780} height={1280} />
+                    <Image src="/images/sulmanservices/Rectangle 48.svg" className="sm:w-[20vw] w-[40vw] block md:hidden" alt="Description" width={800} height={620} />
                 </div>
 
                 <div className="absolute hidden md:block top-[20.5%] left-[43%] ">
-                    <Image src="/images/sulmanservices/Rectangle 48.svg" className="w-[250px] " alt="Description" width={1780} height={1280} />
+                    <Image src="/images/sulmanservices/Rectangle 48.svg" className="w-[250px] " alt="Description" width={800} height={620} />
                 </div>
 
                 <div className="xl:w-[25vw] xl:h-[250px] shadow-xl xl:shadow-none m-2 bg-slate-100 rounded-2xl ">
